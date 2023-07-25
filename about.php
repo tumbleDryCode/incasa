@@ -36,7 +36,7 @@ include("config.php");
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!-- Title -->
-<title>Homex - Real Estate Template</title>
+<title><?php $shopTitle ?></title>
 </head>
 <body>
 
@@ -66,7 +66,7 @@ include("config.php");
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">About Us</li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[913]" data-desc="btn_contact">About Us</ti></li>
                             </ol>
                         </nav>
                     </div>

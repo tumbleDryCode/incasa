@@ -452,7 +452,8 @@ if(isset($_POST['add']))
 		
 		<!-- Custom JS -->
 		<script  src="assets/js/script.js"></script>
-		
+				<script src="assets/js/jquery.dataTables.min.js"></script> 
+
     </body>
 
 </html>

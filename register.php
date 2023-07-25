@@ -103,13 +103,13 @@ if(isset($_REQUEST['reg']))
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Register</b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Register</li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></li>
                             </ol>
                         </nav>
                     </div>
@@ -126,8 +126,8 @@ if(isset($_REQUEST['reg']))
                 	<div class="loginbox">
                         <div class="login-right">
 							<div class="login-right-wrap">
-								<h1>Register</h1>
-								<p class="account-subtitle">Access to our dashboard</p>
+								<h1><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></h1>
+								<p class="account-subtitle"><ti data-ison="stxt[942]" data-desc="btn_access_to_our_dashboard">Access to our dashboard</ti></p>
 								<?php echo $error; ?><?php echo $msg; ?>
 								<!-- Form -->
 								<form method="post" enctype="multipart/form-data">
@@ -146,22 +146,22 @@ if(isset($_REQUEST['reg']))
 
 									 <div class="form-check-inline">
 									  <label class="form-check-label">
-										<input type="radio" class="form-check-input" name="utype" value="user" checked>User
+										<input type="radio" class="form-check-input" name="utype" value="user" checked><ti data-ison="stxt[75]" data-desc="btn_user">User</ti>
 									  </label>
 									</div>
 									<div class="form-check-inline">
 									  <label class="form-check-label">
-										<input type="radio" class="form-check-input" name="utype" value="agent">Agent
+										<input type="radio" class="form-check-input" name="utype" value="agent"><ti data-ison="stxt[943]" data-desc="btn_agent">Agent</ti>
 									  </label>
 									</div>
 									<div class="form-check-inline disabled">
 									  <label class="form-check-label">
-										<input type="radio" class="form-check-input" name="utype" value="builder">Builder
+										<input type="radio" class="form-check-input" name="utype" value="builder"><ti data-ison="stxt[944]" data-desc="btn_builder">Builder</ti>
 									  </label>
 									</div> 
 									
 									<div class="form-group">
-										<label class="col-form-label"><b>User Image</b></label>
+										<label class="col-form-label"><b><ti data-ison="stxt[945]" data-desc="btn_user_image">User Image</ti></b></label>
 										<input class="form-control" name="uimage" type="file">
 									</div>
 									
@@ -184,7 +184,7 @@ if(isset($_REQUEST['reg']))
 								</div>
 								<!-- /Social Login -->
 								
-								<div class="text-center dont-have">Already have an account? <a href="login.php">Login</a></div>
+								<div class="text-center dont-have"><ti data-ison="stxt[946]" data-desc="btn_already_have_an_account">Already have an account?</ti> <a href="login.php">Login</a></div>
 								
 							</div>
                         </div>

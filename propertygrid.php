@@ -1,4 +1,5 @@
 <?php 
+header("Access-Control-Allow-Origin: *");
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
@@ -41,7 +42,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title><?php $shopTitle ?></title>
 </head>
 <body>
 
@@ -68,13 +69,13 @@ include("config.php");
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Property Grid</b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[942]" data-desc="btn_property_grid">Property Grid</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Property Grid</li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[942]" data-desc="btn_property_grid">Property Grid</ti></li>
                             </ol>
                         </nav>
                     </div>
@@ -94,13 +95,14 @@ include("config.php");
 						
 							<?php 
 							
-							if(isset($_REQUEST['filter']))
+							if(isset($_REQUEST['type']))
 							{
 								$type=$_REQUEST['type'];
 								$stype=$_REQUEST['stype'];
 								$city=$_REQUEST['city'];
-								
-								$sql="SELECT * FROM property WHERE type='{$type}' and stype='{$stype}' and city='{$city}'";
+															$sql="SELECT * FROM property limit 3";
+	
+								// $sql="SELECT * FROM property WHERE type='{$type}' and stype='{$stype}' and city='{$city}'";
 								//SELECT * FROM `property` WHERE type='office' or type='office' and stype='sale' or stype='rent' and city='valsad' OR state='mumbai'
 								//SELECT * FROM `property` WHERE type='office' and stype='sale'  and city='valsad' OR state='mumbai'
 								$result=mysqli_query($con,$sql);
@@ -118,7 +120,7 @@ include("config.php");
                                     <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row['18'];?>" alt="pimage">
                                         
                                         <div class="sale bg-secondary text-white">For <?php echo $row['5'];?></div>
-                                        <div class="price text-primary text-capitalize">$<?php echo $row['13'];?> <span class="text-white"><?php echo $row['12'];?> Sqft</span></div>
+                                        <div class="price text-primary text-capitalize">$<?php echo $row['13'];?> <span class="text-white"><?php echo $row['12'];?>M2</span></div>
                                         
                                     </div>
                                     <div class="featured-thumb-data shadow-one">
@@ -126,8 +128,8 @@ include("config.php");
                                             <h5 class="text-secondary hover-text-primary mb-2 text-capitalize"><a href="propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1'];?></a></h5>
                                             <span class="location text-capitalize"><i class="fas fa-map-marker-alt text-primary"></i> <?php echo $row['14'];?></span> </div>
                                         <div class="px-4 pb-4 d-inline-block w-100">
-                                            <div class="float-left text-capitalize"><i class="fas fa-user text-primary mr-1"></i>By : <?php echo $row['uname'];?></div>
-                                            <div class="float-right"><i class="far fa-calendar-alt text-primary mr-1"></i> 6 Months Ago</div>
+                                            <div class="float-left text-capitalize"><i class="fas fa-user text-primary mr-1"></i>: <?php echo $row['uid'];?></div>
+                                            <div class="float-right"><i class="far fa-calendar-alt text-primary mr-1"></i>: ...</div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +141,7 @@ include("config.php");
 								}
 								else {
 									
-									echo "<h1 class='mb-5'><center>No Property Available</center></h1>";
+									echo "<h1 class='mb-5'><center>Uuups.. sem resultados. tente.....</center></h1>";
 								}
 									
 							}
@@ -147,7 +149,16 @@ include("config.php");
 							?>
                             
 
-                            
+                            <script src="js/custom.js"></script>
+ <script async src="https://cse.google.com/cse.js?cx=535200e6c271548d4">
+</script> 
+<!-- <div id="ggAds"></div>
+ <script>
+ JSSHOP.loadScript("https://cse.google.com/cse.js?cx=535200e6c271548d4", doGsearchOnPart,"js");
+</script>-->
+
+<div class="gcse-searchresults-only"></div>
+
                             
                         <!--    <div class="col-md-12">
                                 <nav aria-label="Page navigation">
@@ -247,7 +258,7 @@ include("config.php");
 <script src="js/jquery.slider.js"></script> 
 <script src="js/wow.js"></script> 
 
-<script src="js/custom.js"></script>
+
 </body>
 
 </html>

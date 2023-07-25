@@ -59,8 +59,8 @@ if(isset($_POST['insert']))
 		<link rel="stylesheet" href="assets/plugins/datatables/buttons.bootstrap4.min.css">
 		
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-		
+        <link rel="stylesheet" href="assets/css/style.css"> 
+		  <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
@@ -229,6 +229,6 @@ if(isset($_POST['insert']))
 		
 		<!-- Custom JS -->
 		<script  src="assets/js/script.js"></script>
-		
+			<script src="assets/js/jquery.dataTables.min.js"></script>
     </body>
 </html>

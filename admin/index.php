@@ -1,5 +1,5 @@
 <?php 
-if(session_status() === PHP_SESSION_NONE) {
+if(session_id() == '') {
 	session_start();
 	include("config.php");
 	$error="";
@@ -60,7 +60,7 @@ if(session_status() === PHP_SESSION_NONE) {
 		
     </head>
     <body>
-	
+	 
 		<!-- Main Wrapper -->
         <div class="page-wrappers login-body">
             <div class="login-wrapper">
@@ -74,10 +74,10 @@ if(session_status() === PHP_SESSION_NONE) {
 								<!-- Form -->
 								<form method="post">
 									<div class="form-group">
-										<input class="form-control" name="user" type="text" placeholder="User Name">
+										<input class="form-control" name="user" type="text" placeholder="User Name" value="admin">
 									</div>
 									<div class="form-group">
-										<input class="form-control" type="password" name="pass" placeholder="Password">
+										<input class="form-control" type="password" name="pass" placeholder="Password"  value="admin">
 									</div>
 									<div class="form-group">
 										<button class="btn btn-primary btn-block" name="login" type="submit">Login</button>
@@ -117,7 +117,7 @@ if(session_status() === PHP_SESSION_NONE) {
 		
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
-		
+ 
     </body>
 
 </html>

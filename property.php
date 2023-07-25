@@ -39,7 +39,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title><?php $shopTitle ?></title>
 </head>
 <body>
 
@@ -72,7 +72,7 @@ include("config.php");
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Property Grid</li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[942]" data-desc="btn_property_grid">Property Grid</ti></li>
                             </ol>
                         </nav>
                     </div>

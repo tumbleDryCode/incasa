@@ -96,10 +96,10 @@ if(isset($_POST['add']))
 <link rel="shortcut icon" href="images/favicon.ico">
 
 <!--	Fonts
-	========================================================-->
+	========================================================
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
-
+-->
 <!--	Css Link
 	========================================================-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -142,13 +142,13 @@ if(isset($_POST['add']))
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Submit Property</b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[941]" data-desc="btn_addprop">Submit Property</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Submit Property</li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[941]" data-desc="btn_addprop">Submit Property</ti></li>
                             </ol>
                         </nav>
                     </div>
@@ -163,26 +163,26 @@ if(isset($_POST['add']))
             <div class="container">
                     <div class="row">
 						<div class="col-lg-12">
-							<h2 class="text-secondary double-down-line text-center">Submit Property</h2>
+							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[941]" data-desc="btn_addprop">Submit Property</ti></h2>
                         </div>
 					</div>
                     <div class="row p-5 bg-white">
                         <form method="post" enctype="multipart/form-data">
 								<div class="description">
-									<h5 class="text-secondary">Basic Information</h5><hr>
+									<h5 class="text-secondary"><ti data-ison="stxt[947]" data-desc="btn_basic_information">Basic Information</ti></h5><hr>
 									<?php echo $error; ?>
 									<?php echo $msg; ?>
 									
 										<div class="row">
 											<div class="col-xl-12">
 												<div class="form-group row">
-													<label class="col-lg-2 col-form-label">Title</label>
+													<label class="col-lg-2 col-form-label"><ti data-ison="stxt[10]" data-desc="btn_title">Title</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="title" required placeholder="Enter Title">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-2 col-form-label">Content</label>
+													<label class="col-lg-2 col-form-label"><ti data-ison="stxt[948]" data-desc="btn_content">Content</ti></label>
 													<div class="col-lg-9">
 														<textarea class="tinymce form-control" name="content" rows="10" cols="30"></textarea>
 													</div>
@@ -191,7 +191,7 @@ if(isset($_POST['add']))
 											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Property Type</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[927]" data-desc="btn_property_type">Property Type</ti></label>
 													<div class="col-lg-9">
 														<select class="form-control" required name="ptype">
 															<option value="">Select Type</option>
@@ -205,23 +205,23 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Selling Type</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[949]" data-desc="btn_selling_type">Selling Type</ti></label>
 													<div class="col-lg-9">
 														<select class="form-control" required name="stype">
-															<option value="">Select Status</option>
+															<option value=""><ti data-ison="stxt[950]" data-desc="btn_select_status">Select Status</ti></option>
 															<option value="rent">Rent</option>
 															<option value="sale">Sale</option>
 														</select>
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Bathroom</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[923]" data-desc="btn_bathroom">Bathroom</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="bath" required placeholder="Enter Bathroom (only no 1 to 10)">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Kitchen</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[926]" data-desc="btn_kitcheb">Kitchen</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="kitc" required placeholder="Enter Kitchen (only no 1 to 10)">
 													</div>
@@ -246,19 +246,19 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Bedroom</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[922]" data-desc="btn_bedroom">Bedroom</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="bed" required placeholder="Enter Bedroom  (only no 1 to 10)">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Balcony</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[924]" data-desc="btn_balcony">Balcony</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="balc" required placeholder="Enter Balcony  (only no 1 to 10)">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Hall</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[925]" data-desc="btn_select_status">Hall</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="hall" required placeholder="Enter Hall  (only no 1 to 10)">
 													</div>
@@ -266,11 +266,11 @@ if(isset($_POST['add']))
 												
 											</div>
 										</div>
-										<h5 class="text-secondary">Price & Location</h5><hr>
+										<h5 class="text-secondary"><ti data-ison="stxt[951]" data-desc="btn_price_location">Price - Location</ti></h5><hr>
 										<div class="row">
 											<div class="col-xl-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Floor</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[928]" data-desc="btn_floor">Floor</ti></label>
 													<div class="col-lg-9">
 														<select class="form-control" required name="floor">
 															<option value="">Select Floor</option>
@@ -283,19 +283,19 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Price</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[18]" data-desc="btn_price_location">Price</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="price" required placeholder="Enter Price">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">City</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[210]" data-desc="btn_city">City</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="city" required placeholder="Enter City">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">State</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[211]" data-desc="btn_price_location">State</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="state" required placeholder="Enter State">
 													</div>
@@ -303,7 +303,7 @@ if(isset($_POST['add']))
 											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Floor</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[952]" data-desc="btn_total_floors">Total Floors</ti></label>
 													<div class="col-lg-9">
 														<select class="form-control" required name="totalfl">
 															<option value="">Select Floor</option>
@@ -326,13 +326,13 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Area Size</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[953]" data-desc="btn_area_size">Area Size</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="asize" required placeholder="Enter Area Size (in sqrt)">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Address</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[209]" data-desc="btn_address">Address</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="loc" required placeholder="Enter Address">
 													</div>
@@ -342,7 +342,7 @@ if(isset($_POST['add']))
 										</div>
 										
 										<div class="form-group row">
-											<label class="col-lg-2 col-form-label">Feature</label>
+											<label class="col-lg-2 col-form-label"><ti data-ison="stxt[930]" data-desc="btn_features">Features</ti></label>
 											<div class="col-lg-9">
 											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
 											
@@ -358,7 +358,7 @@ if(isset($_POST['add']))
 													</div>
 													<div class="col-md-4">
 														<ul>
-														<li class="mb-3"><span class="text-secondary font-weight-bold">Type : </span>Appartment</li>
+														<li class="mb-3"><span class="text-secondary font-weight-bold">Type : </span>Apartment</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Security : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Dining Capacity : </span>10 People</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Temple  : </span>Yes</li>
@@ -378,40 +378,40 @@ if(isset($_POST['add']))
 											</div>
 										</div>
 												
-										<h5 class="text-secondary">Image & Status</h5><hr>
+										<h5 class="text-secondary"><ti data-ison="stxt[954]" data-desc="btn_image_status">Image - Status</ti></h5><hr>
 										<div class="row">
 											<div class="col-xl-6">
 												
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[955]" data-desc="btn_image">Image</ti></label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage" type="file" required="">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 2</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[955]" data-desc="btn_image">Image</ti> 2</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage2" type="file" required="">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 4</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[955]" data-desc="btn_image">Image</ti> 4</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage4" type="file" required="">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Status</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[956]" data-desc="btn_status">Status</ti></label>
 													<div class="col-lg-9">
 														<select class="form-control"  required name="status">
-															<option value="">Select Status</option>
+															<option value=""><ti data-ison="stxt[957]" data-desc="btn_select_status">Select Status</ti></option>
 															<option value="available">Available</option>
 															<option value="sold out">Sold Out</option>
 														</select>
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Basement Floor Plan Image</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[958]" data-desc="btn_basement_floor_plan_image">Basement Floor Plan Image</ti></label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage1" type="file">
 													</div>
@@ -420,26 +420,26 @@ if(isset($_POST['add']))
 											<div class="col-xl-6">
 												
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 1</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[955]" data-desc="btn_image">Image</ti> 1</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage1" type="file" required="">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">image 3</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[955]" data-desc="btn_image">Image</ti> 3</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage3" type="file" required="">
 													</div>
 												</div>
 												
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Floor Plan Image</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[959]" data-desc="btn_floor_plan_image">Floor Plan Image</ti></label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage" type="file">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Ground Floor Plan Image</label>
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[960]" data-desc="btn_ground_floor_plan_image">Ground Floor Plan Image</ti></label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage2" type="file">
 													</div>

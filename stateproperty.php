@@ -40,7 +40,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title><?php $shopTitle ?></title>
 </head>
 <body>
 
@@ -164,12 +164,12 @@ include("config.php");
                                 </div>
                                 <input type="text" class="form-control" name="interest" placeholder="Interest Rate">
                             </div>
-                            <button type="submit" value="submit" name="calc" class="btn btn-primary mt-4">Calclute Instalment</button>
+                            <button type="submit" value="submit" name="calc" class="btn btn-primary mt-4"><ti data-ison="stxt[939]" data-desc="btn_calclute_instalment">Calclute Instalment</ti></button>
                         </form>
                         </div>
                         
                         <div class="sidebar-widget mt-5">
-                            <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4">Recent Property Add</h4>
+                            <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4"><ti data-ison="stxt[941]" data-desc="btn_recent_property_add">Recent Property Add</ti></h4>
                             <ul class="property_list_widget">
 							
 								<?php 

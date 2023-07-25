@@ -30,6 +30,10 @@ if(!isset($_SESSION['auser']))
 		
 		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
 		
+				<link rel="stylesheet" href="../css/jquery-ui.css">
+				<link rel="stylesheet" href="../css/jquery-ui.structure.css">
+				<link rel="stylesheet" href="../css/jquery-ui.theme.css">
+
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
 		
@@ -191,8 +195,9 @@ if(!isset($_SESSION['auser']))
 		<!-- /Main Wrapper -->
 		
 		<!-- jQuery -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+			<script src="../js/jquery-ui.js"></script> 
 		<!-- Bootstrap Core JS -->
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -206,8 +211,10 @@ if(!isset($_SESSION['auser']))
 		
 		<!-- Custom JS -->
 		<script  src="assets/js/script.js"></script>
+	
+		<script src="assets/js/jquery.dataTables.min.js"></script> 
 		
-    	<img alt="" height="77" src="../images/logo/logo-small.png" width="126">
+    	&nbsp;
 		
     </body>
 
