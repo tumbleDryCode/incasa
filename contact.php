@@ -79,17 +79,17 @@ if(isset($_POST['send']))
         <!--	Header end  -->
         
         <!--	Banner -->
-        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
+        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');max-height: 121px">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Contact</b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[912]" data-desc="btn_contacts">Contact Us</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active"><ti data-ison="stxt[912]" data-desc="btn_contacts">Contact Us</li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[912]" data-desc="btn_contacts">Contact Us</ti></li>
                             </ol>
                         </nav>
                     </div>
@@ -104,12 +104,12 @@ if(isset($_POST['send']))
                 <div class="row">
                     <div class="col-lg-4 mb-5 bg-primary">
                         <div class="contact-info">
-                            <h3 class="mb-4 mt-4 text-white">Contacts</h3>
+                            <h3 class="mb-4 mt-4 text-white"><ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti></h3>
 							
                             <ul>
                                 <li class="d-flex mb-4"> <i class="fas fa-map-marker-alt text-white mr-2 font-13 mt-1"></i>
                                     <div class="contact-address">
-                                        <h5 class="text-white"><ti data-ison="stxt[907]" data-desc="btn_forum"><ti data-ison="stxt[209]" data-desc="btn_address">Address</ti></h5>
+                                        <h5 class="text-white"><ti data-ison="stxt[209]" data-desc="btn_address">Address</ti></h5>
                                         <span class="text-secondary">Vale do Tejo</span> 
  
 										</div>
@@ -136,7 +136,7 @@ if(isset($_POST['send']))
 						<div class="container">
                         <div class="row">
 							<div class="col-lg-12">
-								<h2 class="text-secondary double-down-line text-center mb-5">Get In Touch</h2>
+								<h2 class="text-secondary double-down-line text-center mb-5"><ti data-ison="stxt[968]" data-desc="btn_getintouch">Get In Touch</ti></h2>
 								<?php echo $msg; ?><?php echo $error; ?>
 							</div>
 						</div>
@@ -204,6 +204,13 @@ if(isset($_POST['send']))
 <script src="js/wow.js"></script> 
 <script src="js/jquery.cookie.js"></script> 
 <script src="js/custom.js"></script>  
-
+<script>
+	document.getElementsByName('name')[0].placeholder=stxt[97];
+	document.getElementsByName('email')[0].placeholder=stxt[50];
+	document.getElementsByName('phone')[0].placeholder=stxt[24];
+	document.getElementsByName('subject')[0].placeholder=stxt[969];
+	document.getElementsByName('message')[0].placeholder=stxt[970] ;
+	document.getElementsByName('send')[0].value=stxt[935];
+</script>
 </body>
 </html>

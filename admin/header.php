@@ -173,7 +173,7 @@ if(!isset($_SESSION['auser']))
 								<span><ti data-ison="stxt[30]" data-desc="btn_about">About</ti></span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fe fe-user"></i> <span> About </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fe fe-user"></i><span><ti data-ison="stxt[30]" data-desc="btn_about">About</ti></span><span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="aboutadd.php"> <ti data-ison="stxt[30]" data-desc="btn_about">About</ti> </a></li>
 									<li><a href="aboutview.php"><ti data-ison="stxt[967]" data-desc="btn_view_about">View About</ti></a></li>

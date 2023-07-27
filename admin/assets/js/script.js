@@ -209,6 +209,7 @@ Version      : 1.0
 	// Small Sidebar
 
 	$(document).on('click', '#toggle_btn', function() {
+		/*
 		if($('body').hasClass('mini-sidebar')) {
 			$('body').removeClass('mini-sidebar');
 			$('.subdrop + ul').slideDown();
@@ -216,12 +217,14 @@ Version      : 1.0
 			$('body').addClass('mini-sidebar');
 			$('.subdrop + ul').slideUp();
 		}
+		*/
 		setTimeout(function(){ 
 			mA.redraw();
 			mL.redraw();
 		}, 300);
 		return false;
 	});
+	/*
 	$(document).on('mouseover', function(e) {
 		e.stopPropagation();
 		if($('body').hasClass('mini-sidebar') && $('#toggle_btn').is(':visible')) {
@@ -236,7 +239,7 @@ Version      : 1.0
 			return false;
 		}
 	});
-	
+	*/
 	// Template Options
 	
 	$(document).on('click', '.skin-sett-icon', function() {

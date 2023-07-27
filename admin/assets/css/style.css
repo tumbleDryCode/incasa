@@ -1674,12 +1674,16 @@ html.menu-opened body {
 }
 
 .sidebar-menu ul {
+	font-size: 15px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
  
  
 }
 .sidebar-menu li a {
 	color: #fff;
- 
+	padding: 0 20px;
 	font-size: 16px;
  
 }

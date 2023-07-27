@@ -234,14 +234,14 @@ stxt[905] = "Suas Propriedades";
 stxt[906] = "Adicionar Propriedade";
  
 stxt[907] = "Forum";
-stxt[908] = "Statistics";
-stxt[909] = "Terms and Conditions";
-stxt[910] = "Get Support";
-stxt[911] = "Freequenly Ask Questions";
-stxt[912] = "Contact Us";
+stxt[908] = "Statisticas";
+stxt[909] = "Termos and Condicoes";
+stxt[910] = "Apoio";
+stxt[911] = "Perguntas Frequentes";
+stxt[912] = "Contacte-nos";
  
  
-stxt[913] = "About Us";
+stxt[913] = "Sobre Nos";
 stxt[914] = "Em Destaque";
 stxt[915] = "Seja Membro";
 stxt[916] = "Adicionar Propriedade";
@@ -296,7 +296,9 @@ stxt[964] = "Adicionar Propriedade";
 stxt[965] = "Ver Propriedades";
 stxt[966] = "Conselhos - Freguesias";
 stxt[967] = "Ver Sobre";
- 
+stxt[968] = "Entre em Contacto";
+stxt[969] = "Assunto";
+stxt[970] = "Mensagem";
 
 
 

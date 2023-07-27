@@ -2439,7 +2439,7 @@ if(JSSHOP.cookies.getCookie("usrlang") !== null) {
 	// alert("usrlang.cookie: " + usrlang);
 usrlang = JSSHOP.cookies.getCookie("usrlang");
 } else {
-usrlang = "pt_pt";
+usrlang = "en_us";
 }
 
 if(JSSHOP.cookies.getCookie("recentActivity") !== null) {

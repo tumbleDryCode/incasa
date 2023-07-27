@@ -305,7 +305,7 @@ if(isset($_POST['add']))
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[952]" data-desc="btn_total_floors">Total Floors</ti></label>
 													<div class="col-lg-9">
-														<select class="form-control" required name="totalfl">
+														<select class="form-control" required name="totalfl" id="totalfl">
 															<option value="">Select Floor</option>
 															<option value="1 Floor">1 Floor</option>
 															<option value="2 Floor">2 Floor</option>
@@ -488,5 +488,7 @@ if(isset($_POST['add']))
 <script src="js/jquery.slider.js"></script> 
 <script src="js/wow.js"></script> 
 <script src="js/custom.js"></script>
-</body>
+<script laguage="javascript" type="text/javascript">
+JSSHOP.shared.addCurrSlctObj(svftObj["u_jtype"], totalfl, "noQvalue", "noQvalue", "Select");
+</script></body>
 </html>

@@ -296,11 +296,9 @@ stxt[964] = "Add Property";
 stxt[965] = "View Properties";
 stxt[966] = "State - City";
 stxt[967] = "View About";
- 
-
-
-
-
+stxt[968] = "Get In Touch";
+stxt[969] = "Subject";
+stxt[970] = "Message";
 
 
 

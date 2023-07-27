@@ -8,7 +8,7 @@
                                     <div class="footer-widget mb-4">
                                         <div class="footer-logo mb-4"> &nbsp;<table style="width: 100%; background-color: #FFFFFF">
 											<tr>
-												<td> <a href="#"><img class="logo-bottom" src="images/logo/logo-white.png" alt="image"></a></td>
+												<td> <a href="#"><img class="" src="images/logo/logo-white.png" alt="image" style="max-width:60px"></a></td>
 											</tr>
 											</table>
 										</div>
@@ -74,8 +74,6 @@
             </div>
         </footer>
 
-        <script src="js/x_booter.js"></script> 
-<script src="js/x_all.js"></script> 
 <script>
 JSSHOP.loadScript("js/" + jscssprefix + "aa-" + usrlang + ".js", donada,"js");
 
