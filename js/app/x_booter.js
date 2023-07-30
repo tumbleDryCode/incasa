@@ -1,3 +1,10 @@
+if(JSSHOP.cookies.getCookie("usrlang") !== null) {
+	// alert("usrlang.cookie: " + usrlang);
+usrlang = JSSHOP.cookies.getCookie("usrlang");
+} else {
+usrlang = "pt_pt";
+}
+
 var doNadaAlert = function(tmpa, tmpb, tmpc) {
 alert("doNadaAlert: " + tmpb);
 };
@@ -2435,12 +2442,7 @@ setCartIArr("n", currCartStr, "n");
 
 	
 	
-if(JSSHOP.cookies.getCookie("usrlang") !== null) {
-	// alert("usrlang.cookie: " + usrlang);
-usrlang = JSSHOP.cookies.getCookie("usrlang");
-} else {
-usrlang = "en_us";
-}
+
 
 if(JSSHOP.cookies.getCookie("recentActivity") !== null) {
 // currRcntActStr = JSSHOP.cookies.getCookie("recentActivity");
@@ -2486,7 +2488,7 @@ JSSHOP.loadScript("js/app/" + jscssprefix + "aa-" + usrlang + ".js", doFrmQLoad,
 } catch(e) {
 alert("doBootLoad error: " + e)
 // JSSHOP.logJSerror(e, arguments, "doBootLoad");
-// JSSHOP.loadScript("js/" + jscssprefix + "aa-" + usrlang + ".js", doFrmQLoad,"js");
+// JSSHOP.loadScript("js/app/" + jscssprefix + "aa-" + usrlang + ".js", doFrmQLoad,"js");
 
 } 
 

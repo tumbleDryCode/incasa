@@ -299,6 +299,9 @@ stxt[967] = "Ver Sobre";
 stxt[968] = "Entre em Contacto";
 stxt[969] = "Assunto";
 stxt[970] = "Mensagem";
+stxt[971] = "Emcontre";
+stxt[972] = "sua Casa de Sonho";
+stxt[973] = "Livro de Reclamações"; // Livro de reclamações
 
 
 
@@ -399,5 +402,47 @@ tDBcritObj["greater"] = "Greater Than";
 tDBcritObj["less"] = "Less Than";
 svftObj["xss_crit"] = tDBcritObj;
 
+
+tDBHObj = null;
+tDBJObj = "";
+tDBHObj = {};
+tDBHObj["house"] = "Moradia";
+tDBHObj["apartment"] = "Apartamento";
+tDBHObj["condo"] = "Condominio";
+tDBHObj["townhouse"] = "Villa";
+tDBHObj["duplex"] = "Duplex";
+tDBHObj["triplex"] = "Triplex";
+tDBHObj["fourplex"] = "Fourplex";
+tDBHObj["mobile"] = "Caravana";
+tDBHObj["manufactured"] = "Prefabricado";
+tDBHObj["farm"] = "Quinta";
+tDBHObj["ranch"] = "Herdade";
+tDBHObj["lot"] = "Lot";
+tDBHObj["acreage"] = "Hectares";
+tDBHObj["other"] = "Outro";
+svftObj["proptype"] = tDBHObj;
+
+tmpContType = null;
+tmpContType = "";
+tmpContType = {};
+tmpContType["sell"] = "Vender";
+tmpContType["rent"] = "Aluguer";
+tmpContType["lease"] = "Lease";
+tmpContType["auction"] = "Leilao";
+tmpContType["foreclosure"] = "Liquidaçao";
+tmpContType["buy"] = "Comprar";
+tmpContType["other"] = "OOutrother";
+svftObj["contract"] = tmpContType;
+
+tDPStatObj = null;
+tDPStatObj = "";
+tDPStatObj = {};
+tDPStatObj["active"] = "Ativo";
+tDPStatObj["pending"] = "Pendente";
+tDPStatObj["sold"] = "Vendido";
+tDPStatObj["expired"] = "Expirado";
+tDPStatObj["withdrawn"] = "Retirado";
+tDPStatObj["other"] = "Outro";
+svftObj["propstat"] = tDPStatObj;
 
  

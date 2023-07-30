@@ -21,12 +21,20 @@
                                             <div class="footer-widget footer-nav mb-4">
                                                 <h4 class="widget-title text-white double-down-line-left position-relative">Support</h4>
                                                 <ul class="hover-text-primary">
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[907]" data-desc="btn_forum">Forum</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[908]" data-desc="btn_statistics">Statistics</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[909]" data-desc="btn_terms">Terms and Condition</ti></a></li>
+                                                    <!--
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[910]" data-desc="btn_support">Get Support</ti></a></li>
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[911]" data-desc="btn_faqs">Freequenly Ask Question</ti></a></li>
+                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[907]" data-desc="btn_forum">Forum</ti></a></li>
+                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[908]" data-desc="btn_statistics">Statistics</ti></a></li>
+                                                    -->
+
                                                     <li><a href="contact.php" class="text-white"><ti data-ison="stxt[912]" data-desc="btn_contact">Contact</ti></a></li>
+                                                    <li><a href="https://www.livroreclamacoes.pt/" class="text-white" target="_blank"><ti data-ison="stxt[973]" data-desc="btn_complaint">Report Issue</ti></a></li>
+                                                    <li><a href="terms.php" class="text-white"><ti data-ison="stxt[909]" data-desc="btn_terms">Terms and Condition</ti></a></li>
+                                                    <li><a href="privacy.php" class="text-white"><ti data-ison="stxt[919]" data-desc="btn_privacy">Privacy Policy</ti></a></li>
+
+
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -34,15 +42,20 @@
                                             <div class="footer-widget footer-nav mb-4">
                                                 <h4 class="widget-title text-white double-down-line-left position-relative">Quick Links</h4>
                                                 <ul class="hover-text-primary">
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[913]" data-desc="btn_about">About Us</ti></a></li>
+                                                    <li><a href="about.php" class="text-white"><ti data-ison="stxt[913]" data-desc="btn_about">About Us</ti></a></li>
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[914]" data-desc="btn_featured">Featured Property</ti></a></li>
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[915]" data-desc="btn_member">Become A Member</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></a></li>
+                                                    <li><a href="submitproperty.php" class="text-white"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></a></li>
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[917]" data-desc="btn_how">How It Works</ti></a></li>
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[918]" data-desc="btn_ouragentes">Our Agentes</ti></a></li>
                                                 </ul>
                                             </div>
                                         </div>
+
+
+
+
+
                                         <div class="col-md-4 col-lg-4">
                                             <div class="footer-widget">
                                                 <h4 class="widget-title text-white double-down-line-left position-relative">Contact-Us</h4>
@@ -55,6 +68,11 @@
                                             </div>
                                             <div class="footer-widget media-widget mt-4 text-white hover-text-primary"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="admin/dashboard.php"><i class="fas fa-rss"></i></a> </div>
                                         </div>
+
+
+                                       
+
+
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +80,6 @@
                     </div>
                 </div>
                 <div class="row copyright">
-                    <div class="col-sm-6"> <span class="text-white">Ã‚Â© 2019 in-casa All right reserved</span> </div>
                     <div class="col-sm-6">
                         <ul class="line-menu text-white hover-text-primary float-right">
                             <li><a href="#"><ti data-ison="stxt[919]" data-desc="btn_privacy">Privacy & Policy</ti></a></li>
@@ -70,12 +87,28 @@
                             <li><a href="#"> Site Map</a></li>
                         </ul>
                     </div>
+
+
+                 
                 </div>
+
+
+            <div style=""  class="copyright col-sm-6">
+            <a class="txtSmall txtClrWhite txtDecorNone" href="javascript:JSSHOP.cookies.setCookie('usrlang','en_us','130','','','');document.location.href='index.php?nls=y';">
+			English</a>&nbsp; |&nbsp;
+			<a class="txtSmall txtClrWhite txtDecorNone" href="javascript:JSSHOP.cookies.setCookie('usrlang','spa_spa','130','','','');document.location.href='index.php?nls=y';">
+			Spanish</a>&nbsp; |&nbsp;
+			<a class="txtSmall txtClrWhite txtDecorNone"  href="javascript:JSSHOP.cookies.setCookie('usrlang','pt_pt','130','','','');document.location.href='index.php?nls=y';">
+			Portuguese</a>
             </div>
+
+            
+            </div>
+           
         </footer>
 
 <script>
-JSSHOP.loadScript("js/" + jscssprefix + "aa-" + usrlang + ".js", donada,"js");
+JSSHOP.loadScript("js/app/" + jscssprefix + "aa-" + usrlang + ".js", donada,"js");
 
 setTimeout("doDWD()", 800);
 

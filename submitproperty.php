@@ -86,37 +86,9 @@ if(isset($_POST['add']))
 <html lang="en">
 
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Meta Tags -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="images/favicon.ico">
-
-<!--	Fonts
-	========================================================
-<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
--->
-<!--	Css Link
-	========================================================-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="css/color.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/login.css">
-
-<!--	Title
-	=========================================================-->
-<title>Homex - Real Estate Template</title>
-</head>
+        <!--	HYML Header start  -->
+		<?php include("include/html_header.php");?>
+        <!--	HYML Header end  --></head>
 <body>
 
 <!--	Page Loader
@@ -134,21 +106,21 @@ if(isset($_POST['add']))
 <div id="page-wrapper">
     <div class="row"> 
         <!--	Header start  -->
-		<?php include("include/header.php");?>
+		<?php  include("include/header.php");?>
         <!--	Header end  -->
         
         <!--	Banner   --->
-        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
+        <div class="" style="background-image:url('images/breadcromb.jpg');max-height:200px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[941]" data-desc="btn_addprop">Submit Property</ti></b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active"><ti data-ison="stxt[941]" data-desc="btn_addprop">Submit Property</ti></li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></li>
                             </ol>
                         </nav>
                     </div>
@@ -163,57 +135,85 @@ if(isset($_POST['add']))
             <div class="container">
                     <div class="row">
 						<div class="col-lg-12">
-							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[941]" data-desc="btn_addprop">Submit Property</ti></h2>
+							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></h2>
                         </div>
 					</div>
-                    <div class="row p-5 bg-white">
+                    <div class="">
                         <form method="post" enctype="multipart/form-data">
-								<div class="description">
+								<div class="description" id="dvDescM">
+								<div class="accordion" id="accordionEPExample">
 									<h5 class="text-secondary"><ti data-ison="stxt[947]" data-desc="btn_basic_information">Basic Information</ti></h5><hr>
 									<?php echo $error; ?>
 									<?php echo $msg; ?>
 									
 										<div class="row">
 											<div class="col-xl-12">
+											<div class="form-group row">
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[956]" data-desc="btn_status">Status</ti></label>
+													<div class="col-lg-9">
+														<select class="form-control" name="status" id="selPropStat">
+														 
+														</select>
+													</div>
+												</div>
+												
+											<div class="form-group row">
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[949]" data-desc="btn_selling_type">Selling Type</ti></label>
+													<div class="col-lg-9">
+														<select class="form-control" name="stype" id="stype">
+	 
+														</select>
+													
+													</div>
+												</div>
+												
+												<div class="form-group row">
+													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[927]" data-desc="btn_property_type">Property Typee</ti></label>
+													<div class="col-lg-9">
+														<select class="form-control" name="ptype" id="ptype">
+															 
+														</select>
+													</div>
+												</div>
+												
+												
 												<div class="form-group row">
 													<label class="col-lg-2 col-form-label"><ti data-ison="stxt[10]" data-desc="btn_title">Title</ti></label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="title" required placeholder="Enter Title">
 													</div>
 												</div>
-												<div class="form-group row">
-													<label class="col-lg-2 col-form-label"><ti data-ison="stxt[948]" data-desc="btn_content">Content</ti></label>
+												<!-- test Accordian -->
+												<label class=""><ti data-ison="stxt[948]" data-desc="btn_content">Content</ti></label>
+												<div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+        <button style="background-color: #eaf9f9;border: 1px solid #483c3c" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+        <div><i class="nav-material-icons coll-menu-item txtClrHdr" style="margin-right:4px;">&#xe0d0</i><span class="txtClrHdr"><ti data-ison="stxt[948]" data-desc="btn_content">Content</ti></span><br>
+			 </div>
+
+        </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+        <div class="accordion-body">
+        <!-- tinymc -->
+        <div class="form-group row" id="dvFGRo">
+													
 													<div class="col-lg-9">
 														<textarea class="tinymce form-control" name="content" rows="10" cols="30"></textarea>
 													</div>
 												</div>
+        <!-- end tinymc -->
+        </div>
+        </div>
+    </div>
+
+												<!-- end test Accordian -->												
+												
 												
 											</div>
 											<div class="col-xl-6">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[927]" data-desc="btn_property_type">Property Type</ti></label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="ptype">
-															<option value="">Select Type</option>
-															<option value="appartment">Appartment</option>
-															<option value="flat">Flat</option>
-															<option value="bunglow">Bunglow</option>
-															<option value="house">House</option>
-															<option value="villa">Villa</option>
-															<option value="office">Office</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[949]" data-desc="btn_selling_type">Selling Type</ti></label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="stype">
-															<option value=""><ti data-ison="stxt[950]" data-desc="btn_select_status">Select Status</ti></option>
-															<option value="rent">Rent</option>
-															<option value="sale">Sale</option>
-														</select>
-													</div>
-												</div>
+												
+												
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[923]" data-desc="btn_bathroom">Bathroom</ti></label>
 													<div class="col-lg-9">
@@ -341,7 +341,7 @@ if(isset($_POST['add']))
 											</div>
 										</div>
 										
-										<div class="form-group row">
+										<div class="form-group row" style="display:none; visibility: hidden">
 											<label class="col-lg-2 col-form-label"><ti data-ison="stxt[930]" data-desc="btn_features">Features</ti></label>
 											<div class="col-lg-9">
 											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
@@ -401,16 +401,6 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[956]" data-desc="btn_status">Status</ti></label>
-													<div class="col-lg-9">
-														<select class="form-control"  required name="status">
-															<option value=""><ti data-ison="stxt[957]" data-desc="btn_select_status">Select Status</ti></option>
-															<option value="available">Available</option>
-															<option value="sold out">Sold Out</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[958]" data-desc="btn_basement_floor_plan_image">Basement Floor Plan Image</ti></label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage1" type="file">
@@ -451,7 +441,7 @@ if(isset($_POST['add']))
 											<input type="submit" value="Submit" class="btn btn-primary"name="add" style="margin-left:200px;">
 										
 								</div>
-								</form>
+								</div></form>
                     </div>            
             </div>
         </div>
@@ -459,9 +449,16 @@ if(isset($_POST['add']))
         
         
         <!--	Footer   start-->
-		<?php include("include/footer.php");?>
+		<?php  include("include/footer.php");?>
 		<!--	Footer   start-->
         
+        
+        <script laguage="javascript" type="text/javascript">
+// JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "Select");
+
+</script>
+
+
         <!-- Scroll to top --> 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
         <!-- End Scroll To top --> 
@@ -489,6 +486,10 @@ if(isset($_POST['add']))
 <script src="js/wow.js"></script> 
 <script src="js/custom.js"></script>
 <script laguage="javascript" type="text/javascript">
-JSSHOP.shared.addCurrSlctObj(svftObj["u_jtype"], totalfl, "noQvalue", "noQvalue", "Select");
+// JSSHOP.shared.addCurrSlctObj(svftObj["u_jtype"], totalfl, "noQvalue", "noQvalue", "Select");
+JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "noQvalue", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "noQvalue", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "noQvalue");
+
 </script></body>
 </html>

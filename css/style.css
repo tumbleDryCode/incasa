@@ -3,13 +3,19 @@
 	-moz-transition: all 0.6s ease 0s;
 	-webkit-transition: all 0.6s ease 0s;
 	-o-transition: all 0.6s ease 0s;
+	/* overflow-x: auto; */
 }
+.flowerx {
+	overflow-x: auto;
+}
+/* Not using this
 ::-webkit-scrollbar {
   width: 7px;
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 3px #ececec; 
 }
+*/
 
 /*=========================================================
  Color Settings
@@ -480,7 +486,7 @@ hover-text-white-nav .navbar-nav .nav-link.active,
 .bg-shape::after, 
 .send-mail button,
 ::-webkit-scrollbar-thumb{
-	background-color: var(--theme-primary-color)
+	 background-color: var(--theme-primary-color)  
 }
 .bg-secondary {
 	background-color: var(--theme-secondary-color) !important
@@ -694,7 +700,7 @@ body {
 	line-height: 28px;
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	font-family: var(--theme-highlight-font);
+	/*font-family: var(--theme-highlight-font); +*/
 	font-weight: 700;
 }
 h4, .h4 {
@@ -1035,7 +1041,8 @@ blockquote {
 	margin-right: 2px;
 	font-size: 15px;
 	border-radius: 3px;
-	font-weight: 500
+	font-weight: 500;
+	color: #fff;
 }
 .hover-border-white-nav .navbar-nav .nav-link {
 	border: 1px solid transparent;
@@ -1303,9 +1310,11 @@ blockquote {
 .form-control {
 	font-family: var(--theme-ordinary-font);
 	font-size: 15px;
-	height: 50px;
+	/* height: 50px; */
 	border-color: #483c3c;
-	line-height: 35px
+	line-height: 35px;
+	background-color: #eaf9f9;
+	padding: .125rem .75rem;
 }
 ::-webkit-input-placeholder { /* Edge */
  font: var(--theme-ordinary-font);
@@ -1387,7 +1396,7 @@ blockquote {
 	width: 162px;
 }
 .form-group label {
-	margin-bottom: 15px;
+	margin-bottom: 1px;
 }
 .radio-check label {
 	background-color: #ededed;
@@ -1495,27 +1504,34 @@ blockquote {
 .accordion button::after {
 	position: absolute;
 	font-family: "Font Awesome 5 Free";
-	content: "\f106";
+
 	font-weight: 900;
 	color: inherit;
 	font-size: 12px;
 	right: 20px;
 	top: 50%;
+	border: 0px;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
 }
 .accordion button.collapsed::after {
 	position: absolute;
 	font-family: "Font Awesome 5 Free";
-	content: "\f107";
+
 	font-weight: 900;
 	color: inherit;
 	font-size: 12px;
 	right: 20px;
 	top: 50%;
+	border: 0px;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
 }
+
 /*=====================================
  Contact Information Style
  =====================================*/

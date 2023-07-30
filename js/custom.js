@@ -408,7 +408,7 @@
 
 	// Youtube and Vimeo video popup control
 	jQuery(function(){
-		jQuery("a.video-popup").YouTubePopUp();
+		// jQuery("a.video-popup").YouTubePopUp();
 		//jQuery("a.video-popup").YouTubePopUp( { autoplay: 0 } ); // Disable autoplay
 	});
    
@@ -497,7 +497,7 @@
 
 		});
 	} 
-
+/*
 	// Pricing bar Filter
 	$(".filter-price").slider({ 
 		from: 0,
@@ -572,7 +572,7 @@
 	   skin: "plastic" 
 	});
  
-
+*/
  
 	//  Panel Massage
 	var close = document.getElementsByClassName("closebtn");

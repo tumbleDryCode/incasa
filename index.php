@@ -2,39 +2,14 @@
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
-include("config.php");
-								
+include("config.php");							
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Meta Tags -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="images/favicon.ico">
-
-
-<!--	Css Link
-	========================================================-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="css/color.css" id="color-change">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<!--	Title
-	=========================================================-->
-<title>IN-CASA ...</title>
-
- 
+        <!--	HYML Header start  -->
+		<?php include("include/html_header.php");?>
+        <!--	HYML Header end  -->
 </head>
 <body>
 
@@ -54,58 +29,26 @@ include("config.php");
 		<?php include("include/header.php");?>
         <!--	Header end  -->
 		
-        <!--	Banner Start   -->
-        <div class="" style="background-image: url('images/banner/04.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;margin:9px">
+        <!--	Banner Start  -->
+  
+        <div class="rtable brdrClrHdr" style="background-image: url('images/banner/04.jpg'); min-width: 95%; max-width: 95%;min-height: 105%;margin:0 auto;margin-top:2px;">
+
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
-                    <div class="col-lg-12">
-                        <div class="text-white">
-                            <h1 class="mb-4"><span class="text-primary">Encontre</span><br>
-                                Sua casa de sonho</h1>
-                            <form method="post" action="propertygrid.php" id="psearch">
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-2">
-                                        <div class="form-group">
-                                            <select class="form-control" name="type" id="ptype">
-                                                <option value="house">Moradia</option>
-												<option value="appartment">Apartamento</option>
-												<option value="flat">Flat</option>
-												<option value="bunglow">Bunglow</option>
-												
-												<option value="villa">Villa</option>
-												<option value="office">Escritorio</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-2">
-                                        <div class="form-group">
-                                            <select class="form-control" name="stype" id="pstype">
-                                               												<option value="sale">Comprar</option>
-												<option value="rent">Alugar</option>
 
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="city" id="pcity" placeholder="Introduza Localidade" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-lg-2" style="padding-bottom:8px">
-                                        <div class="form-group" >
-                                            <button type="button" name="filter" class="btn btn-primary w-100" style=" font-weight:bolder" onclick="javascript:dosearch();">Procurar Propriedade</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="hidden" id="q" value="moradia comprar alcanena">
-                            </form>
+               
+                    <div class="col-lg-12">
+                        <div>
+                            <span class="text-primary txtBig"><ti data-ison="stxt[971]" data-desc="btn_find">Find</ti></span><br>
+                           <span class="txtClrWhite txtBigger"> <ti data-ison="stxt[972]" data-desc="btn_dreamhome"> your dream home</ti></span><br>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--	Banner End  -->
-        
+         <!--	 Banner End  -->
+ 
         <!--	Text Block One
 		======================================================-->
 		<!-----  Our Services  ---->
@@ -153,7 +96,7 @@ include("config.php");
                                                         <li><span><?php echo $row['6'];?></span> Camas</li>
                                                         <li><span><?php echo $row['7'];?></span> Casas Banho</li>
                                                         <li><span><?php echo $row['9'];?></span> Cosinhas</li>
-                                                        <li><span><?php echo $row['8'];?></span> TeraÃ§os</li>
+                                                        <li><span><?php echo $row['8'];?></span> Teracos</li>
                                                         
                                                     </ul>
                                                 </div>
@@ -177,6 +120,11 @@ include("config.php");
             </div>
         </div>
 		 
+
+
+ 
+
+
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
         
@@ -209,8 +157,11 @@ include("config.php");
 <script src="js/YouTubePopUp.jquery.js"></script> 
 <script src="js/validate.js"></script> 
 <script src="js/jquery.cookie.js"></script> 
+<script laguage="javascript" type="text/javascript">
+JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "Select");
+JSSHOP.shared.addCurrSlctObj(svftObj["contract"], pstype, "noQvalue", "noQvalue", "Select");
 
- <ti data-ison="stxt[63]" data-desc="btn_more">Moreda</ti>
+</script></body>
 </body>
 
 </html>

@@ -1,13 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/x_cc.css">
-<link rel="stylesheet" type="text/css" href="css/x_dev.css">
 
-<link rel="stylesheet" type="text/css" href="css/x_forms.css">
-
-<script src="js/x_allinit.js"></script> 
-<script src="js/x_last.js"></script> 
-
-<script src="js/x_booter.js"></script> 
-<script src="js/x_all.js"></script> 
 <script>
 function doDWD() {
  xae = document.getElementsByTagName("ti");
@@ -41,7 +32,15 @@ if (person != null) {
 }
 </script>
 
-<header id="header" class="transparent-header-modern fixed-header-bg-white w-100">
+
+
+<div id="lightbox" class="lightbox"   onclick="javascript:JSSHOP.ui.closePopMenus();">
+</div> <div id="lightbox_content" class="rtable bkgdClrWhite" style="min-height:400px;min-width:350px;z-index: 2147483647;position:fixed;top:-700px;left:-700px;word-wrap: break-word;max-width:80%;margin: 0 auto">
+      </div>
+
+
+
+<header id="header" class="transparent-header-modern fixed-header-bg-white w-100" style="margin:0px;padding:0px;min-width:100%">
             <div class="top-header bg-secondary bigtable brdrClrHdr" style="margin:15px;">
                 <div class="container">
                     <div class="row">
@@ -58,29 +57,52 @@ if (person != null) {
 								<?php  if(isset($_SESSION['uemail']))
 								{ ?>
 								<a href="logout.php">Logout</a>&nbsp;&nbsp;<?php } else { ?>
-								<a href="login.php">Login</a>&nbsp;&nbsp;
+								<a href="login.php">Loginz</a>&nbsp;&nbsp;
+                                <a href="register.php"><ti data-ison="stxt[30]" data-desc="btn_register">Register</ti>
 								<?php } ?>
 								| </li>
-								<li><i class="fas fa-user text-primary mr-1"></i><a href="register.php"><ti data-ison="stxt[30]" data-desc="btn_register">Register</ti></li>
-								</ul>
+ 								</ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="main-nav secondary-nav hover-primary-nav py-2">
+            <div class="main-nav secondary-nav hover-primary-nav py-6  bg-secondary"  style="margin:0px;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 bigtable brdrClrHdr" style="margin:15px;">
-                            <nav class="navbar navbar-expand-lg navbar-light p-0"> <a class="navbar-brand position-relative" href="index.php"><b>eu...</b><img class="nav-logo" src="images/logo/logo-small.png" alt="" style="max-height:100px"></a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="col-lg-12" style="margin:0px;">
+                            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                              <span style="float:left;text-align:left;white-space: nowrap;"><a class="breadcrumb-item active" href="index.php"><img class="slmtable" src="images/logo/logo-small.png" alt="in-casa.eu" style="max-height:40px;max-width:40px;"> <b>IN<span class="txtClrHdr">-</span>CASA.eu</b></a></span>
+
+  <!-- menu icons 
+
+  <a href="javascript:void(0);" onclick="javascript:JSSHOP.ui.setNuCBBClickClr(this,'kcoll-menu-item','collection-item txtClrRed', function(){JSSHOP.ui.popAndFillLbox(doFavoritesRndr('y', 'y', 'y', 60).replace(/::/g, '<br>'))});" class="collection-item txtClrRed"><span><i class="menu-material-icons collection-item txtClrRed"></i></span><span style="vertical-align:super;padding-left:12px;" class="collection-item txtClrRed">Favorites</span></a>
+
+
+			<div style="">
+ 
+			<ul class="shop-menu" > 
+
+ 
+
+ 
+<li id="ahAccountIcon"  style="float:right"><a href="javascript:JSSHOP.ui.doDefCBBCC('ahAccountIcon', null, doEditUser());"><i class="material-icons"  style="margin-top: 5px;font-size:32px;" alt="person" title="person">&#xe7fd;</i></a></li>   
+ <li id="ahNotifyIcon"  style="float:right"><span id="spnAlrtNotify" class="icnbtn slmtable txtSmall txtClrWhite bkgdClrHdr" style="float:right"></span><a href="javascript:JSSHOP.ui.doDefCBBCC('ahNotifyIcon', null, doMLinkM('aa-show-notifications', 'pid=aa-show-notifications'));"><i class="material-icons"  style="margin-top: 5px;font-size:27px;margin-right:6px;" alt="Notify" title="notifications">&#xe7f4;</i></a></li>   
+
+<li id="ahMsgsIcon"  style="float:right"><span id="spnMsgsNotify" class="icnbtn slmtable txtSmall txtClrWhite bkgdClrHdr" style="float:right"></span><a href="javascript:JSSHOP.ui.doDefCBBCC('ahMsgsIcon', null, doMLinkM('aa-show-messages','pid=aa-show-messages'));"><i class="material-icons"  style="margin-top: 5px;font-size:27px;margin-right:6px;" alt="Messages" title="Messages">&#xe0b7;</i></a></li>   
+                                </ul>
+
+			</div>
+				  -->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="padding: 2px;background-color: #fff;border:0px;"> <span class="navbar-toggler-icon"></span> </button>
+                                <div class="collapse navbar-collapse txtClrWhite" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item dropdown"> <a class="nav-link" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">Home</a></li>
+                                        <li class="nav-item"> <a class="nav-link" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">Home</a></li>
 										
 										<li class="nav-item"> <a class="nav-link" href="about.php"><ti data-ison="stxt[30]" data-desc="btn_about">About</ti></a> </li>
 										
 										<li class="nav-item"> <a class="nav-link" href="agent.php"><ti data-ison="stxt[900]" data-desc="btn_agentes">Agentes</ti></a> </li>
+										<li class="nav-item"> <a class="nav-link" href="search.php"><ti data-ison="stxt[936]" data-desc="btn_searchprops">Search Properties</ti></a> </li>
 										
 										<li class="nav-item"> <a class="nav-link" href="property.php"><ti data-ison="stxt[901]" data-desc="btn_properties">Properties</ti></a> </li>
                                         <li class="nav-item"> <a class="nav-link" href="contact.php"><ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti></a> </li>
@@ -98,12 +120,14 @@ if (person != null) {
                                         </li>
 										<?php } else { ?>
 										<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>
+                                        <li class="nav-item"> <a class="nav-link"  href="register.php"><ti data-ison="stxt[961]" data-desc="btn_register">Register</ti></li>
 										<?php } ?>
 										
                                     </ul>
                                     
 									
 									<a class="btn btn-primary d-none d-xl-block" href="submitproperty.php"><ti data-ison="stxt[90]" data-desc="btn_about">About</ti></a> 
+                                    
                                 </div>
                             </nav>
                         </div>

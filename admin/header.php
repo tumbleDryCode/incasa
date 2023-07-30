@@ -10,8 +10,8 @@ if(!isset($_SESSION['auser']))
 	header("location:index.php");
 }
 ?>  
-        <link rel="stylesheet" href="../css/x_dev.css">
-                <link rel="stylesheet" href="../css/x_forms.css">
+<link rel="stylesheet" href="../css/x_dev.css">
+<link rel="stylesheet" href="../css/x_forms.css">
 
 
 <script type="text/javascript">
@@ -34,16 +34,14 @@ if(!isset($_SESSION['auser']))
 			<div>
 	
 				 
-								<a onclick="javascript:toggleVisibility('sidebara');" id="toggle_btn" style="float:right">
+								<a onclick="javascript:toggleVisibility('sidebara');" id="toggle_btn" style="float:right;padding: 2px;" class="bkgdWhite">
 					<i class="fa fa-bars"></i>
 				</a>
-
-
-				
+			
 				<!-- Mobile Menu Toggle -->
 	 
 				
-								<a class="mobile_btn" id="mobile_btna" onclick="javascript:toggleVisibility('sidebara');" style="float:right">
+								<a class="mobile_btn" id="mobile_btna" onclick="javascript:toggleVisibility('sidebara');" style="float:right;padding: 2px;" class="bkgdWhite">
 					<i class="fa fa-bars" ></i>
 				</a>
 
