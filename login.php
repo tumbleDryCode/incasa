@@ -22,7 +22,7 @@ if(isset($_REQUEST['login']))
 				
 		   }
 		   else{
-			   $error = "<p class='alert alert-warning'>Login Not Successfully</p> ";
+			   $error = "<p class='alert alert-warning'><ti data-ison='stxt[976]' data-desc='btn_loginerr'>Login Error</ti></p>";
 		   }
 	}else{
 		$error = "<p class='alert alert-warning'>Please Fill all the fields</p>";
@@ -33,36 +33,9 @@ if(isset($_REQUEST['login']))
 <html lang="en">
 
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Meta Tags -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="images/favicon.ico">
-
-<!--	Fonts
-	========================================================-->
-<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
-
-<!--	Css Link
-	========================================================-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="css/color.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/login.css">
-
-<!--	Title
-	=========================================================-->
-<title>Homex - Real Estate Template</title>
+        <!--	HYML Header start  -->
+		<?php include("include/html_header.php");?>
+        <!--	HYML Header end  -->
 </head>
 <body>
 
@@ -84,36 +57,27 @@ if(isset($_REQUEST['login']))
 		<?php include("include/header.php");?>
         <!--	Header end  -->
         
-        <!--	Banner   --->
-        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Login</b></h2>
-                    </div>
-                    <div class="col-md-6">
+		<div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
-                                <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item text-black"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">Login</li>
                             </ol>
                         </nav>
                     </div>
-                </div>
-            </div>
-        </div>
-         <!--	Banner   --->
 		 
 		 
 		 
-        <div class="page-wrappers login-body full-row bg-gray">
-            <div class="login-wrapper">
+        <div class="page-wrappers full-row" style="padding: 15px;">
+            <div class="">
             	<div class="container">
-                	<div class="loginbox">
+                	<div class="rtable bkgdClrWhite brdrClrHdr" style="max-width:600px;margin: 0 auto">
                         <div class="login-right">
 							<div class="login-right-wrap">
-								<h1>Login</h1>
-								<p class="account-subtitle">Access to our dashboard</p>
+							 
+								<p class="account-subtitle" style="margin:0px;padding:0px;"><ti data-ison="stxt[974]" data-desc="btn_login">Login</ti></p>
+								<span class="txtSmall txtClrGrey"><ti data-ison="stxt[37]" data-desc="btn_login">Email Password</ti>:</span>
+								
 								<?php echo $error; ?><?php echo $msg; ?>
 								<!-- Form -->
 								<form method="post">
@@ -127,13 +91,13 @@ if(isset($_REQUEST['login']))
 										<button class="btn btn-primary" name="login" value="Login" type="submit">Login</button>
 									
 								</form>
-								
+																<!-- Social Login 
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
 								</div>
 								
-								<!-- Social Login -->
+
 								<div class="social-login">
 									<span>Login with</span>
 									<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -141,9 +105,9 @@ if(isset($_REQUEST['login']))
 									<a href="#" class="facebook"><i class="fab fa-twitter"></i></a>
 									<a href="#" class="google"><i class="fab fa-instagram"></i></a>
 								</div>
-								<!-- /Social Login -->
-								
-								<div class="text-center dont-have">Don't have an account? <a href="register.php">Register</a></div>
+								  /Social Login -->
+								<br>
+								<div class="text-center dont-have"><ti data-ison="stxt[975]" data-desc="btn_reg">Dont have an Account</ti> <a href="register.php"><ti data-ison="stxt[36]" data-desc="btn_reg">Register</ti></a></div>
 								
 							</div>
                         </div>
@@ -159,7 +123,7 @@ if(isset($_REQUEST['login']))
 		<!--	Footer   start-->
         
         <!-- Scroll to top --> 
-        <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
+        <a href="#" class="bg-secondary text-white" id="scroll"><i class="fas fa-angle-up"></i></a> 
         <!-- End Scroll To top --> 
     </div>
 </div>
@@ -182,5 +146,10 @@ if(isset($_REQUEST['login']))
 <script src="js/jquery.slider.js"></script> 
 <script src="js/wow.js"></script> 
 <script src="js/custom.js"></script>
+<script laguage="javascript" type="text/javascript">
+document.getElementsByName('email')[0].placeholder= stxt[977];
+document.getElementsByName('pass')[0].placeholder= stxt[978];
+
+</script>
 </body>
 </html>

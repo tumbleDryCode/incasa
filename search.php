@@ -4,8 +4,7 @@ session_cache_limiter(false);
 session_start();
 include("config.php");							
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
         <!--	HYML Header start  -->
 		<?php include("include/html_header.php");?>
@@ -163,33 +162,9 @@ include("config.php");
     </div>
 </div>
 <!-- Wrapper End --> 
-
-<!--	Js Link
-============================================================--> 
-<script src="js/jquery.min.js"></script> 
-
-<!--jQuery Layer Slider --> 
-<script src="js/greensock.js"></script> 
-<script src="js/layerslider.transitions.js"></script> 
-<script src="js/layerslider.kreaturamedia.jquery.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
- 
-<script src="js/jquery.dependClass-0.1.js"></script> 
-<script src="js/draggable-0.1.js"></script> 
-<script src="js/tmpl.js"></script>
-
-<script src="js/wow.js"></script> 
-<script src="js/YouTubePopUp.jquery.js"></script> 
-<script src="js/validate.js"></script> 
-<script src="js/jquery.cookie.js"></script> 
-<script laguage="javascript" type="text/javascript">
-JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "Select");
-JSSHOP.shared.addCurrSlctObj(svftObj["contract"], pstype, "noQvalue", "noQvalue", "Select");
-
-</script></body>
+         <!--	HYML footer start  -->
+         <?php include("include/html_footer.php");?>
+        <!--	HYML footer end  -->
 </body>
 
 </html>

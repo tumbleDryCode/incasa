@@ -74,7 +74,7 @@ include("config.php");
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
                                 <div class="row">
 								
-									<?php $query=mysqli_query($con,"SELECT property.*, user.uname,user.utype,user.uimage FROM `property`,`user` WHERE property.uid=user.uid ORDER BY RAND() LIMIT 1");
+									<?php $query=mysqli_query($con,"SELECT property.*, user.uname,user.utype,user.uimage FROM `property`,`user` WHERE property.uid=user.uid ORDER BY RAND() LIMIT 2");
 										while($row=mysqli_fetch_array($query))
 										{
 									?>
@@ -136,32 +136,9 @@ include("config.php");
 </div>
 <!-- Wrapper End --> 
 
-<!--	Js Link
-============================================================--> 
-<script src="js/jquery.min.js"></script> 
 
-<!--jQuery Layer Slider --> 
-<script src="js/greensock.js"></script> 
-<script src="js/layerslider.transitions.js"></script> 
-<script src="js/layerslider.kreaturamedia.jquery.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
- 
-<script src="js/jquery.dependClass-0.1.js"></script> 
-<script src="js/draggable-0.1.js"></script> 
-<script src="js/tmpl.js"></script>
-
-<script src="js/wow.js"></script> 
-<script src="js/YouTubePopUp.jquery.js"></script> 
-<script src="js/validate.js"></script> 
-<script src="js/jquery.cookie.js"></script> 
-<script laguage="javascript" type="text/javascript">
-JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "Select");
-JSSHOP.shared.addCurrSlctObj(svftObj["contract"], pstype, "noQvalue", "noQvalue", "Select");
-
-</script></body>
+        <!--	HYML footer start  -->
+		<?php include("include/html_footer.php");?>
+        <!--	HYML footer end  -->
 </body>
-
 </html>

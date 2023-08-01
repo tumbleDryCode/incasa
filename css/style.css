@@ -697,7 +697,7 @@ hover-text-white-nav .navbar-nav .nav-link.active,
 body {
 	font-family: var(--theme-ordinary-font);
 	font-size: 15px;
-	line-height: 28px;
+	/* line-height: 8px;  28px */
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	/*font-family: var(--theme-highlight-font); +*/

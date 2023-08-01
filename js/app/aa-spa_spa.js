@@ -285,7 +285,18 @@ stxt[969] = "Tema";
 stxt[970] = "Mensaje";
 stxt[971] = "Encontrar";
 stxt[972] = " Tu casa";
-stxt[973] = "Reportar problema"; // Livro de reclamações
+stxt[973] = "Reportar problema"; 
+stxt[974] = "Login to Access our DashBoard";
+stxt[975] = "Dont have an Account?"; // Não tem uma conta?
+stxt[976] = "Login was not successful. Please try again."; // O login não foi bem sucedido. Por favor tente novamente.
+stxt[977] = "*Your Email"; // *O seu email
+stxt[978] = "*Your Password"; // *A sua password 
+stxt[979] = "Title and Description"; // Título e Descrição
+stxt[980] = "Images - Media"; // Imagens - Media
+stxt[981] = "Property Details"; // Características do imóvel
+stxt[982] = "Number of bedrooms, kitchens..."; // Número de quartos, cozinhas...
+stxt[983] = "Description of the property"; // Descrição do imóvel
+stxt[984] = "add more images-media";  // adicionar mais imagens-media 
 
 
 

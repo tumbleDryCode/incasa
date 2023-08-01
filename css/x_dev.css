@@ -976,6 +976,13 @@ text-decoration:underline !important;
 height: 2px;
 }
 
+.icnxsmlbtn {
+  border-width: 0px;
+  max-height: 2px;
+  max-width: 2px;
+  }
+
+
 .icnsmlbtn {
 border-width: 0px;
 vertical-align:center;
@@ -1010,10 +1017,10 @@ max-width: 40px;
 }
 .icnmedbtn {
 border-width: 0px;
-vertical-align:center;
+ 
 max-height: 72px;
 max-width: 72px;
-margin-right:10px;
+ 
 }
 
 .icnbigbtn {

@@ -6,9 +6,7 @@ session_start();
 include("config.php");
 								
 ?>
-<!DOCTYPE html>
- 
-
+<html>
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">

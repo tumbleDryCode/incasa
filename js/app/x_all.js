@@ -4494,6 +4494,7 @@ var qlDoPlacesSearch = function() {
 
 
 
+
 var qlDoNuPlSearch = function(tInpNQLPS, tInpNQLDV, tInpNQLCB) {
 	try {
 		tSrchInp = document.getElementById(tInpNQLPS);
@@ -4575,3 +4576,33 @@ currMapMrkrArr.push(tMrkr);
 	};
 
 
+
+
+	
+// incasa functions
+
+function previewFile(theImgID, theInpObj) {
+	var preview = document.getElementById(theImgID);
+	theInpObj = document.getElementById(theInpObj);
+	var file    = document.querySelector('input[type=file]').files[0];
+	// var file    = theInpObj;
+	var reader  = new FileReader();
+  
+	reader.onloadend = function () {
+	  preview.src = reader.result;
+	  preview.className = "icnmedbtn";
+	}
+  
+	if (file) {
+	  reader.readAsDataURL(file);
+	} else {
+	  preview.src = "";
+	}
+  }
+
+ function tImgClass(theTCImg) {
+	tIsrc = theTCImg.src;
+	if(tIsrc.indexOf("admin") != -1) {
+		theTCImg.className = "icnmedbtn";
+	}
+ }

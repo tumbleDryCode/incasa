@@ -33,6 +33,7 @@
 <script src="js/app/x_last.js"></script> 
 <script src="js/app/x_all.js"></script> 
 <script src="js/app/x_booter.js"></script>
+<script src="js/app/x_admin.js"></script>
 
 <script src="js/bootstrap5.2/bootstrap.js"  language="javascript" type="text/javascript"></script>
 

@@ -41,7 +41,7 @@ if (person != null) {
 
 
 <header id="header" class="transparent-header-modern fixed-header-bg-white w-100" style="margin:0px;padding:0px;min-width:100%">
-            <div class="top-header bg-secondary bigtable brdrClrHdr" style="margin:15px;">
+            <div class="top-header bg-secondary bigtable brdrClrHdr" style="margin:15px;visiility:hidden;display:none;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -67,12 +67,12 @@ if (person != null) {
                     </div>
                 </div>
             </div>
-            <div class="main-nav secondary-nav hover-primary-nav py-6  bg-secondary"  style="margin:0px;">
+            <div class="main-nav secondary-nav hover-primary-nav py-6  bg-secondary"  style="">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12" style="margin:0px;">
                             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                              <span style="float:left;text-align:left;white-space: nowrap;"><a class="breadcrumb-item active" href="index.php"><img class="slmtable" src="images/logo/logo-small.png" alt="in-casa.eu" style="max-height:40px;max-width:40px;"> <b>IN<span class="txtClrHdr">-</span>CASA.eu</b></a></span>
+                              <span style="float:left;text-align:left;white-space: nowrap;"><a class="breadcrumb-item active" href="index.php"><img class="slmtable" src="images/logo/logo-small.png" alt="in-casa.eu" style="max-height:40px;max-width:40px;"> <b>IN<span class="txtClrWhite">-</span>CASA<span class="txtClrWhite">.</span>eu</b></a></span>
 
   <!-- menu icons 
 
@@ -98,21 +98,26 @@ if (person != null) {
                                 <div class="collapse navbar-collapse txtClrWhite" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item"> <a class="nav-link" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">Home</a></li>
-										
-										<li class="nav-item"> <a class="nav-link" href="about.php"><ti data-ison="stxt[30]" data-desc="btn_about">About</ti></a> </li>
-										
-										<li class="nav-item"> <a class="nav-link" href="agent.php"><ti data-ison="stxt[900]" data-desc="btn_agentes">Agentes</ti></a> </li>
+										<li class="nav-item"> <a class="nav-link" href="property.php"><ti data-ison="stxt[940]" data-desc="btn_properties">Properties</ti></a> </li>					 
 										<li class="nav-item"> <a class="nav-link" href="search.php"><ti data-ison="stxt[936]" data-desc="btn_searchprops">Search Properties</ti></a> </li>
-										
-										<li class="nav-item"> <a class="nav-link" href="property.php"><ti data-ison="stxt[901]" data-desc="btn_properties">Properties</ti></a> </li>
+										<!-- <li class="nav-item"> <a class="nav-link" href="agent.php"><ti data-ison="stxt[900]" data-desc="btn_agentes">Agentes</ti></a> </li> -->
                                         <li class="nav-item"> <a class="nav-link" href="contact.php"><ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti></a> </li>
 										
 										<?php  if(isset($_SESSION['uemail']))
 										{ ?>
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><ti data-ison="stxt[56]" data-desc="btn_account">Account</ti></a>
+										<li class="dropdown onlyWideScreen" style="margin-top:10px;">
+											 <a style="float:left;padding-left:15px;" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><ti data-ison="stxt[56]" data-desc="btn_account">Account</ti></a>
 											<ul class="dropdown-menu">
 												<li class="nav-item"> <a class="nav-link" href="profile.php"><ti data-ison="stxt[903]" data-desc="btn_profile">Profile</ti></a> </li>
+                                                <li class="nav-item"> <a class="nav-link" href="submitproperty.php"><ti data-ison="stxt[916]" data-desc="btn_addprop">Subit Property</ti></a> </li>
+												 <li class="nav-item"> <a class="nav-link" href="feature.php"><ti data-ison="stxt[905]" data-desc="btn_yourprops">Your Properties</ti></a> </li>
+												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>	
+											</ul>
+                                        </li>
+                                        <li class="onlySmallScreen" style="margin-top:10px;">
+											 <span style="float:left;padding-left:15px;" class="txtBold txtClrDlg"><ti data-ison="stxt[56]" data-desc="btn_account">Account</ti></a>
+											<ul class="">
+												<li class="nav-item"> <a class="nav-link txtClrDlg txtBold" href="profile.php"><ti data-ison="stxt[903]" data-desc="btn_profile">Profile</ti></a> </li>
                                                 <li class="nav-item"> <a class="nav-link" href="submitproperty.php"><ti data-ison="stxt[916]" data-desc="btn_addprop">Subit Property</ti></a> </li>
 												 <li class="nav-item"> <a class="nav-link" href="feature.php"><ti data-ison="stxt[905]" data-desc="btn_yourprops">Your Properties</ti></a> </li>
 												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>	
@@ -135,4 +140,4 @@ if (person != null) {
                 </div>
             </div>
         </header>
-<p>&nbsp;</p>
+<div class="txtSmall txtClrWhite">.</div>

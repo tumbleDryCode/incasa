@@ -268,7 +268,7 @@ stxt[936] = "Search Properties";
 stxt[937] = "Instalment Calculator";
 stxt[938] = "Property Amount";
 stxt[939] = "Calclute Instalment";
-stxt[940] = "Featured Property";
+stxt[940] = "Featured Properties";
 stxt[941] = "Recent Property Add";
 stxt[942] = "Access to our dashboard";
 stxt[943] = "Agent";
@@ -302,9 +302,17 @@ stxt[970] = "Message";
 stxt[971] = "Find";
 stxt[972] = " Your Home";
 stxt[973] = "Report Issue"; // Livro de reclamações
- 
-
-
+stxt[974] = "Login to Access our DashBoard"; // Login para aceder ao nosso painel de controlo
+stxt[975] = "Dont have an Account?"; // Não tem uma conta?
+stxt[976] = "Login was not successful. Please try again."; // O login não foi bem sucedido. Por favor tente novamente.
+stxt[977] = "*Your Email"; // *O seu email
+stxt[978] = "*Your Password"; // *A sua password 
+stxt[979] = "Title and Description"; // Título e Descrição
+stxt[980] = "Images - Media"; // Imagens - Media
+stxt[981] = "Property Details"; // Características do imóvel
+stxt[982] = "Number of bedrooms, kitchens..."; // Número de quartos, cozinhas...
+stxt[983] = "Description of the property"; // Descrição do imóvel
+stxt[984] = "add more images-media";  // adicionar mais imagens-media 
 
 
 // valdiation error messages

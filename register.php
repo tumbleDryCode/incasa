@@ -44,39 +44,13 @@ if(isset($_REQUEST['reg']))
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--	HYML Header start  -->
+		<?php include("include/html_header.php");?>
+        <!--	HYML Header end  -->
 
-<!-- Meta Tags -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="images/favicon.ico">
-
-<!--	Fonts
-	========================================================-->
-<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
-
-<!--	Css Link
-	========================================================-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="css/color.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/login.css">
-
-<!--	Title
-	=========================================================-->
-<title>Homex - Real Estate Template</title>
 </head>
 <body>
 
@@ -98,7 +72,18 @@ if(isset($_REQUEST['reg']))
 		<?php include("include/header.php");?>
         <!--	Header end  -->
         
-        <!--	Banner   --->
+
+		<div class="col-md-6">
+                        <nav aria-label="breadcrumb" class="float-left float-md-right">
+                            <ol class="breadcrumb bg-transparent m-0 p-0">
+                                <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></li>
+                            </ol>
+                        </nav>
+                    </div>
+
+
+        <!--	Banner  
         <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
             <div class="container">
                 <div class="row">
@@ -116,14 +101,14 @@ if(isset($_REQUEST['reg']))
                 </div>
             </div>
         </div>
-         <!--	Banner   --->
+       Banner   --->
 		 
 		 
 		 
-        <div class="page-wrappers login-body full-row bg-gray">
-            <div class="login-wrapper">
+	   <div class="page-wrappers full-row" style="padding: 15px;">
+            <div class="">
             	<div class="container">
-                	<div class="loginbox">
+				<div class="rtable bkgdClrWhite brdrClrHdr" style="max-width:600px;margin: 0 auto">
                         <div class="login-right">
 							<div class="login-right-wrap">
 								<h1><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></h1>

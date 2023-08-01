@@ -8,40 +8,13 @@ if(!isset($_SESSION['uemail']))
 	header("location:login.php");
 }								
 ?>
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Meta Tags -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="images/favicon.ico">
-
-<!--	Fonts
-	========================================================-->
-<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
-
-<!--	Css Link
-	========================================================-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="css/color.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/login.css">
-
-<!--	Title
-	=========================================================-->
-<title>Homex - Real Estate Template</title>
+        <!--	HYML Header start  -->
+		<?php  include("include/html_header.php");?>
+        <!--	HYML Header end  -->
 </head>
 <body>
 
@@ -64,7 +37,7 @@ if(!isset($_SESSION['uemail']))
         <!--	Header end  -->
         
         <!--	Banner   --->
-        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
+        <div class="rtable brdrClrHdr" style="background-image: url('images/banner/04.jpg'); min-width: 95%; max-width: 95%;min-height: 105%;margin:0 auto;margin-top:2px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -85,7 +58,7 @@ if(!isset($_SESSION['uemail']))
 		 
 		 
 		<!--	Submit property   -->
-        <div class="full-row bg-gray">
+        <div class="full-row bg-gray" style="overflow-y:scroll">
             <div class="container">
                     <div class="row mb-5">
 						<div class="col-lg-12">
@@ -147,29 +120,14 @@ if(!isset($_SESSION['uemail']))
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
         
-        <!-- Scroll to top --> 
+        <!-- Scroll to top 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
-        <!-- End Scroll To top --> 
+        End Scroll To top --> 
     </div>
 </div>
 <!-- Wrapper End --> 
-
-<!--	Js Link
-============================================================--> 
-<script src="js/jquery.min.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/greensock.js"></script> 
-<script src="js/layerslider.transitions.js"></script> 
-<script src="js/layerslider.kreaturamedia.jquery.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/tmpl.js"></script> 
-<script src="js/jquery.dependClass-0.1.js"></script> 
-<script src="js/draggable-0.1.js"></script> 
-<script src="js/jquery.slider.js"></script> 
-<script src="js/wow.js"></script> 
-<script src="js/custom.js"></script>
+         <!--	HYML footer start  -->
+         <?php include("include/html_footer.php");?>
+        <!--	HYML footer end  -->
 </body>
 </html>

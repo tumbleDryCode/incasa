@@ -2,24 +2,44 @@
             <div class="container">
                 <div  class="row">
                     <div class="col-lg-12">
-                        <div class="divider py-40">
+                        <div class="divider py-1">
                             <div class="row">
-                                <div class="col-md-12 col-lg-4">
-                                    <div class="footer-widget mb-4">
-                                        <div class="footer-logo mb-4"> &nbsp;<table style="width: 100%; background-color: #FFFFFF">
+                                <div class="col-md-12 col-lg-4" style="padding:0px;">
+                                    <div class="footer-widget mb-4"  style="padding:0px;">
+                                        <div class="footer-logo mb-4" style="padding: 0px;">
+                                        <table style="border:0px;">
 											<tr>
-												<td> <a href="#"><img class="" src="images/logo/logo-white.png" alt="image" style="max-width:60px"></a></td>
+												<td><a href="#"><img src="images/logo/logo-white.png" alt="image" style="max-width:60px"  class="rtable brdrClrHdr bkgdClrWhite"></a></td>
+												<td style="text-align:left;padding:0px;"><span class="text-primary txtBig">IN</span><span class="txtClrWhite txtBig">-</span><span class="text-primary txtBig">CASA<span class="txtClrWhite txtBig">.</span>eu</span></td>
 											</tr>
 											</table>
 										</div>
-                                        <p class="pb-20 text-white">in-casa.eu</p>
+ 
                                         </div>
                                 </div>
                                 <div class="col-md-12 col-lg-8">
                                     <div class="row">
+
+                                    <div class="col-md-4 col-lg-4">
+                                            <div class="footer-widget footer-nav mb-4">
+                                                <h4 class="widget-title text-white double-down-line-left position-relative">Quick Links</h4>
+                                                <ul class="hover-text-primary">
+                                                    <li><a href="about.php" class="text-white"><ti data-ison="stxt[913]" data-desc="btn_about">About Us</ti></a></li>
+                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[914]" data-desc="btn_featured">Featured Property</ti></a></li>
+                                                    <!--
+                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[915]" data-desc="btn_member">Become A Member</ti></a></li>
+                                                    <li><a href="submitproperty.php" class="text-white"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></a></li>
+                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[917]" data-desc="btn_how">How It Works</ti></a></li>
+                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[918]" data-desc="btn_ouragentes">Our Agentes</ti></a></li>
+                                                    -->
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
                                         <div class="col-md-4 col-lg-4">
                                             <div class="footer-widget footer-nav mb-4">
-                                                <h4 class="widget-title text-white double-down-line-left position-relative">Support</h4>
+                                                <h4 class="widget-title text-white double-down-line-left position-relative"><ti data-ison="stxt[910]" data-desc="btn_support">Get Support</ti></h4>
                                                 <ul class="hover-text-primary">
                                                     <!--
                                                     <li><a href="#" class="text-white"><ti data-ison="stxt[910]" data-desc="btn_support">Get Support</ti></a></li>
@@ -38,27 +58,15 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-lg-4">
-                                            <div class="footer-widget footer-nav mb-4">
-                                                <h4 class="widget-title text-white double-down-line-left position-relative">Quick Links</h4>
-                                                <ul class="hover-text-primary">
-                                                    <li><a href="about.php" class="text-white"><ti data-ison="stxt[913]" data-desc="btn_about">About Us</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[914]" data-desc="btn_featured">Featured Property</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[915]" data-desc="btn_member">Become A Member</ti></a></li>
-                                                    <li><a href="submitproperty.php" class="text-white"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[917]" data-desc="btn_how">How It Works</ti></a></li>
-                                                    <li><a href="#" class="text-white"><ti data-ison="stxt[918]" data-desc="btn_ouragentes">Our Agentes</ti></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        
 
 
 
 
-
+                                        <!--
                                         <div class="col-md-4 col-lg-4">
                                             <div class="footer-widget">
-                                                <h4 class="widget-title text-white double-down-line-left position-relative">Contact-Us</h4>
+                                                <h4 class="widget-title text-white double-down-line-left position-relative"><ti data-ison="stxt[912]" data-desc="btn_contactus">Contact Us</ti></h4>
                                                 <ul class="text-white">
                                                     <li class="hover-text-primary">
 													Portugal</li>
@@ -66,9 +74,9 @@
 													in.casa22@sapo.pt</li>
                                                 </ul>
                                             </div>
-                                            <div class="footer-widget media-widget mt-4 text-white hover-text-primary"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="admin/dashboard.php"><i class="fas fa-rss"></i></a> </div>
+                                             <div class="footer-widget media-widget mt-4 text-white hover-text-primary"> <a href="#"><i class="fab fa-facebook-f txtClrWhite"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="admin/dashboard.php"><i class="fas fa-rss"></i></a> </div> 
                                         </div>
-
+                                        -->
 
                                        
 
@@ -79,6 +87,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- copyright not needed for now
                 <div class="row copyright">
                     <div class="col-sm-6">
                         <ul class="line-menu text-white hover-text-primary float-right">
@@ -87,11 +96,8 @@
                             <li><a href="#"> Site Map</a></li>
                         </ul>
                     </div>
-
-
-                 
                 </div>
-
+                 -->
 
             <div style=""  class="copyright col-sm-6">
             <a class="txtSmall txtClrWhite txtDecorNone" href="javascript:JSSHOP.cookies.setCookie('usrlang','en_us','130','','','');document.location.href='index.php?nls=y';">
