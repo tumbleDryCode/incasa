@@ -36,13 +36,13 @@ include("config.php");
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Property Grid</b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[940]" data-desc="btn_pdetail">Featured</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active"><ti data-ison="stxt[942]" data-desc="btn_property_grid">Property Grid</ti></li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[940]" data-desc="btn_property_featured">Featured</ti></li>
                             </ol>
                         </nav>
                     </div>

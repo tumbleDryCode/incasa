@@ -2,7 +2,15 @@
 include("config.php");
 $error="";
 $msg="";
-if(isset($_POST['send']))
+
+?>
+<html>
+<head>
+	<!--	HYML Header start  -->
+		<?php include("include/html_header.php");?>
+		<!--	HYML Header end  -->
+		<?php 
+		if(isset($_POST['send']))
 {
 	$name=$_POST['name'];
 	$email=$_POST['email'];
@@ -16,21 +24,16 @@ if(isset($_POST['send']))
 		$sql="INSERT INTO contact (name,email,phone,subject,message) VALUES ('$name','$email','$phone','$subject','$message')";
 		   $result=mysqli_query($con, $sql);
 		   if($result){
-			   $msg = "<p class='alert alert-success'>Message Send Successfully</p> ";
+			   $msg = "<p class='alert alert-success'><ti data-ison='stxt[1006]'  data-desc='btn_msgok'>Message sent successfully</ti></p> ";
 		   }
 		   else{
-			   $error = "<p class='alert alert-warning'>Message Not Send Successfully</p> ";
+			   $error = "<p class='alert alert-warning'><ti data-ison='stxt[1007]'   data-desc='btn_msgerr'>Message failed to send</ti></p> ";
 		   }
 	}else{
-		$error = "<p class='alert alert-warning'>Please Fill all the fields</p>";
+		$error = "<p class='alert alert-warning'><ti data-ison='stxt[1008]'   data-desc='btn_msgff'>Please fill in all fields</ti></p>";
 	}
 }
 ?>
-<html>
-<head>
-	<!--	HYML Header start  -->
-		<?php include("include/html_header.php");?>
-		<!--	HYML Header end  -->
 </head>
 <body>
 
@@ -136,7 +139,7 @@ if(isset($_POST['send']))
 												</div>
 											</div>
 										</div>
-										<button type="submit" value="send message" name="send" class="btn btn-primary">Send Message</button>
+										<button type="submit" value="send message" name="send" class="btn btn-primary"><ti data-ison="stxt[935]" data-desc="btn_getintouch">Send Message</ti></button>
 									</div>
 								</form>
 							</div>

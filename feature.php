@@ -126,8 +126,8 @@ if(!isset($_SESSION['uemail']))
     </div>
 </div>
 <!-- Wrapper End --> 
-         <!--	HYML footer start  -->
+         <!--	HTML footer start  -->
          <?php include("include/html_footer.php");?>
-        <!--	HYML footer end  -->
+        <!--	HTML footer end  -->
 </body>
 </html>

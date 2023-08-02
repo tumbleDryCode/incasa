@@ -108,7 +108,7 @@ stxt[205] = "Country";
 stxt[206] = "Phone";
 stxt[207] = "Mobile";
 stxt[208] = "Fax";	
-stxt[209] = "Address";
+stxt[209] = "Direccion";
 stxt[210] = "City";
 stxt[211] = "State";
 stxt[212] = "Zip Code";
@@ -313,6 +313,10 @@ stxt[1003] = "Email must be good.";
 stxt[1003] = "Item title must be good.";
 stxt[1004] = "Item desc must be good.";
 stxt[1005] = "Item price must be good.";
+// TRANSLATE TO spanish
+stxt[1006] = "Mensaje enviado con exito";
+stxt[1007] = "Mensaje no enviado";
+stxt[1008] = "Por favor, rellene todos los campos";
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";

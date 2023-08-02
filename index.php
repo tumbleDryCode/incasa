@@ -7,9 +7,9 @@ include("config.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!--	HYML Header start  -->
+        <!--	HTML Header start  -->
 		<?php include("include/html_header.php");?>
-        <!--	HYML Header end  -->
+        <!--	HTML Header end  -->
 </head>
 <body>
 
@@ -135,10 +135,8 @@ include("config.php");
     </div>
 </div>
 <!-- Wrapper End --> 
-
-
-        <!--	HYML footer start  -->
+        <!--	HTML footer start  -->
 		<?php include("include/html_footer.php");?>
-        <!--	HYML footer end  -->
+        <!--	HTML footer end  -->
 </body>
 </html>

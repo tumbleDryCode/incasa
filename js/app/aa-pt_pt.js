@@ -94,7 +94,7 @@ stxt[93] = "Trips";
 stxt[94] = "Sector";
 stxt[95] = "Dept";
 stxt[96] = "All Users";
-stxt[97] = "Name";
+stxt[97] = "Nome";
 
 stxt[102] = "Make";
 stxt[104] = "Year";
@@ -108,7 +108,7 @@ stxt[205] = "Country";
 stxt[206] = "Phone";
 stxt[207] = "Mobile";
 stxt[208] = "Fax";	
-stxt[209] = "Address";
+stxt[209] = "Morada";
 stxt[210] = "City";
 stxt[211] = "State";
 stxt[212] = "Zip Code";
@@ -330,7 +330,9 @@ stxt[1003] = "Email must be good.";
 stxt[1003] = "Item title must be good.";
 stxt[1004] = "Item desc must be good.";
 stxt[1005] = "Item price must be good.";
-
+stxt[1006] = "Mensagem enviada com sucesso";
+stxt[1007] = "Mesagem nao enviada";
+stxt[1008] = "Por favor preencha todos os campos";
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";
 

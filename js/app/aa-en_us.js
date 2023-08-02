@@ -322,6 +322,10 @@ stxt[1003] = "Email must be good.";
 stxt[1003] = "Item title must be good.";
 stxt[1004] = "Item desc must be good.";
 stxt[1005] = "Item price must be good.";
+stxt[1006] = "Message sent successfully";
+stxt[1007] = "Message failed to send";
+stxt[1008] = "Please fill in all fields";
+
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";
