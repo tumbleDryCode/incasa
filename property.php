@@ -61,14 +61,16 @@ include("config.php");
                         <div class="row">
 						
 							<?php 
-							$query=mysqli_query($con,"SELECT property.*, user.uname,user.utype,user.uimage FROM `property`,`user` WHERE property.uid=user.uid");
+                                          //              $query=mysqli_query($con,"SELECT * FROM `property` WHERE property.bhk='5' limit 5");
+							 $query=mysqli_query($con,"SELECT property.*,  user.uname,user.utype,user.uimage FROM `property`, `user` WHERE property.bhk='5' and user.uid=property.uid  limit 5");
 								while($row=mysqli_fetch_array($query))
 								{
+                                   
 							?>
 									
                             <div class="col-md-6">
                                 <div class="featured-thumb hover-zoomer mb-4">
-                                    <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row['18'];?>" alt="pimage">
+                                    <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row["pimage"];?>" alt="pimage">
                                         
                                         <div class="sale bg-secondary text-white">For <?php echo $row['5'];?></div>
                                         <div class="price text-primary text-capitalize">$<?php echo $row['13'];?> <span class="text-white"><?php echo $row['12'];?> Sqft</span></div>

@@ -72,6 +72,7 @@ if(!isset($_SESSION['uemail']))
 					<table class="items-list col-lg-12" style="border-collapse:inherit;">
                         <thead>
                              <tr  class="bg-primary">
+                                <th class="text-white font-weight-bolder">ID</th>
                                 <th class="text-white font-weight-bolder">Properties</th>
                                 <th class="text-white font-weight-bolder">BHK</th>
                                 <th class="text-white font-weight-bolder">Reason</th>
@@ -85,13 +86,25 @@ if(!isset($_SESSION['uemail']))
 						
 							<?php 
 							$uid=$_SESSION['uid'];
-							$query=mysqli_query($con,"SELECT * FROM `property` WHERE uid='$uid'");
+                            // $query=mysqli_query($con,"SELECT property.*, qmedia.*  FROM `property`, qmedia WHERE property.uid='$uid' and property.bhk='5' and qmedia.m_uid=property.uid  and qmedia.m_file like '%.%'  order by qmedia.m_vala desc limit 5");
+                            $query=mysqli_query($con,"SELECT * FROM `property` WHERE property.uid='$uid' and property.bhk='5' limit 5");
+
 								while($row=mysqli_fetch_array($query))
 								{
+                                            // echo $row as string
+                                        
+                             
+
+
+
 							?>
                             <tr>
+                                <td><a class="txtBold txtDecorNone" href="submitpropertyupdate.php?id=<?php echo $row['0'];?>"><?php echo $row['0'];?></a></td>
                                 <td>
-									<img src="admin/property/<?php echo $row['18'];?>" alt="pimage">
+
+                                    <?php //  echo implode(" ",$row) . '<br>' . $row["m_file"]; 
+                                    ?>
+									<img src="admin/property/<?php echo $row["pimage"];?>" alt="pimage" class="icnmedbtn rtable">
                                     <div class="property-info d-table">
                                         <h5 class="text-secondary text-capitalize"><a href="propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1'];?></a></h5>
                                         <span class="font-14 text-capitalize"><i class="fas fa-map-marker-alt text-primary font-13"></i>&nbsp; <?php echo $row['14'];?></span>

@@ -36,7 +36,7 @@ if(isset($_POST['add']))
 	$feature=$_POST['feature'];
 	
 	$totalfloor=$_POST['totalfl'];
-	
+	/*
 	$aimage=$_FILES['aimage']['name'];
 	$aimage1=$_FILES['aimage1']['name'];
 	$aimage2=$_FILES['aimage2']['name'];
@@ -66,10 +66,10 @@ if(isset($_POST['add']))
 	move_uploaded_file($temp_name5,"admin/property/$fimage");
 	move_uploaded_file($temp_name6,"admin/property/$fimage1");
 	move_uploaded_file($temp_name7,"admin/property/$fimage2");
-	
+	*/
 	$sql="insert into property (title,pcontent,type,bhk,stype,bedroom,bathroom,balcony,kitchen,hall,floor,size,price,location,city,state,feature,pimage,pimage1,pimage2,pimage3,pimage4,uid,status,mapimage,topmapimage,groundmapimage,totalfloor)
-	values('$title','$content','$ptype','$bhk','$stype','$bed','$bath','$balc','$kitc','$hall','$floor','$asize','$price',
-	'$loc','$city','$state','$feature','$aimage','$aimage1','$aimage2','$aimage3','$aimage4','$uid','$status','$fimage','$fimage1','$fimage2','$totalfloor')";
+	values('$title','$content','$ptype','5','$stype','$bed','$bath','$balc','$kitc','$hall','$floor','$asize','$price',
+	'$loc','$city','$state','$feature','','','','','','$uid','$status','','','','$totalfloor')";
 	$result=mysqli_query($con,$sql);
 	if($result)
 		{
@@ -89,7 +89,8 @@ if(isset($_POST['add']))
         <!--	HYML Header start  -->
 		<?php  include("include/html_header.php");?>
         <!--	HYML Header end  -->
-        </head>
+		
+</head>
 <body>
 
 <!--	Page Loader

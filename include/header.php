@@ -1,39 +1,3 @@
-
-<script>
-function doDWD() {
- xae = document.getElementsByTagName("ti");
-var iint = 0;
-while(iint < xae.length) {
-nuDW(xae[iint]);
-iint++
-}
-}
-function dosearch() {
-strUp = "propertygrid.php?type=" + ptype.value + "&stype=" + pstype.value + "&city=" + pcity.value + "&q=" + ptype.options[ptype.selectedIndex].text + " " + pstype.options[pstype.selectedIndex].text + " " + pcity.value;
-document.getElementById("q").value = ptype.options[ptype.selectedIndex].text + " " + pstype.options[pstype.selectedIndex].text + " " + pcity.value;
-// document.location.href = strUp;
-document.getElementById("psearch").action = strUp;
-
-document.getElementById("psearch").submit();
-}
-
-// just keeping out of view for now
-if(JSSHOP.cookies.getCookie("beta")) {
-} else {
-let person = prompt("beta please", "...?");
-
-if (person != null) {
-  if(person == "in") {
-  JSSHOP.cookies.setCookie("beta","in","30","","","");
-  } else {
-  document.location.href = "https://github.com";
-  }
-}
-}
-</script>
-
-
-
 <div id="lightbox" class="lightbox"   onclick="javascript:JSSHOP.ui.closePopMenus();">
 </div> <div id="lightbox_content" class="rtable bkgdClrWhite" style="min-height:400px;min-width:350px;z-index: 2147483647;position:fixed;top:-700px;left:-700px;word-wrap: break-word;max-width:80%;margin: 0 auto">
       </div>

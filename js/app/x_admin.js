@@ -26,7 +26,7 @@ document.location.href='index.html?pid=login&u=' + tmp_u_email.value + '&p=' + t
 }
 
 var removeDiacritics = function(str) {
-
+try {
   var defaultDiacriticsRemovalMap = [
     {'base':'A', 'letters':/[\u0041\u24B6\uFF21\u00C0\u00C1\u00C2\u1EA6\u1EA4\u1EAA\u1EA8\u00C3\u0100\u0102\u1EB0\u1EAE\u1EB4\u1EB2\u0226\u01E0\u00C4\u01DE\u1EA2\u00C5\u01FA\u01CD\u0200\u0202\u1EA0\u1EAC\u1EB6\u1E00\u0104\u023A\u2C6F]/g},
     {'base':'AA','letters':/[\uA732]/g},
@@ -119,6 +119,10 @@ var removeDiacritics = function(str) {
   }
 
   return str;
+} catch(e) {
+// alert("removeDiacritics: " + str + " : " + e);
+return str;
+}
 
 };
 
@@ -520,6 +524,27 @@ var procNuUIitem = function(thetble,thecol,theid,theVal,atmpCB) {
 };
 
 
+/*
+* basic funtion to update
+* one field in db table and set timestamp
+*/ 
+var procNurUIitem = function(thetble,thecol,theColId,theid,theVal,atmpCB) {
+    tmpVpar = null;
+    tmpSobj = null;
+    tmpFobj = null; 
+    tmpVpar = [];
+    tmpSobj = {};
+    tmpFobj = {}; 
+    tmpSobj["t"] = thecol;
+    tmpSobj["v"] = theVal;
+    tmpVpar.push(tmpSobj);
+    tmpFobj["ws"] = "where " + theColId + " =?";
+    tmpFobj["wa"] = [theid];
+    tmpFobj["knvp"] = tmpVpar;
+    oi = getNuDBFnvp(thetble,7,null,tmpFobj);
+    // alert("procNuUIitem: " + oi["rq"]);
+    doQComm(oi["rq"], null, atmpCB);
+};
 
 var procUIitem = function(theElem) {
 ts = JSSHOP.shared.getElemDUrl(theElem);
@@ -534,3 +559,4 @@ JSADMSHOP.prepAdmPipe(theElem,ts,JSADMSHOP.procNuAdmPipe);
 }
 }
 };
+

@@ -1703,18 +1703,37 @@ alert("doRequestPrep: " + e);
 	alert("no JSSHOP.ui.showShareBox: " + e);
 	}
 	};
-
+	var doneMMupload = function(thetheAAdiv, theAAresp, theAAarr) {
+		try {
+			// alert("doneMMupload: " + theAAresp);
+			document.getElementById("m_dadded").value = JSSHOP.getUnixTimeStamp();
+			getPropImgs();
+		} catch(e) {
+		alert("no doneMMupload: " + e);
+		}
+	};
+ 
 	var finishMMupload = function(theMMum) {
 	try {
 
-
+		console.log("finishMMupload: " + theMMum);
 		image = null;
 		image = new Image();
-		image.src = "images/msgimgs/s_thumb" + theMMum;
-		document.getElementById("mmprogressBar").appendChild(image);
-		JSSHOP.shared.setFrmFieldVal("qmsgs", "msg_media", theMMum);
+		image.src = "admin/property/s_thumb" + theMMum;
+		// document.getElementById("dvProdImgs").appendChild(image);
+		document.getElementById("m_file").value = theMMum;
+		document.getElementById("m_file_thumb").value = "s_thumb" + theMMum;
+		document.getElementById("m_vala").value = "1000000001";
+		tmpFarr = null;
+		tmpFobj = null;
+		tmpFobj = {};
+		tmpFobj["knvp"] =  JSSHOP.shared.getFrmVals(document["qmedia"], "nada");
+		oi = getNuDBFnvp("qmedia", 6, null, tmpFobj);
+		doQComm(oi["rq"], null, "doneMMupload"); 
+		// document.getElementById("dvProdImgs").innerHTML = "<img src=\"images/misc/s_thumb" + theMMum + "\" />";
+		// JSSHOP.shared.setFrmFieldVal("qmsgs", "msg_media", theMMum);
 	} catch(e) {
-	alert(e);
+	alert("finishMMupload: " + e);
 	}
 	};
 
@@ -3365,17 +3384,18 @@ themaxbounds = L.latLngBounds(corner1, corner2);
 	JSSHOP.ui.closePopMenus = function() {
 try {
 document.getElementById('lightbox').style.display='none';
+document.getElementById('lightbox_content').style.top='-800px';
+document.getElementById('lightbox_content').style.display='none';
+/*
 document.getElementById('mmDdown').style.display='none';
 document.getElementById('mmDdown').style.visibility='hidden';
 document.getElementById('dvMnuT').style.display='none';
 document.getElementById('dvMnuT').style.visibility='hidden';
-document.getElementById('lightbox_content').style.top='-800px';
-document.getElementById('lightbox_content').style.display='none';
 if(document.getElementById('dvSandMap')) {
 document.getElementById('dvSandMap').style.display='none';
-}
+*/
 } catch(e) {
-	alert("closePopMenus: " + e);
+	// alert("closePopMenus: " + e);
 JSSHOP.logJSerror(e, arguments, "JSSHOP.closePopMenus");
 }
 };

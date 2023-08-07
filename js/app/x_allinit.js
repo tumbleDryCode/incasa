@@ -29,7 +29,7 @@ var currPrefPrdP = "a"; // price order preference
 var currInfoStr = ""; // above saved as html string
 var trgr_bclck = [];
 var canLoad = "no";
-var quid = 43;
+var quid = 0;
 var qtype = "guest";
 var pid = "index_main";
 var ppid = 0;
@@ -59,6 +59,8 @@ var currMsgsIArr = [];
 var currMediaBtnPrfx = "";
 var currMediaBtnCB = "finishImgUload";
 var currMediaFldr = "msgimgs";
+var currMediaItemID = 0;
+var currMediaID = "";
 var tmpMediaFldr = "msgimgs";
 var currCartStr = "";
 var currCartIttl = 0;
@@ -79,7 +81,7 @@ var currFFinitArr = [];
 var currPgIndex = 0; // pagination starts at 1
 var currProdsPPg = 10; // pagination  - number of items per page
 var currMCollItems = {}; // all links object found in x_menu
-var stxt = []; // languge file strings found in aa-en_us.js
+var stxt = {}; // languge file strings found in aa-en_us.js
 var svtxt = []; // array of language strings
 var usrlang = "pt_pt"; // user language
 var currSearchType = "products"; // companies (qco db table), messages (qmsgs, qmsg), etc;
@@ -142,7 +144,6 @@ document.onkeydown = function(evt) {
 };
 */
 
- 
 
 
 // variavles from aa-add-job
@@ -640,4 +641,50 @@ var pfBoot = function(theElem, theResp, marble) {
 console.log("seq.pfBoot");
 document.getElementById(theElem).innerHTML = theResp;
 setTimeout("doBootLoad()", 800);
+};
+
+
+
+function doDWD() {
+ xae = document.getElementsByTagName("ti");
+var iint = 0;
+while(iint < xae.length) {
+nuDW(xae[iint]);
+iint++
+}
+}
+function dosearch() {
+strUp = "propertygrid.php?type=" + ptype.value + "&stype=" + pstype.value + "&city=" + pcity.value + "&q=" + ptype.options[ptype.selectedIndex].text + " " + pstype.options[pstype.selectedIndex].text + " " + pcity.value;
+document.getElementById("q").value = ptype.options[ptype.selectedIndex].text + " " + pstype.options[pstype.selectedIndex].text + " " + pcity.value;
+// document.location.href = strUp;
+document.getElementById("psearch").action = strUp;
+
+document.getElementById("psearch").submit();
+}
+
+// just keeping out of view for now
+if(JSSHOP.cookies.getCookie("beta")) {
+} else {
+let person = prompt("beta please", "...?");
+
+if (person != null) {
+  if(person == "in") {
+  JSSHOP.cookies.setCookie("beta","in","30","","","");
+  } else {
+  document.location.href = "https://github.com";
+  }
+}
+}
+
+function doWinLoad() {
+    
+document.getElementById("m_uid").value = quid;
+document.getElementById("m_pid").value = cid;
+document.getElementById("m_dadded").value = JSSHOP.getUnixTimeStamp();
+doDWD();
+}
+
+// create a window onload function to call the doDWD function
+window.onload = function() {
+doWinLoad();
 };

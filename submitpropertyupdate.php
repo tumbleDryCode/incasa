@@ -8,8 +8,111 @@ if(!isset($_SESSION['uemail']))
 	header("location:login.php");
 }
 
-//// code insert
-//// add code
+ 
+								
+/*
+title
+pcontent
+type
+bhk
+stype
+bedroom
+bathroom
+balcony
+kitchen
+hall
+floor
+size
+price
+location
+city
+state
+feature
+pimage
+pimage1
+pimage2
+pimage3
+pimage4
+uid
+status
+mapimage
+topmapimage
+groundmapimage
+totalfloor
+date
+*/
+$ruid = "";
+$rstatus = "";
+$rtype = "";
+$rstype = "";
+$rtitle = "";
+$rpcontent = "";
+
+
+$rbhk = "0";
+
+$rbedroom = "1";
+$rbathroom = "1";
+$rbalcony = "0";
+$rkitchen = "1";
+$rhall = "1";
+$rfloor = "1";
+$rsize = "";
+$rprice = "0";
+$rlocation = "";
+$rcity = "";
+$rstate = "";
+$rfeature = "";
+$rpimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage1 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage2 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage3 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage4 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+
+
+
+$rmapimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rtopmapimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rgroundmapimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rtotalfloor = "1";
+$rdate = "";
+
+
+		$pid=$_REQUEST['id'];
+		$query=mysqli_query($con,"select * from property where pid='$pid'");
+		while($row=mysqli_fetch_array($query))
+		{
+			$rtitle = $row["title"];
+			$rpcontent = $row["pcontent"];
+			$rtype = $row["type"];
+			$rbhk = $row["bhk"];
+			$rstype = $row["stype"];
+			$rbedroom = $row["bedroom"];
+			$rbathroom = $row["bathroom"];
+			$rbalcony = $row["balcony"];
+			$rkitchen = $row["kitchen"];
+			$rhall = $row["hall"];
+			$rfloor = $row["floor"];
+			$rsize = $row["size"];
+			$rprice = $row["price"];
+			$rlocation = $row["location"];
+			$rcity = $row["city"];
+			$rstate = $row["state"];
+			$rfeature = $row["feature"];
+			$rpimage = "admin/property/" . $row["pimage"];
+			$rpimage1 = "admin/property/" . $row["pimage1"];
+			$rpimage2 = "admin/property/" . $row["pimage2"];
+			$rpimage3 = "admin/property/" . $row["pimage3"];
+			$rpimage4 = "admin/property/" . $row["pimage4"];
+			$ruid = $row["uid"];
+			$rstatus = $row["status"];
+			$rmapimage = "admin/property/" . $row["mapimage"];
+			$rtopmapimage = "admin/property/" . $row["topmapimage"];
+			$rgroundmapimage = "admin/property/" . $row["groundmapimage"];
+			$rtotalfloor = $row["totalfloor"];
+			$rdate = $row["date"];		 
+			} 
+							 
 
 $msg="";
 if(isset($_POST['add']))
@@ -37,37 +140,70 @@ if(isset($_POST['add']))
 	$feature=$_POST['feature'];
 	
 	$totalfloor=$_POST['totalfl'];
-	
-	$aimage=$_FILES['aimage']['name'];
-	$aimage1=$_FILES['aimage1']['name'];
-	$aimage2=$_FILES['aimage2']['name'];
-	$aimage3=$_FILES['aimage3']['name'];
-	$aimage4=$_FILES['aimage4']['name'];
-	
-	$fimage=$_FILES['fimage']['name'];
-	$fimage1=$_FILES['fimage1']['name'];
-	$fimage2=$_FILES['fimage2']['name'];
-	
-	$temp_name  =$_FILES['aimage']['tmp_name'];
-	$temp_name1 =$_FILES['aimage1']['tmp_name'];
-	$temp_name2 =$_FILES['aimage2']['tmp_name'];
-	$temp_name3 =$_FILES['aimage3']['tmp_name'];
-	$temp_name4 =$_FILES['aimage4']['tmp_name'];
-	
-	$temp_name5 =$_FILES['fimage']['tmp_name'];
-	$temp_name6 =$_FILES['fimage1']['tmp_name'];
-	$temp_name7 =$_FILES['fimage2']['tmp_name'];
-	
-	move_uploaded_file($temp_name,"admin/property/$aimage");
-	move_uploaded_file($temp_name1,"admin/property/$aimage1");
-	move_uploaded_file($temp_name2,"admin/property/$aimage2");
-	move_uploaded_file($temp_name3,"admin/property/$aimage3");
-	move_uploaded_file($temp_name4,"admin/property/$aimage4");
-	
-	move_uploaded_file($temp_name5,"admin/property/$fimage");
-	move_uploaded_file($temp_name6,"admin/property/$fimage1");
-	move_uploaded_file($temp_name7,"admin/property/$fimage2");
-	
+	if(isset($_FILES['aimage']['name'])) {
+		$aimage = $_FILES['aimage']['name'];
+		$temp_name = $_FILES['aimage']['tmp_name'];
+		move_uploaded_file($temp_name,"admin/property/$aimage");
+	} else {
+		$aimage=$rpimage;
+	}
+	if(isset($_FILES['aimage1']['name'])) {
+		$aimage1 = $_FILES['aimage1']['name'];
+		$temp_name1 = $_FILES['aimage1']['tmp_name'];
+		move_uploaded_file($temp_name1,"admin/property/$aimage1");
+	} else {
+		$aimage1=$rpimage1;
+	}
+	if(isset($_FILES['aimage2']['name'])) {
+		$aimage2 = $_FILES['aimage2']['name'];
+		$temp_name2 = $_FILES['aimage2']['tmp_name'];
+		move_uploaded_file($temp_name2,"admin/property/$aimage2");
+	} else {
+		$aimage2=$rpimage2;
+	}
+	if(isset($_FILES['aimage3']['name'])) {
+		$aimage3 = $_FILES['aimage3']['name'];
+		$temp_name3 = $_FILES['aimage3']['tmp_name'];
+		move_uploaded_file($temp_name3,"admin/property/$aimage3");
+	} else {
+		$aimage3=$rpimage3;
+	}
+	if(isset($_FILES['aimage4']['name'])) {
+		$aimage4 = $_FILES['aimage4']['name'];
+		$temp_name4 = $_FILES['aimage4']['tmp_name'];
+		move_uploaded_file($temp_name4,"admin/property/$aimage4");
+	} else {
+		$aimage4=$rpimage4;
+	}
+
+
+	if(isset($_FILES['fimage']['name'])) {
+		$fimage = $_FILES['fimage']['name'];
+		$rmapimage = $_FILES['fimage']['name'];
+		$temp_name5 = $_FILES['fimage']['tmp_name'];
+		move_uploaded_file($temp_name5,"admin/property/$fimage");
+	} else {
+		$fimage=$rmapimage;
+	}
+	if(isset($_FILES['fimage1']['name'])) {
+		$fimage1 = $_FILES['fimage1']['name'];
+		$rtopmapimage = $_FILES['fimage1']['name'];
+		$temp_name6 = $_FILES['fimage1']['tmp_name'];
+		move_uploaded_file($temp_name6,"admin/property/$fimage1");
+	} else {
+		$fimage1=$rtopmapimage;
+	}
+	if(isset($_FILES['fimage2']['name'])) {
+		$fimage2 = $_FILES['fimage2']['name'];
+		$rgroundmapimage = $_FILES['fimage2']['name'];
+		$temp_name7 = $_FILES['fimage2']['tmp_name'];
+		move_uploaded_file($temp_name7,"admin/property/$fimage2");
+	} else {
+		$fimage2=$rgroundmapimage;
+	}
+
+	 
+  
 	
 	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
 	bedroom='{$bed}', bathroom='{$bath}', balcony='{$balc}', kitchen='{$kitc}', hall='{$hall}', floor='{$floor}', 
@@ -95,6 +231,87 @@ if(isset($_POST['add']))
         <!--	HYML Header start  -->
 		<?php include("include/html_header.php");?>
         <!--	HYML Header end  -->
+		<script>
+
+
+var fnshProdMDel = function(aa,bb,cc) { 
+	getPropImgs();
+JSSHOP.ui.closeLbox();
+};
+
+var doPrdMDelete = function() { 
+    if(confirm(stxt[42] + " " + stxt[19] + "?")) {
+    procNuUIitem("qmedia","m_rtype",JSSHOP.shared.getFrmFieldVal("qmedia", "_id", 0),"0","fnshProdMDel");
+    }
+};
+
+
+
+var fnshProdMMain = function(aa,bb,cc) { 
+// alert(bb);
+getPropImgs();
+JSSHOP.ui.closeLbox();
+
+};
+
+
+var doPrdMMain = function() { 
+if(confirm("Set as main product picture?" + JSSHOP.shared.getFrmFieldVal("qmedia", "m_file", 0))) {
+procNurUIitem("property","pimage","pid",cid,JSSHOP.shared.getFrmFieldVal("qmedia", "m_file", "1.jpg"),"fnshProdMMain");
+    }
+};
+ 
+
+var getPrdImgEditDv = function(tpIncrNPI, tpFImg) {
+tpPIEDv = document.createElement('div');
+JSSHOP.shared.setFrmFieldVal("qmedia", "_id", tpIncrNPI);
+JSSHOP.shared.setFrmFieldVal("qmedia", "m_file", tpFImg);
+ 
+tmpRetStr = "<img src=\"admin/property/" + tpFImg +  "\" style=\"width: 100%\"  class=\"\" onclick=\"alert('" + JSSHOP.shared.getFrmFieldVal("qmedia", "_id", "0") + "');\">"
+ try {
+tmpRetStr += "<div class=\"dvTxtBtns\"><input type=\"button\" class=\"btnTxtLabel\" value=\"Set as Main\" onclick=\"javascript:doPrdMMain();\">   |   <input type=\"button\" class=\"btnTxtLabel\" value=\"Delete\" onclick=\"javascript:doPrdMDelete();\"></div>";
+tmpRetStr += "<br><br>";
+ 
+return tmpRetStr;
+} catch(e) {
+alert("getPrdImgEditDv " + e);
+tmpRetStr = "oops. something wrong..";
+return tmpRetStr;
+}
+};
+
+var setPropImgs = function(theAIa, theAIb, theAIc) {
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+	if(theAIb.indexOf("_id") != -1) {
+		tAiretArr = JSON.parse(theAIb);
+		var len = tAiretArr.length;
+        tstr = "";
+        iint = 0;
+        while (iint < len) {
+ 
+			tstr += "<div style=\"float:left\">";
+ 			tstr += "<img src=\"admin/property/" + tAiretArr[iint]["m_file_thumb"] + "\" class=\"icnmedbtn rtable\" onclick=\"javascript:JSSHOP.ui.popAndFillLbox(getPrdImgEditDv('" + tAiretArr[iint]["_id"] + "','" + tAiretArr[iint]["m_file"] + "'));\">";
+			tstr += "</div>";
+ 
+			iint++;
+		}
+		document.getElementById("dvProdImgs").innerHTML = tstr;
+	}
+};
+
+var getPropImgs = function() {
+    tmpFobj = null;
+    tmpFobj = {};
+    tmpFobj["ws"] = "where m_uid=? and m_pid=? and m_rtype=?";
+    tmpFobj["wa"] = [quid, cid, 5];
+	tmpFobj["o"] = "m_vala desc";
+    oi = getNuDBFnvp("qmedia", 5, null, tmpFobj);
+    doQComm(oi["rq"], null, "setPropImgs");
+};
+
+			</script>
 </head>
 <body>
 
@@ -180,7 +397,7 @@ topmapimage
 groundmapimage
 totalfloor
 date
-*/
+
 $ruid = "";
 $rstatus = "";
 $rtype = "";
@@ -218,43 +435,42 @@ $rtotalfloor = "1";
 $rdate = "";
 
 
-									$pid=$_REQUEST['id'];
-									$query=mysqli_query($con,"select * from property where pid='$pid'");
-									while($row=mysqli_fetch_array($query))
-									{
-										$rtitle = $row["title"];
-										$rpcontent = $row["pcontent"];
-										$rtype = $row["type"];
-										$rbhk = $row["bhk"];
-										$rstype = $row["stype"];
-										$rbedroom = $row["bedroom"];
-										$rbathroom = $row["bathroom"];
-										$rbalcony = $row["balcony"];
-										$rkitchen = $row["kitchen"];
-										$rhall = $row["hall"];
-										$rfloor = $row["floor"];
-										$rsize = $row["size"];
-										$rprice = $row["price"];
-										$rlocation = $row["location"];
-										$rcity = $row["city"];
-										$rstate = $row["state"];
-										$rfeature = $row["feature"];
-										$rpimage = "admin/property/" . $row["pimage"];
-										$rpimage1 = "admin/property/" . $row["pimage1"];
-										$rpimage2 = "admin/property/" . $row["pimage2"];
-										$rpimage3 = "admin/property/" . $row["pimage3"];
-										$rpimage4 = "admin/property/" . $row["pimage4"];
-										$ruid = $row["uid"];
-										$rstatus = $row["status"];
-										$rmapimage = "admin/property/" . $row["mapimage"];
-										$rtopmapimage = "admin/property/" . $row["topmapimage"];
-										$rgroundmapimage = "admin/property/" . $row["groundmapimage"];
-										$rtotalfloor = $row["totalfloor"];
-										$rdate = $row["date"];
-										
-							 
-								 include "include/subprop.php";
-								} 
+		$pid=$_REQUEST['id'];
+		$query=mysqli_query($con,"select * from property where pid='$pid'");
+		while($row=mysqli_fetch_array($query))
+		{
+			$rtitle = $row["title"];
+			$rpcontent = $row["pcontent"];
+			$rtype = $row["type"];
+			$rbhk = $row["bhk"];
+			$rstype = $row["stype"];
+			$rbedroom = $row["bedroom"];
+			$rbathroom = $row["bathroom"];
+			$rbalcony = $row["balcony"];
+			$rkitchen = $row["kitchen"];
+			$rhall = $row["hall"];
+			$rfloor = $row["floor"];
+			$rsize = $row["size"];
+			$rprice = $row["price"];
+			$rlocation = $row["location"];
+			$rcity = $row["city"];
+			$rstate = $row["state"];
+			$rfeature = $row["feature"];
+			$rpimage = "admin/property/" . $row["pimage"];
+			$rpimage1 = "admin/property/" . $row["pimage1"];
+			$rpimage2 = "admin/property/" . $row["pimage2"];
+			$rpimage3 = "admin/property/" . $row["pimage3"];
+			$rpimage4 = "admin/property/" . $row["pimage4"];
+			$ruid = $row["uid"];
+			$rstatus = $row["status"];
+			$rmapimage = "admin/property/" . $row["mapimage"];
+			$rtopmapimage = "admin/property/" . $row["topmapimage"];
+			$rgroundmapimage = "admin/property/" . $row["groundmapimage"];
+			$rtotalfloor = $row["totalfloor"];
+			$rdate = $row["date"];		 
+		
+			} */
+					include "include/subprop.php";	
 								?>	 
 								</form>
 								
@@ -287,7 +503,7 @@ $rdate = "";
 JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "<?php echo $rstype; ?>", "noQvalue", "noQvalue");
 JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "<?php echo $rstatus; ?>", "noQvalue", "noQvalue");
 JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "<?php echo $rtype; ?>", "noQvalue", "noQvalue");
-
+getPropImgs();
 </script>
 </body>
 </html>

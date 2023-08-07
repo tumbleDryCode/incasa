@@ -226,7 +226,7 @@ var getPropImgs = function() {
 								<?php echo $row['17'];?>
 								
                             </div>   
-							<!-- start of floor plans
+							
                             <h5 class="mt-5 mb-4 text-secondary">Floor Plans</h5>
                             <div class="accordion" id="accordionExample">
                                 <button class="bg-gray hover-bg-primary hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><ti data-ison="stxt[931]" data-desc="btn_floor_plans">Floor Plans</ti></button>
@@ -239,7 +239,7 @@ var getPropImgs = function() {
                                 <div id="collapseThree" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <img src="admin/property/<?php echo $row['27'];?>" alt="Not Available"> </div>
                             </div>
-							 end of floor plans -->
+
                             <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative"><ti data-ison="stxt[934]" data-desc="btn_contact_agent">Contact Agent</ti></h5>
                             <div class="agent-contact pt-60">
                                 <div class="row">

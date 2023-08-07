@@ -122,20 +122,25 @@ $msg="";
 									<div class="row">
 										<div class="row mb-4">
 											<div class="form-group col-lg-6">
-												<input type="text"  name="name" class="form-control" placeholder="Your Name*">
+											<label class="col-lg-3 col-form-label"><ti data-ison="stxt[97]" data-desc="btn_name">Name</ti></label>			
+												<input type="text" id="fldname"  name="name" class="form-control">
 											</div>
 											<div class="form-group col-lg-6">
-												<input type="text"  name="email" class="form-control" placeholder="Email Address*">
+											<label class="col-lg-3 col-form-label"><ti data-ison="stxt[50]" data-desc="btn_email">Email</ti></label>
+												<input type="text" id="fldemail" name="email" class="form-control">
 											</div>
 											<div class="form-group col-lg-6">
-												<input type="text"  name="phone" class="form-control" placeholder="Phone" maxlength="10">
+											<label class="col-lg-3 col-form-label"><ti data-ison="stxt[24]" data-desc="btn_phone">Phone</ti></label>
+												<input type="text" id="fldphone" name="phone" class="form-control" maxlength="10">
 											</div>
 											<div class="form-group col-lg-6">
-												<input type="text" name="subject"  class="form-control" placeholder="Subject">
+											<label class="col-lg-3 col-form-label"><ti data-ison="stxt[969]" data-desc="btn_subject">Subject</ti></label>
+												<input type="text" id="fldsubject" name="subject"  class="form-control">
 											</div>
 											<div class="col-lg-12">
 												<div class="form-group">
-													<textarea name="message" class="form-control" rows="5" placeholder="Type Comments..."></textarea>
+												<label class="col-lg-3 col-form-label"><ti data-ison="stxt[970]" data-desc="btn_msg">Message</ti></label>
+													<textarea name="message" id="fldmsg" class="form-control" rows="5"></textarea>
 												</div>
 											</div>
 										</div>
@@ -160,17 +165,11 @@ $msg="";
          End Scroll To top --> 
     </div>
 </div>
+ 
 <!-- Wrapper End --> 
         <!--	HYML footer start  -->
 		<?php include("include/html_footer.php");?>
         <!--	HYML footer end  -->
-<script>
-	document.getElementsByName('name')[0].placeholder=stxt[97];
-	document.getElementsByName('email')[0].placeholder=stxt[50];
-	document.getElementsByName('phone')[0].placeholder=stxt[24];
-	document.getElementsByName('subject')[0].placeholder=stxt[969];
-	document.getElementsByName('message')[0].placeholder=stxt[970] ;
-	document.getElementsByName('send')[0].value=stxt[935];
-</script>
+
 </body>
 </html>
