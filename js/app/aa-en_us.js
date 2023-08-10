@@ -244,7 +244,7 @@ stxt[912] = "Contact Us";
 stxt[913] = "About Us";
 stxt[914] = "Featured Property";
 stxt[915] = "Become A Member";
-stxt[916] = "Submit Property";
+stxt[916] = "Add Property";
 stxt[917] = "How It Works";
 stxt[918] = "Our Agentes";
 stxt[919] = "Privacy Policy";
@@ -313,6 +313,7 @@ stxt[981] = "Property Details"; // Características do imóvel
 stxt[982] = "Number of bedrooms, kitchens..."; // Número de quartos, cozinhas...
 stxt[983] = "Description of the property"; // Descrição do imóvel
 stxt[984] = "add more images-media";  // adicionar mais imagens-media 
+stxt[985] = "Edit Property";  // adicionar mais imagens-media 
 
 
 // valdiation error messages

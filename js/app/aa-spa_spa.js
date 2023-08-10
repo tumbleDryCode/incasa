@@ -297,7 +297,7 @@ stxt[981] = "Property Details"; // Características do imóvel
 stxt[982] = "Number of bedrooms, kitchens..."; // Número de quartos, cozinhas...
 stxt[983] = "Description of the property"; // Descrição do imóvel
 stxt[984] = "add more images-media";  // adicionar mais imagens-media 
-
+stxt[985] = "Editar Propiedad";
 
 
 

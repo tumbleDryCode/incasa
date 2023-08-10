@@ -202,16 +202,22 @@ if(isset($_POST['add']))
 		$fimage2=$rgroundmapimage;
 	}
 
-	 
-  
-	
+	 	 
 	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
 	bedroom='{$bed}', bathroom='{$bath}', balcony='{$balc}', kitchen='{$kitc}', hall='{$hall}', floor='{$floor}', 
 	size='{$asize}', price='{$price}', location='{$loc}', city='{$city}', state='{$state}', feature='{$feature}',
-	pimage='{$aimage}', pimage1='{$aimage1}', pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
+	pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
 	uid='{$uid}', status='{$status}', mapimage='{$fimage}', topmapimage='{$fimage1}', groundmapimage='{$fimage2}', 
 	totalfloor='{$totalfloor}' WHERE pid = {$pid}";
-	
+	 
+	/*
+	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
+	bedroom='{$bed}', bathroom='{$bath}', balcony='{$balc}', kitchen='{$kitc}', hall='{$hall}', floor='{$floor}', 
+	size='{$asize}', price='{$price}', location='{$loc}', city='{$city}', state='{$state}', feature='{$feature}',
+	pimage='{$aimage}', pimage1='{$rpimage}', pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
+	uid='{$uid}', status='{$status}', mapimage='{$fimage}', topmapimage='{$fimage1}', groundmapimage='{$fimage2}', 
+	totalfloor='{$totalfloor}' WHERE pid = {$pid}";
+	*/
 	$result=mysqli_query($con,$sql);
 	if($result == true)
 	{
@@ -355,14 +361,13 @@ var getPropImgs = function() {
 		 
 		 
 		<!--	Submit property   -->
-        <div class="full-row">
-            <div class="container">
-                    <div class="row">
-						<div class="col-lg-12">
-							<h2 class="text-secondary double-down-line text-center">Submit Property</h2>
+        <div class="full-row py-2">
+            <div class="container" style="margin: 0 auto; max-width: 600px;">
+                    <div class="row">						<div class="col-lg-12">
+							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[985]" data-desc="btn_editprop">Edit Property</ti></h2>
                         </div>
 					</div>
-                    <div class="row p-5 bg-white">
+                    <div class="row bg-white">
                         <form method="post" enctype="multipart/form-data">
 								
 								

@@ -313,6 +313,7 @@ stxt[981] = "Caracteristicas do imovel"; // Caracteristicas do imovel
 stxt[982] = "Numero de quartos, cozinhas..."; // Numero de quartos, cozinhas...
 stxt[983] = "Descricao do imovel"; // Descricao do imovel
 stxt[984] = "adicionar mais imagens-media";  // adicionar mais imagens-media 
+stxt[985] = "Editar Propriedade";
 
 
 

@@ -238,23 +238,21 @@ if(isset($_REQUEST['id']))
 {
 ?>
  
-								 <table style="width: 100%">
+								 <table style="max-width:95%;min-width:90%;margin:0 auto">
 							 <tr>
 								<td style="width:100%" valign="top"><table style="width: 100%" cellspacing="0" cellpadding="3">
 				 <tr>
-					 <td><div id="progressOuter"></div><div id="msgBox"></div></td>
+					 <td style="height: 6px"><div id="progressOuter"></div><div id="msgBox"></div></td>
 				 </tr>
 				 <tr>
-					 <td><table cellpadding="3px" cellspacing="3px"><tr>
-						 <td style="height: 50px"><img alt="Product Image" src="images/misc/transparent.gif"  class="slmtable icnsmlbtn brdrClrDlg" style="text-align:center;max-height:18px; margin-right:12px" align="absmiddle" id="imgIedit"   onclick="javascript:JSSHOP.ui.toggleVisibility('tdImedia');" ></td>
-						 <td class="crsrPointer" style="text-align:center; height: 50px;" align="absmiddle">Media
+					 <td><table><tr>
+						 <td style="height: 50px"><img alt="Product Image" src="images/misc/transparent.gif"  class="slmtable icnsmlbtn brdrClrDlg" style="text-align:center;max-height:3px; margin-right:3px" align="absmiddle" id="imgIedit"></td>
+						 <td class="crsrPointer" style="text-align:center; height: 50px;" align="absmiddle">
 					
-					</td><td style="height: 50px"><div id="dvUploadBtn"  style="display:block;visibility:visible;margin-right:10px"><button id="uploadBtn" class="cls_button cls_button-small"><ti data-ison="stxt[70]" data-desc="btn_save">Add</ti></button></div>
+					</td><td style="height: 50px"><div id="dvUploadBtn"  style="display:block;visibility:visible;margin-right:10px"><button id="uploadBtn" class="cls_button cls_button-small form-control"><ti data-ison="stxt[70]" data-desc="btn_save">Add</ti></button></div>
 					
 				 
-             </td><td style="height: 50px"><span><a href="javascript:JSSHOP.ui.getPopHelp('media-chooser');" class=""><i class="material-icons" title="help">&#xe887;</i></a>
-							</span>
-</td><td style="text-align: center; vertical-align:top; height: 50px;"><div id="dvPrdMedia"></div></td></tr></table></td>
+             </td><td style="text-align: center; vertical-align:top; height: 50px;"><div id="dvPrdMedia"></div></td></tr></table></td>
 				 </tr>
 				 <tr>
 					 <td id="tdAppBCodeBtn"><div id="dvAppBCodeBtn"><div><a href="javascript:doBarCodeScan('add');" class="txtDecorNone">

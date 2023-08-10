@@ -137,7 +137,7 @@ if(isset($_POST['add']))
             <div class="container" style="margin: 0 auto; max-width: 600px;">
                     <div class="row">
 						<div class="col-lg-12">
-							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[916]" data-desc="btn_addprop">Submit Property</ti></h2>
+							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[916]" data-desc="btn_addprop">Add Property</ti></h2>
                         </div>
 					</div>
                    	 <form method="post" enctype="multipart/form-data">
