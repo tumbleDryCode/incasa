@@ -313,8 +313,13 @@ stxt[981] = "Property Details"; // Características do imóvel
 stxt[982] = "Number of bedrooms, kitchens..."; // Número de quartos, cozinhas...
 stxt[983] = "Description of the property"; // Descrição do imóvel
 stxt[984] = "add more images-media";  // adicionar mais imagens-media 
-stxt[985] = "Edit Property";  // adicionar mais imagens-media 
-
+stxt[985] = "Edit Property";  // editar imóvel
+stxt[986] = "Upload";  // Carregar
+stxt[987] = "For Sale";  // Para venda
+stxt[988] = "For Rent";  // Para alugar
+stxt[989] = "For Lease";  // Para arrendar
+stxt[990] = "For Auction";  // Para leilão
+stxt[991] = "For Foreclosure";  // Para execução
 
 // valdiation error messages
 stxt[1001] = "Username must be good.";

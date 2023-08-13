@@ -1813,7 +1813,7 @@ Tables Style
 
 table td, table th {
 	border: none;
-	padding: 10px 15px;
+	padding: 2px 2px;
 }
 .tab-table td, .tab-table td {
 	border-bottom: 1px solid #dee2e6

@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="images/favicon.ico">
 
 <link href="js/bootstrap5.2/bootstrap-multiselect.css" rel="stylesheet">  
-<link rel="stylesheet" type="text/css" href="css/x_bs-fixes.css">
+
 <!--	Css Link
 	========================================================-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="css/x_dev.css">
 <link rel="stylesheet" type="text/css" href="css/x_forms.css">
 <link rel="stylesheet" type="text/css" href="css/x_nav.css">
+<link rel="stylesheet" type="text/css" href="css/x_cc.css">
 <link href="js/bootstrap5.2/bootstrap.min.css" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -31,19 +32,18 @@
 <link href="fonts/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
-
+<link rel="stylesheet" type="text/css" href="css/x_bs-fixes.css">
 <!--	Title
 	=========================================================-->
-
+	<script src="js/bootstrap5.2/bootstrap.js"  language="javascript" type="text/javascript"></script>
 <script src="js/app/x_allinit.js"></script> 
 <script src="js/app/x_last.js"></script> 
 <script src="js/app/x_all.js"></script> 
 <script src="js/app/x_booter.js"></script>
 <script src="js/app/x_admin.js"></script>
-
-<script src="js/bootstrap5.2/bootstrap.js"  language="javascript" type="text/javascript"></script>
 <script>
 JSSHOP.loadScript("js/app/aa-" + usrlang + ".js", donada,"js");
 </script>
+
 
 <title>IN-CASA.eu</title>

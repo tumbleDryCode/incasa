@@ -317,6 +317,17 @@ var getPropImgs = function() {
     doQComm(oi["rq"], null, "setPropImgs");
 };
 
+
+window.onload = function() {
+JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "<?php echo $rstype; ?>", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "<?php echo $rstatus; ?>", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "<?php echo $rtype; ?>", "noQvalue", "noQvalue");
+getPropImgs();
+doWinLoad();
+};
+
+
+
 			</script>
 </head>
 <body>
@@ -505,10 +516,7 @@ $rdate = "";
 <script src="js/tinymce/init-tinymce.min.js"></script>
 <script laguage="javascript" type="text/javascript">
 // JSSHOP.shared.addCurrSlctObj(svftObj["u_jtype"], totalfl, "noQvalue", "noQvalue", "Select");
-JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "<?php echo $rstype; ?>", "noQvalue", "noQvalue");
-JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "<?php echo $rstatus; ?>", "noQvalue", "noQvalue");
-JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "<?php echo $rtype; ?>", "noQvalue", "noQvalue");
-getPropImgs();
+teramid = "tearmid";
 </script>
 </body>
 </html>

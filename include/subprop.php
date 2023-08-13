@@ -36,16 +36,16 @@
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[18]" data-desc="btn_price_location">Price</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="price" placeholder="Enter Price" value="<?php echo $rprice; ?>">
+														<input type="text" class="form-control" name="price"  value="<?php echo $rprice; ?>">
 													</div>
 												</div>
 												
 												
 												
 												<div class="form-group row">
-													<label class="col-lg-2 col-form-label"><ti data-ison="stxt[979]" data-desc="btn_title">Title and Description</ti></label>
+													<label class="col-lg-2 col-form-label"><ti data-ison="stxt[10]" data-desc="btn_title">Title</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="title" required placeholder="Enter Title" value="<?php echo $rtitle; ?>">
+														<input type="text" class="form-control" name="title" required  value="<?php echo $rtitle; ?>">
 													</div>
 												</div>
 												<!-- test Accordian -->
@@ -96,7 +96,7 @@
         										<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[953]" data-desc="btn_area_size">Area Size</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="asize" placeholder="Enter Area Size (in sqrt)" value="<?php echo $rsize; ?>">
+														<input type="text" class="form-control" name="asize"  value="<?php echo $rsize; ?>">
 													</div>
 												</div>
 												
@@ -111,13 +111,13 @@
 						 						<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[923]" data-desc="btn_bathroom">Bathroom</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="bath" placeholder="Enter Bathroom (only no 1 to 10)" value="<?php echo $rbathroom; ?>">
+														<input type="text" class="form-control" name="bath"  value="<?php echo $rbathroom; ?>">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[926]" data-desc="btn_kitcheb">Kitchen</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="kitc" placeholder="Enter Kitchen (only no 1 to 10)"  value="<?php echo $rkitchen; ?>">
+														<input type="text" class="form-control" name="kitc"  value="<?php echo $rkitchen; ?>">
 													</div>
 												</div>
 												
@@ -133,19 +133,19 @@
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[922]" data-desc="btn_bedroom">Bedroom</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="bed" placeholder="Enter Bedroom  (only no 1 to 10)"  value="<?php echo $rbedroom; ?>">
+														<input type="text" class="form-control" name="bed" value="<?php echo $rbedroom; ?>">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[924]" data-desc="btn_balcony">Balcony</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="balc" placeholder="Enter Balcony  (only no 1 to 10)"  value="<?php echo $rbalcony; ?>">
+														<input type="text" class="form-control" name="balc"   value="<?php echo $rbalcony; ?>">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[925]" data-desc="btn_select_status">Hall</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="hall" placeholder="Enter Hall  (only no 1 to 10)"  value="<?php echo $rhall; ?>">
+														<input type="text" class="form-control" name="hall"  value="<?php echo $rhall; ?>">
 													</div>
 												</div>
         <!-- end tinymc -->
@@ -173,7 +173,7 @@
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[209]" data-desc="btn_address">Address</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="loc" placeholder="Enter Address" value="<?php echo $rlocation; ?>">
+														<input type="text" class="form-control" name="loc" value="<?php echo $rlocation; ?>">
 													</div>
 												</div>
 													
@@ -181,13 +181,13 @@
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[210]" data-desc="btn_city">City</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="city" placeholder="Enter City" value="<?php echo $rcity; ?>">
+														<input type="text" class="form-control" name="city" value="<?php echo $rcity; ?>">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><ti data-ison="stxt[211]" data-desc="btn_price_location">State</ti></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="state" placeholder="Enter State" value="<?php echo $rstate; ?>">
+														<input type="text" class="form-control" name="state" value="<?php echo $rstate; ?>">
 													</div>
 												</div>
 									
@@ -230,17 +230,18 @@
 										 
 										</div>
 												
-										<hr><h5 class="text-secondary"><ti data-ison="stxt[980]" data-desc="btn_images_media">Images - Media</ti></h5>
 								 
 								 <!-- upload button start  -->
 <?php
 if(isset($_REQUEST['id']))
 {
 ?>
+										<hr><h5 class="text-secondary"><ti data-ison="stxt[980]" data-desc="btn_images_media">Images - Media</ti></h5>
+
  
 								 <table style="max-width:95%;min-width:90%;margin:0 auto">
 							 <tr>
-								<td style="width:100%" valign="top"><table style="width: 100%" cellspacing="0" cellpadding="3">
+								<td valign="top"><table style="width: 100%" cellspacing="0" cellpadding="0">
 				 <tr>
 					 <td style="height: 6px"><div id="progressOuter"></div><div id="msgBox"></div></td>
 				 </tr>
@@ -249,7 +250,9 @@ if(isset($_REQUEST['id']))
 						 <td style="height: 50px"><img alt="Product Image" src="images/misc/transparent.gif"  class="slmtable icnsmlbtn brdrClrDlg" style="text-align:center;max-height:3px; margin-right:3px" align="absmiddle" id="imgIedit"></td>
 						 <td class="crsrPointer" style="text-align:center; height: 50px;" align="absmiddle">
 					
-					</td><td style="height: 50px"><div id="dvUploadBtn"  style="display:block;visibility:visible;margin-right:10px"><button id="uploadBtn" class="cls_button cls_button-small form-control"><ti data-ison="stxt[70]" data-desc="btn_save">Add</ti></button></div>
+					</td><td style="height: 50px">
+
+					<div id="dvUploadBtn"  style="display:block;visibility:visible;margin-right:10px"><button id="uploadBtn" class="cls_button cls_button-small form-control"><i class="nav-material-icons coll-menu-item txtClrHdr" style="margin-right:4px;">&#xe439;</i><ti data-ison="stxt[986]" data-desc="btn_upload">Upload</ti></button></div>
 					
 				 
              </td><td style="text-align: center; vertical-align:top; height: 50px;"><div id="dvPrdMedia"></div></td></tr></table></td>
@@ -270,7 +273,7 @@ if(isset($_REQUEST['id']))
 <!-- upload button end  -->
 										 		<div>
 										 
-											<div style="margin: 0 auto;padding: 10px;"><input type="submit" value="Submit" class="btn btn-primary"name="add"></div>
+											<div style="margin: 0 auto;padding: 10px;"><button type="submit" value="Submit" class="btn btn-primary" name="add"><ti data-ison="stxt[21]" data-desc="btn_save">Save</ti></button></div>
 										
 								</div>
 

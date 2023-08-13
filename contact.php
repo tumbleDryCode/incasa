@@ -2,15 +2,12 @@
 include("config.php");
 $error="";
 $msg="";
+// display all errors on page
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-?>
-<html>
-<head>
-	<!--	HYML Header start  -->
-		<?php include("include/html_header.php");?>
-		<!--	HYML Header end  -->
-		<?php 
-		if(isset($_POST['send']))
+if(isset($_POST['send']))
 {
 	$name=$_POST['name'];
 	$email=$_POST['email'];
@@ -34,6 +31,16 @@ $msg="";
 	}
 }
 ?>
+<html>
+<head>
+	<!--	HYML Header start  -->
+		<?php include("include/html_header.php"); ?>
+<script>
+window.onload = function() {
+
+doWinLoad();
+};
+</script>
 </head>
 <body>
 

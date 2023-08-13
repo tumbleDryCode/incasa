@@ -5,4 +5,5 @@ $con = mysqli_connect("titan","incasa","casain","developers");
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
+	include("include/functions.php");
 ?>

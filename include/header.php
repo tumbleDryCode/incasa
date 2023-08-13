@@ -67,7 +67,13 @@
 										<!-- <li class="nav-item"> <a class="nav-link" href="agent.php"><ti data-ison="stxt[900]" data-desc="btn_agentes">Agentes</ti></a> </li> -->
                                         <li class="nav-item"> <a class="nav-link" href="contact.php"><ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti></a> </li>
 										
-										<?php  if(isset($_SESSION['uemail']))
+										<?php  
+                                        // if(isset($_SESSION['uemail']))
+                                        // check for cookie quid
+                                    if(isset($_COOKIE['quid'])) 
+                                    
+ 
+
 										{ ?>
 										<li class="dropdown onlyWideScreen" style="margin-top:10px;">
 											 <a style="float:left;padding-left:15px;" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><ti data-ison="stxt[56]" data-desc="btn_account">Account</ti></a>

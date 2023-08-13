@@ -652,6 +652,7 @@ while(iint < xae.length) {
 nuDW(xae[iint]);
 iint++
 }
+doCCrun();
 }
 function dosearch() {
 strUp = "propertygrid.php?type=" + ptype.value + "&stype=" + pstype.value + "&city=" + pcity.value + "&q=" + ptype.options[ptype.selectedIndex].text + " " + pstype.options[pstype.selectedIndex].text + " " + pcity.value;
@@ -674,7 +675,9 @@ if (person != null) {
   document.location.href = "https://github.com";
   }
 }
+
 }
+
 
 function doWinLoad() {
     

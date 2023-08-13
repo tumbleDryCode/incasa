@@ -1,9 +1,8 @@
-
 <?php 
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
-include("config.php");							
+include("config.php");		
 ?>
 <html>
 <head>
@@ -79,6 +78,8 @@ var setPropImgs = function(theAIa, theAIb, theAIc) {
 		}
 		document.getElementById("single-property").innerHTML = tstr;
 	}
+	// alert(inpPropCtrct.value);
+	
 };
 
 var getPropImgs = function() {
@@ -145,8 +146,10 @@ var getPropImgs = function() {
 						$query=mysqli_query($con,"SELECT property.*, user.* FROM `property`,`user` WHERE property.uid=user.uid and pid='$id'");
 						while($row=mysqli_fetch_array($query))
 						{
+						
+						echo '<input type="hidden" id="inpPropCtrct" value="' . $row['5'] . '">';
 					  ?>
-				  
+				   
                     <div class="col-lg-8">
 
                         <div class="row">
@@ -172,13 +175,13 @@ var getPropImgs = function() {
                         </div>
                         <div class="row mb-4">
                             <div class="col-md-6">
-                                <div class="bg-primary d-table px-3 py-2 rounded text-white text-capitalize">For <?php echo $row['5'];?></div>
+                                <div class="bg-primary d-table px-3 py-2 rounded text-white text-capitalize" id="dvPropTypeK"><?php echo getPropTypeStr($row['5']);?></div>
                                 <h5 class="mt-2 text-secondary text-capitalize"><?php echo $row['1'];?></h5>
                                 <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-primary font-12"></i> &nbsp;<?php echo $row['14'];?></span>
 							</div>
                             <div class="col-md-6">
                                 <div class="text-primary text-left h5 my-2 text-md-right">$<?php echo $row['13'];?></div>
-                                <div class="text-left text-md-right">Price</div>
+                                <div class="text-left text-md-right"><ti data-ison="stxt[18]" data-desc="btn_price">Price</ti></div>
                             </div>
                         </div>
                         <div class="property-details">
@@ -221,11 +224,13 @@ var getPropImgs = function() {
                                     </tbody>
                                 </table>
                             </div>
+                            <!-- not showing features for now
                             <h5 class="mt-5 mb-4 text-secondary"><ti data-ison="stxt[930]" data-desc="btn_features">Features</ti></h5>
                             <div class="row">
-								<?php echo $row['17'];?>
+								<?php // echo $row['17'];?>
 								
-                            </div>   
+                            </div> 
+                            -->  
 							<!-- start of floor plans
                             <h5 class="mt-5 mb-4 text-secondary">Floor Plans</h5>
                             <div class="accordion" id="accordionExample">
@@ -240,7 +245,7 @@ var getPropImgs = function() {
                                     <img src="admin/property/<?php echo $row['27'];?>" alt="Not Available"> </div>
                             </div>
 							 end of floor plans -->
-                            <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative"><ti data-ison="stxt[934]" data-desc="btn_contact_agent">Contact Agent</ti></h5>
+                            <!-- <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative"><ti data-ison="stxt[934]" data-desc="btn_contact_agent">Contact Agent</ti></h5>
                             <div class="agent-contact pt-60">
                                 <div class="row">
                                     <div class="col-sm-4 col-lg-3"> <img src="admin/user/<?php echo $row['uimage']; ?>" alt="" height="200" width="170"> </div>
@@ -299,7 +304,7 @@ var getPropImgs = function() {
                                                 </div>
                                             </div>
                                         </form>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -395,11 +400,10 @@ var getPropImgs = function() {
 		<!--	Footer   start-->
         
         
-        <!-- Scroll to top --> 
+        <!-- Scroll to top 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
-        <!-- End Scroll To top --> 
-    </div>
-</div>
+         End Scroll To top --> 
+ 
         <!--	HTML footer start  -->
 		<?php include("include/html_footer.php");?>
         <!--	HTML footer end  -->

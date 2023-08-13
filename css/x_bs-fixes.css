@@ -18,7 +18,12 @@
 .btn, .btn-large {
   text-decoration: none;
   color: #000000;
-   background-color: transparent;
+  max-width: fit-content;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin: 0 auto;
+
+   /* background-color: transparent; */
    letter-spacing: auto;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
@@ -30,8 +35,7 @@
 .btn-group, .btn {
 	font-size: 12px;
 	letter-spacing:  0.5px;
-    padding: 1px;
-	margin: 0px;
+
 }
 btn-success {
 	border: 0px;
@@ -135,4 +139,8 @@ btn-success {
      box-shadow: none; 
 	  background-color: #F7F7F7;
  
+}
+
+.accordion-body {
+  padding: 2px;
 }

@@ -82,14 +82,20 @@ if(isset($_POST['add']))
 		}
 }							
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
         <!--	HYML Header start  -->
 		<?php  include("include/html_header.php");?>
         <!--	HYML Header end  -->
 		
+<script>
+	window.onload = function() {
+JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "noQvalue", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "noQvalue", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "noQvalue");
+doWinLoad();
+	};
+	</script>
 </head>
 <body>
 
@@ -204,11 +210,7 @@ if(isset($_POST['add']))
 <script src="js/tinymce/tinymce.min.js"></script>
 <script src="js/tinymce/init-tinymce.min.js"></script>
 <script laguage="javascript" type="text/javascript">
-// JSSHOP.shared.addCurrSlctObj(svftObj["u_jtype"], totalfl, "noQvalue", "noQvalue", "Select");
-JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "noQvalue", "noQvalue", "noQvalue");
-JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "noQvalue", "noQvalue", "noQvalue");
-JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "noQvalue", "noQvalue", "noQvalue");
-
+sasas = "erer";
 </script>
 </body>
 </html>

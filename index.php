@@ -129,9 +129,9 @@ include("config.php");
 		<!--	Footer   start-->
         
         
-        <!-- Scroll to top --> 
+        <!-- Scroll to top 
         <a href="#" class="bg-primary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
-        <!-- End Scroll To top --> 
+          End Scroll To top --> 
     </div>
 </div>
 <!-- Wrapper End --> 
