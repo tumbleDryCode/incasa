@@ -14,11 +14,11 @@ function getPropTypeStr($tmpDBstr) {
 	$tmpContType["pt_pt"]["auction"] = "Leilão";
 	$tmpContType["pt_pt"]["foreclosure"] = "Execução";
 	
-	$tmpContType["es_es"]["sell"] = "En venta";
-	$tmpContType["es_es"]["rent"] = "Para alquilar";
-	$tmpContType["es_es"]["lease"] = "Para arrendar";
-	$tmpContType["es_es"]["auction"] = "Subasta";
-	$tmpContType["es_es"]["foreclosure"] = "Ejecución hipotecaria";
+	$tmpContType["spa_spa"]["sell"] = "En venta";
+	$tmpContType["spa_spa"]["rent"] = "Para alquilar";
+	$tmpContType["spa_spa"]["lease"] = "Para arrendar";
+	$tmpContType["spa_spa"]["auction"] = "Subasta";
+	$tmpContType["spa_spa"]["foreclosure"] = "Ejecución hipotecaria";
 	
 	// check for usrlang cookie and set to default if not set
 	if(isset($_COOKIE["usrlang"])) {

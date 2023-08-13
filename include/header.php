@@ -78,7 +78,7 @@
 										<li class="dropdown onlyWideScreen" style="margin-top:10px;">
 											 <a style="float:left;padding-left:15px;" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><ti data-ison="stxt[56]" data-desc="btn_account">Account</ti></a>
 											<ul class="dropdown-menu">
-												<li class="nav-item"> <a class="nav-link" href="profile.php"><ti data-ison="stxt[903]" data-desc="btn_profile">Profile</ti></a> </li>
+												<!-- <li class="nav-item"> <a class="nav-link" href="profile.php"><ti data-ison="stxt[903]" data-desc="btn_profile">Profile</ti></a> </li> -->
                                                 <li class="nav-item"> <a class="nav-link" href="submitproperty.php"><ti data-ison="stxt[916]" data-desc="btn_addprop">Subit Property</ti></a> </li>
 												 <li class="nav-item"> <a class="nav-link" href="feature.php"><ti data-ison="stxt[905]" data-desc="btn_yourprops">Your Properties</ti></a> </li>
 												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>	
@@ -87,7 +87,7 @@
                                         <li class="onlySmallScreen" style="margin-top:10px;">
 											 <span style="float:left;padding-left:15px;" class="txtBold txtClrDlg"><ti data-ison="stxt[56]" data-desc="btn_account">Account</ti></a>
 											<ul class="">
-												<li class="nav-item"> <a class="nav-link txtClrDlg txtBold" href="profile.php"><ti data-ison="stxt[903]" data-desc="btn_profile">Profile</ti></a> </li>
+												<!-- <li class="nav-item"> <a class="nav-link txtClrDlg txtBold" href="profile.php"><ti data-ison="stxt[903]" data-desc="btn_profile">Profile</ti></a> </li> -->
                                                 <li class="nav-item"> <a class="nav-link" href="submitproperty.php"><ti data-ison="stxt[916]" data-desc="btn_addprop">Subit Property</ti></a> </li>
 												 <li class="nav-item"> <a class="nav-link" href="feature.php"><ti data-ison="stxt[905]" data-desc="btn_yourprops">Your Properties</ti></a> </li>
 												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>	

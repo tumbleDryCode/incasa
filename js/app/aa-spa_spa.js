@@ -37,7 +37,7 @@ stxt[36] = "Register";
 stxt[37] = "Enter your email-address and password to login or register";
 stxt[38] = "or";
 stxt[39] = "Logout";
-stxt[40] = "Description";
+stxt[40] = "Descripcion";  // Descrição
 stxt[41] = "Send Order";
 stxt[42] = "Delete";
 stxt[43] = "Jays Bar and Grill";
@@ -225,6 +225,21 @@ stxt[813] = "More information";
 stxt[814] = "For any queries in relation to my policy on cookies and your choices, please <a href=\"index.php?pid=aa-contactus\" class=\"cc-link\">contact us</a>.";
 
 
+
+
+
+stxt[900] = "Agentes";  // Agentes
+stxt[901] = "Propiedades";  // Propiedades
+stxt[902] = "Contactos";  // Contactos
+stxt[903] = "Profile";  // Perfil
+stxt[905] = "Sus propiedades";  // Sus propiedades
+stxt[906] = "Agregar propiedad";  // Agregar propiedad
+stxt[907] = "Forum";  // Foro   
+stxt[908] = "Statistics"; // Estadísticas
+stxt[909] = "Terminos y condiciones"; // Terminos y condiciones
+stxt[910] = "Obtener soporte"; // Obtener soporte
+stxt[911] = "Preguntas frecuentes"; // Preguntas frecuentes
+stxt[912] = "Contactenos"; // Contactenos
 stxt[913] = "Acerca de nosotros";
 stxt[914] = "Propiedad destacada";
 stxt[915] = "Hágase miembro";
@@ -253,7 +268,7 @@ stxt[937] = "Calculadora de cuotas";
 stxt[938] = "Cantidad de propiedad";
 stxt[939] = "Calcular cuota";
 stxt[940] = "Propiedad destacada";
-stxt[941] = "Agregar propiedad reciente";
+stxt[941] = "Ppropiedades Recientes";
 stxt[942] = "Acceso a nuestro panel";
 stxt[943] = "Agente";
 stxt[944] = "Constructor";
@@ -287,15 +302,16 @@ stxt[971] = "Encontrar";
 stxt[972] = " Tu casa";
 stxt[973] = "Reportar problema"; 
 stxt[974] = "Login to Access our DashBoard";
-stxt[975] = "Dont have an Account?"; // Não tem uma conta?
-stxt[976] = "Login was not successful. Please try again."; // O login não foi bem sucedido. Por favor tente novamente.
-stxt[977] = "*Your Email"; // *O seu email
-stxt[978] = "*Your Password"; // *A sua password 
-stxt[979] = "Title and Description"; // Título e Descrição
-stxt[980] = "Images - Media"; // Imagens - Media
-stxt[981] = "Property Details"; // Características do imóvel
-stxt[982] = "Number of bedrooms, kitchens..."; // Número de quartos, cozinhas...
-stxt[983] = "Description of the property"; // Descrição do imóvel
+// translate to spanish
+stxt[975] = "Dont have an Account?"; // No tienes una cuenta?  
+stxt[976] = "Login was not successful. Please try again."; // El inicio de sesión no fue exitoso. Inténtalo de nuevo.
+stxt[977] = "*Su email"; // *Su email 
+stxt[978] = "**Su contraseña"; // *Su contraseña
+stxt[979] = "Titulo"; // Título
+stxt[980] = "Imagens - Media"; // Imagens - Media
+stxt[981] = "Detalles de la propiedad"; // Detalles de la propiedad
+stxt[982] = "Numero de dormitorios, cocinas..."; // Numero de dormitorios, cocinas...
+stxt[983] = "Descripcion de la propiedad"; // Descripcion de la propiedad 
 stxt[984] = "add more images-media";  // adicionar mais imagens-media 
 stxt[985] = "Editar Propiedad";
 stxt[986] = "Carregar";  // Carregar

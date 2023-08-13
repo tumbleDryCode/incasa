@@ -530,7 +530,7 @@ hover-text-white-nav .navbar-nav .nav-link.active,
 }
 /*============ Background opacity colors ===============*/
 .overlay-black::before {
-	background-color: var(--theme-dark-opacity-color)
+	/* background-color: var(--theme-dark-opacity-color) */
 }
 .overlay-secondary::before, .overlay-secondary-half::before {
 	background-color: var(--theme-secondary-opacity-color)

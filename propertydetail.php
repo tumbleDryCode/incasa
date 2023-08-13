@@ -177,7 +177,7 @@ var getPropImgs = function() {
                             <div class="col-md-6">
                                 <div class="bg-primary d-table px-3 py-2 rounded text-white text-capitalize" id="dvPropTypeK"><?php echo getPropTypeStr($row['5']);?></div>
                                 <h5 class="mt-2 text-secondary text-capitalize"><?php echo $row['1'];?></h5>
-                                <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-primary font-12"></i> &nbsp;<?php echo $row['14'];?></span>
+                                <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-primary font-12"></i> &nbsp;<?php echo $row['16'];?></span>
 							</div>
                             <div class="col-md-6">
                                 <div class="text-primary text-left h5 my-2 text-md-right">$<?php echo $row['13'];?></div>
@@ -198,7 +198,7 @@ var getPropImgs = function() {
                             <h4 class="text-secondary my-4"><ti data-ison="stxt[40]" data-desc="btn_desc">Description</ti></h4>
                             <p><?php echo $row['2'];?></p>
                             
-                            <h5 class="mt-5 mb-4 text-secondary">Property Summary</h5>
+                            <!-- <h5 class="mt-5 mb-4 text-secondary">Property Summary</h5>
                             <div  class="table-striped font-14 pb-2">
                                 <table class="w-100">
                                     <tbody>
@@ -223,7 +223,7 @@ var getPropImgs = function() {
                                         
                                     </tbody>
                                 </table>
-                            </div>
+                            </div> -->
                             <!-- not showing features for now
                             <h5 class="mt-5 mb-4 text-secondary"><ti data-ison="stxt[930]" data-desc="btn_features">Features</ti></h5>
                             <div class="row">

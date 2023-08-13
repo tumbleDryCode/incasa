@@ -5,4 +5,5 @@ $con = mysqli_connect("pdb1046.freehostingeu.com","3537280_incasa","casain01","3
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
+	include("include/functions.php");
 ?>
