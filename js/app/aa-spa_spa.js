@@ -95,6 +95,10 @@ stxt[94] = "Sector";
 stxt[95] = "Dept";
 stxt[96] = "All Users";
 stxt[97] = "Name";
+stxt[98] = "Contactar";
+stxt[99] = "mas detalles";
+
+
 
 stxt[102] = "Make";
 stxt[104] = "Year";

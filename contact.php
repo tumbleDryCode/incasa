@@ -36,10 +36,39 @@ if(isset($_POST['send']))
 	<!--	HYML Header start  -->
 		<?php include("include/html_header.php"); ?>
 <script>
-window.onload = function() {
+var setPropInf = function(theAIa, theAIb, theAIc) {
+    console.log("setPropInf: " + theAIa + " " + theAIb + " " + theAIc);
+	if(theAIb.indexOf("pid") != -1) {
+		tAiretArr = JSON.parse(theAIb);
+		var len = tAiretArr.length;
+		tAiretObj = tAiretArr[0];
+		tpropid = tAiretObj["pid"];
+		tproptitle = tAiretObj["title"];
+		document.getElementById("fldsubject").value = tproptitle;
+	}
+};
+var getPropInf = function() {
+	currUrlArr = JSSHOP.shared.urlToArray(getCurrUrl()); 
+	if(currUrlArr.propid) {
 
+	tpropid = currUrlArr.propid;
+    tmpFobj = null;
+    tmpFobj = {};
+    tmpFobj["ws"] = "where pid=?";
+    tmpFobj["wa"] = [tpropid];
+	tmpFobj["l"] = "1";
+	tmpFobj["o"] = "pid";	
+    oi = getNuDBFnvp("property", 5, null, tmpFobj);
+    doQComm(oi["rq"], null, "setPropInf");
+	}
+};
+
+
+window.onload = function() {
+ getPropInf();
 doWinLoad();
 };
+
 </script>
 </head>
 <body>
@@ -85,36 +114,8 @@ doWinLoad();
         <div class="full-row">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 mb-5 bg-primary">
-                        <div class="contact-info">
-                            <h3 class="mb-4 mt-4 text-white"><ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti></h3>
-							
-                            <ul>
-                                <li class="d-flex mb-4"> <i class="fas fa-map-marker-alt text-white mr-2 font-13 mt-1"></i>
-                                    <div class="contact-address">
-                                        <h5 class="text-white"><ti data-ison="stxt[209]" data-desc="btn_address">Address</ti></h5>
-                                        <span class="text-secondary">Vale do Tejo</span> 
- 
-										</div>
-                                </li>
-                                <li class="d-flex mb-4"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>
-                                    <div class="contact-address">
-                                        <h5 class="text-white"><ti data-ison="stxt[24]" data-desc="btn_tel">Tel</ti></h5>
-                                        <span class="d-table text-secondary">961159145</span>
- 
-									</div>
-                                </li>
-                                <li class="d-flex mb-4"> <i class="fas fa-envelope text-white mr-2 font-13 mt-1"></i>
-                                    <div class="contact-address">
-                                        <h5 class="text-white">Email</h5>
-										<span class="d-table text-secondary">in.casa22@sapo.pt</span>
- 
-										</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-					<div class="col-lg-1"></div>
+
+				<div class="col-lg-1"></div>
                     <div class="col-md-12 col-lg-7">
 						<div class="container">
                         <div class="row">
@@ -158,6 +159,37 @@ doWinLoad();
 						</div>
 						</div>
 					</div>
+					
+                    <div class="col-lg-4 mb-5 bg-primary">
+                        <div class="contact-info">
+                            <h3 class="mb-4 mt-4 text-white"><ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti></h3>
+							
+                            <ul>
+                                <li class="d-flex mb-4"> <i class="fas fa-map-marker-alt text-white mr-2 font-13 mt-1"></i>
+                                    <div class="contact-address">
+                                        <h5 class="text-white"><ti data-ison="stxt[209]" data-desc="btn_address">Address</ti></h5>
+                                        <span class="text-secondary">Vale do Tejo</span> 
+ 
+										</div>
+                                </li>
+                                <li class="d-flex mb-4"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>
+                                    <div class="contact-address">
+                                        <h5 class="text-white"><ti data-ison="stxt[24]" data-desc="btn_tel">Tel</ti></h5>
+                                        <span class="d-table text-secondary">961159145</span>
+ 
+									</div>
+                                </li>
+                                <li class="d-flex mb-4"> <i class="fas fa-envelope text-white mr-2 font-13 mt-1"></i>
+                                    <div class="contact-address">
+                                        <h5 class="text-white">Email</h5>
+										<span class="d-table text-secondary">in.casa22@sapo.pt</span>
+ 
+										</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+					
                 </div>
             </div>
         </div>

@@ -144,3 +144,11 @@ btn-success {
 .accordion-body {
   padding: 2px;
 }
+
+.container {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 6px;
+  margin-right: 6px;
+  margin-left: 6px;
+}

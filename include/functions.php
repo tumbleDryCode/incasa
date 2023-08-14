@@ -24,7 +24,7 @@ function getPropTypeStr($tmpDBstr) {
 	if(isset($_COOKIE["usrlang"])) {
 		$tmpLang = $_COOKIE["usrlang"];
 	} else {
-		$tmpLang = "en_us";
+		$tmpLang = "pt_pt";
 	}
 	
 		switch($tmpDBstr) {
