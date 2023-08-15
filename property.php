@@ -73,7 +73,7 @@ include("config.php");
                                     <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row["pimage"];?>" alt="pimage">
                                         
                                         <div class="sale bg-secondary text-white"><?php echo getPropTypeStr($row['5']);?></div>
-                                        <div class="price text-primary">$<?php echo $row['13'];?> <span class="text-white"><?php echo $row['12'];?> Area m2</span></div>
+                                        <div class="price text-primary"><?php echo $row['13'];?> <span class="text-white"><?php echo $row['12'];?> Area m2</span></div>
                                         
                                     </div>
                                     <div class="featured-thumb-data shadow-one">
@@ -83,8 +83,21 @@ include("config.php");
                                         <div class="px-4 pb-4 d-inline-block w-100">
                                             <div class=""> <a href="propertydetail.php?pid=<?php echo $row['0'];?>" class="txtSmall txtBold txtDecorNone"><ti data-ison="stxt[99]" data-desc="btn_moredet">more details</ti>...</a> </div>
                                             <div class="float-right"><i class="nav-material-icons coll-menu-item txtClrHdr" style="margin-right:4px;margin-top:2px;">&#xe0b7;</i> <a href="contact.php?propid=<?php echo $row['0'];?>" class="txtSmall txtBold txtDecorNone"><ti data-ison="stxt[98]" data-desc="btn_contact">Contact</ti></a> </div>
-
                                         </div>
+
+                                        <div class="bg-gray quantity px-4 pt-4">
+                                                    <ul>
+                                                        <li><b><?php echo $row['12'];?></b> Area m2</li>
+                                                        <li><b><?php echo $row['6'];?></b> <ti data-ison="stxt[922]" data-desc="btn_bedroos">Bedrooms</ti></li>
+                                                        <li><b><?php echo $row['7'];?></b> <ti data-ison="stxt[923]" data-desc="btn_bathrooms">Bathrooms</ti></li>
+                                                        <li><b><?php echo $row['9'];?></b> <ti data-ison="stxt[926]" data-desc="btn_kitchend">Kitchens</ti></li>
+                                                    <!--    <li><span><?php echo $rhall; ?></span> <ti data-ison="stxt[925]" data-desc="btn_halls">Halls</ti></li>
+                                                        <li><span><?php echo $row['8'];?></span> <ti data-ison="stxt[924]" data-desc="btn_terrace">Terrace</ti></li>
+                                                        -->
+                                                    </ul>
+                                                </div> 
+
+
                                     </div>
                                 </div>
                             </div>

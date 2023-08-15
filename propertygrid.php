@@ -32,17 +32,17 @@ include("config.php");
         <!--	Header end  -->
         
         <!--	Banner   --->
-        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
+        <div class="rtable brdrClrHdr" style="background-image: url('images/banner/04.jpg'); min-width: 95%; max-width: 95%;min-height: 105%;margin:0 auto;margin-top:2px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[940]" data-desc="btn_property_grid">Featured Properties</ti></b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[936]" data-desc="btn_srchprops">Search Prop</ti></b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active"><ti data-ison="stxt[942]" data-desc="btn_property_grid">Property Grid</ti></li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[940]" data-desc="btn_property_featured">Featured</ti></li>
                             </ol>
                         </nav>
                     </div>
@@ -66,57 +66,41 @@ include("config.php");
 							{
 								$type=$_REQUEST['type'];
 								$stype=$_REQUEST['stype'];
-								$city=$_REQUEST['city'];
-															$sql="SELECT * FROM property limit 3";
+								// $city=$_REQUEST['city'];
+                                if(isset($_REQUEST['city'])) {
+                                    $city=$_REQUEST['city'];
+                                } else{
+                                    $city="Lisboa";
+                                }
+								// 							$sql="SELECT * FROM property limit 3";
 	
-								// $sql="SELECT * FROM property WHERE type='{$type}' and stype='{$stype}' and city='{$city}'";
+								$sql="SELECT * FROM property WHERE type='{$type}' and stype='{$stype}' and city='{$city}'";
 								//SELECT * FROM `property` WHERE type='office' or type='office' and stype='sale' or stype='rent' and city='valsad' OR state='mumbai'
 								//SELECT * FROM `property` WHERE type='office' and stype='sale'  and city='valsad' OR state='mumbai'
 								$result=mysqli_query($con,$sql);
 							
 								if(mysqli_num_rows($result)>0)
 								{
-									if($result == true)
-									{
-										while($row=mysqli_fetch_array($result))
-										{
+
 							?>
 									
-                            <div class="col-md-6">
-                                <div class="featured-thumb hover-zoomer mb-4">
-                                    <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row['18'];?>" alt="pimage">
-                                        
-                                        <div class="sale bg-secondary text-white">For <?php echo $row['5'];?></div>
-                                        <div class="price text-primary text-capitalize">$<?php echo $row['13'];?> <span class="text-white"><?php echo $row['12'];?>M2</span></div>
-                                        
-                                    </div>
-                                    <div class="featured-thumb-data shadow-one">
-                                        <div class="p-4">
-                                            <h5 class="text-secondary hover-text-primary mb-2 text-capitalize"><a href="propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1'];?></a></h5>
-                                            <span class="location text-capitalize"><i class="fas fa-map-marker-alt text-primary"></i> <?php echo $row['14'];?></span> </div>
-                                        <div class="px-4 pb-4 d-inline-block w-100">
-                                            <div class="float-left text-capitalize"><i class="fas fa-user text-primary mr-1"></i>: <?php echo $row['uid'];?></div>
-                                            <div class="float-right"><i class="far fa-calendar-alt text-primary mr-1"></i>: ...</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
                             <?php 		
 										} 
 					
 									}
-								}
+					
 								else {
 									
 									echo "<h1 class='mb-5'><center>Uuups.. sem resultados. tente.....</center></h1>";
 								}
 									
-							}
+					
 
 							?>
                             
 
-                            <script src="js/custom.js"></script>
+                        
  <script async src="https://cse.google.com/cse.js?cx=535200e6c271548d4">
 </script> 
 <!-- <div id="ggAds"></div>
@@ -143,7 +127,7 @@ include("config.php");
                         </div>
                     </div>
 					
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="sidebar-widget">
                             <h4 class="double-down-line-left text-secondary position-relative pb-4 my-4">Instalment Calculator</h4>
 						<form class="d-inline-block w-100" action="calc.php" method="post">
@@ -190,20 +174,22 @@ include("config.php");
 
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     
                 </div>
             </div>
         </div>
+
+        <!--	Property Grid   end-->
 
         
         <!--	Footer   start-->
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
         
-        <!-- Scroll to top --> 
+        <!-- Scroll to top 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
-        <!-- End Scroll To top --> 
+          End Scroll To top --> 
     </div>
 </div>
         <!--	HTML footer start  -->

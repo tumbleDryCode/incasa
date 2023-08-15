@@ -175,12 +175,15 @@ var getPropImgs = function() {
                         </div>
                         <div class="row mb-4">
                             <div class="col-md-6">
+                            <div class="float-right"><i class="nav-material-icons coll-menu-item txtClrHdr" style="margin-right:4px;margin-top:2px;">&#xe0b7;</i> <a href="contact.php?propid=<?php echo $row['0'];?>" class="txtSmall txtBold txtDecorNone"><ti data-ison="stxt[98]" data-desc="btn_contact">Contact</ti></a> </div>
+
                                 <div class="bg-primary d-table px-3 py-2 rounded text-white text-capitalize" id="dvPropTypeK"><?php echo getPropTypeStr($row['5']);?></div>
                                 <h5 class="mt-2 text-secondary text-capitalize"><?php echo $row['1'];?></h5>
                                 <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-primary font-12"></i> &nbsp;<?php echo $row['16'];?></span>
+
 							</div>
                             <div class="col-md-6">
-                                <div class="text-primary text-left h5 my-2 text-md-right">$<?php echo $row['13'];?></div>
+                                <div class="text-primary text-left h5 my-2 text-md-right"><?php echo $row['13'];?></div>
                                 <div class="text-left text-md-right"><ti data-ison="stxt[18]" data-desc="btn_price">Price</ti></div>
                             </div>
                         </div>

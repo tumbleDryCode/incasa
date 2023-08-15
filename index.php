@@ -145,27 +145,37 @@ include("config.php");
 									?>
 								
                                     <div class="col-md-6 col-lg-4">
+                                    <div class="price text-primary"><b>$<?php echo $row['13'];?> </b><span class="txtClrHdr"><?php echo $row['12'];?> Area m2</span></div>
+
                                         <div class="featured-thumb hover-zoomer mb-4">
                                             <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row['18'];?>" alt="pimage">
                                                 <div class="featured bg-primary text-white">New</div>
                                                 <div class="sale bg-secondary text-white text-capitalize"><?php echo getPropTypeStr($row['5']);?></div>
-                                                <div class="price text-primary"><b>$<?php echo $row['13'];?> </b><span class="text-white"><?php echo $row['12'];?> Area m2</span></div>
                                             </div>
                                             <div class="featured-thumb-data shadow-one">
+
                                                 <div class="p-3">
+
                                                     <h5 class="text-secondary hover-text-primary mb-2 text-capitalize"><a href="propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1'];?></a></h5>
                                                     <span class="location text-capitalize"><i class="fas fa-map-marker-alt text-primary"></i> <?php echo $row['14'];?></span> </div>
-                                                <div class="bg-gray quantity px-4 pt-4">
+
+                                                    <div class="px-4 pb-4 d-inline-block w-100">
+                                            <div class=""> <a href="propertydetail.php?pid=<?php echo $row['0'];?>" class="txtSmall txtBold txtDecorNone"><ti data-ison="stxt[99]" data-desc="btn_moredet">more details</ti>...</a> </div>
+                                            <div class="float-right"><i class="nav-material-icons coll-menu-item txtClrHdr" style="margin-right:4px;margin-top:2px;">&#xe0b7;</i> <a href="contact.php?propid=<?php echo $row['0'];?>" class="txtSmall txtBold txtDecorNone"><ti data-ison="stxt[98]" data-desc="btn_contact">Contact</ti></a> </div>
+                                        </div>
+
+
+                                                 <div class="bg-gray quantity px-4 pt-4">
                                                     <ul>
-                                                        <li><span><?php echo $row['12'];?></span> Area m2</li>
-                                                        <li><span><?php echo $row['6'];?></span> <ti data-ison="stxt[922]" data-desc="btn_bedroos">Bedrooms</ti></li>
-                                                        <li><span><?php echo $row['7'];?></span> <ti data-ison="stxt[923]" data-desc="btn_bathrooms">Bathrooms</ti></li>
-                                                        <li><span><?php echo $row['9'];?></span> <ti data-ison="stxt[926]" data-desc="btn_kitchend">Kitchens</ti></li>
-                                                        <li><span><?php echo $rhall; ?></span> <ti data-ison="stxt[925]" data-desc="btn_halls">Halls</ti></li>
+                                                    <li><b><?php echo $row['12'];?></b> Area m2</li>
+                                                        <li><b><?php echo $row['6'];?></b> <ti data-ison="stxt[922]" data-desc="btn_bedroos">Bedrooms</ti></li>
+                                                        <li><b><?php echo $row['7'];?></b> <ti data-ison="stxt[923]" data-desc="btn_bathrooms">Bathrooms</ti></li>
+                                                        <li><b><?php echo $row['9'];?></b> <ti data-ison="stxt[926]" data-desc="btn_kitchend">Kitchens</ti></li>
+                                                    <!--    <li><span><?php echo $rhall; ?></span> <ti data-ison="stxt[925]" data-desc="btn_halls">Halls</ti></li>
                                                         <li><span><?php echo $row['8'];?></span> <ti data-ison="stxt[924]" data-desc="btn_terrace">Terrace</ti></li>
-                                                        
+                                                        -->
                                                     </ul>
-                                                </div>
+                                                </div> 
                                                 <!-- <div class="p-4 d-inline-block w-100">
                                                     <div class="float-left text-capitalize"><i class="fas fa-user text-primary mr-1"></i>By : <?php echo $row['uname'];?></div>
                                                     <div class="float-right"><i class="far fa-calendar-alt text-primary mr-1"></i> 6 Months Ago</div>
