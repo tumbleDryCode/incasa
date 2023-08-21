@@ -33,31 +33,12 @@ if(session_id() == '') {
 		header("location:dashboard.php");
 	}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    
+<html>
 <head>
-        <meta charset="utf-8">
- 
-        <title>IN-CASA Admin - Login</title>
-		
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-		
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-		
+        
+		        <!--	HTML Header start  -->
+				<?php include("includes/html_header.php");?>
+        <!--	HTML Header end  -->
     </head>
     <body>
 	 
@@ -68,28 +49,29 @@ if(session_id() == '') {
                 	<div class="loginbox">
                         <div class="login-right">
 							<div class="login-right-wrap">
-								<h1>Login</h1>
-								<p class="account-subtitle">Access to our dashboard</p>
+							<p class="account-subtitle" style="margin:0px;padding:0px;"><ti data-ison="stxt[974]" data-desc="btn_login">Login</ti></p>
+								<span class="txtSmall txtClrGrey"><ti data-ison="stxt[1011]" data-desc="btn_login">Email Password</ti>:</span>
+								
 								<p style="color:red;"><?php echo $error; ?></p>
 								<!-- Form -->
 								<form method="post">
 									<div class="form-group">
-										<input class="form-control" name="user" type="text" placeholder="User Name" value="admin">
+										<input class="form-control" name="user" type="text" placeholder="Name" value="">
 									</div>
 									<div class="form-group">
-										<input class="form-control" type="password" name="pass" placeholder="Password"  value="admin">
+										<input class="form-control" type="password" name="pass" placeholder="Password"  value="">
 									</div>
 									<div class="form-group">
 										<button class="btn btn-primary btn-block" name="login" type="submit">Login</button>
 									</div>
 								</form>
-								
+								<!-- Social Login
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
 								</div>
 								
-								<!-- Social Login -->
+								
 								<div class="social-login">
 									<span>Login with</span>
 									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -97,9 +79,9 @@ if(session_id() == '') {
 									<a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
 									<a href="#" class="google"><i class="fa fa-instagram"></i></a>
 								</div>
-								<!-- /Social Login -->
-								
-								<div class="text-center dont-have">Don't have an account? <a href="register.php">Register</a></div>
+								Social Login -->
+								<br>
+								<div class="text-center dont-have"><ti data-ison="stxt[975]" data-desc="btn_reg">Dont have an Account</ti> <a href="register.php"><ti data-ison="stxt[36]" data-desc="btn_reg">Register</ti></a></div>
 								
 							</div>
                         </div>
@@ -108,16 +90,9 @@ if(session_id() == '') {
             </div>
         </div>
 		<!-- /Main Wrapper -->
-		
-		<!-- jQuery -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-		<!-- Bootstrap Core JS -->
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- Custom JS -->
-		<script src="assets/js/script.js"></script>
- 
+				         <!--	HYML footer start  -->
+						 <?php include("includes/html_footer.php");?>
+        <!--	HYML footer end  -->
     </body>
 
 </html>

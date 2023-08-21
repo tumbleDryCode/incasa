@@ -92,7 +92,12 @@ var getPropImgs = function() {
     doQComm(oi["rq"], null, "setPropImgs");
 };
 
-			</script>
+ 
+	window.onload = function() {
+        getPropImgs();
+ doWinLoad();
+	};
+	</script>
 </head>
 <body>
 
@@ -410,9 +415,7 @@ var getPropImgs = function() {
         <!--	HTML footer start  -->
 		<?php include("include/html_footer.php");?>
         <!--	HTML footer end  -->
-        <script>
-            getPropImgs();
-            </script>
+
  
 </body>
 </html>

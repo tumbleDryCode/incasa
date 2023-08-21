@@ -21,7 +21,7 @@ stxt[20] = "Editar Item";
 stxt[21] = "Guardar";
 stxt[22] = "Titulo do Shop";
 stxt[23] = "Descricao";
-stxt[24] = "Tel";
+stxt[24] = "Numero Telefone";
 stxt[25] = "Web";
 stxt[26] = "Email";
 stxt[27] = "Editar seus Shops";
@@ -37,7 +37,7 @@ stxt[33] = "Items em breve";
 stxt[34] = "Cart sem items";
 stxt[35] = "sobre in-casa.eu";
 stxt[36] = "Registe-se";
-stxt[37] = "Entroduza seu email-address e password para login ou registar-se";
+stxt[37] = "Entroduza seu email e password para login ou registar-se";
 stxt[38] = "ou";
 stxt[39] = "Logout";
 stxt[40] = "Descricao";
@@ -342,6 +342,13 @@ stxt[1005] = "Item price must be good.";
 stxt[1006] = "Mensagem enviada com sucesso";
 stxt[1007] = "Mesagem nao enviada";
 stxt[1008] = "Por favor preencha todos os campos";
+stxt[1009] = "Registo falhou. Por favor tente novamente.";  // Registo falhou. Por favor tente novamente.
+stxt[1010] = "Registado com sucesso. Por favor <a href=\"login.php\">login</a>";  // Registado com sucesso. Por favor entre.
+stxt[1011] = "Introduza seu nome e password para entrar no painel de admin"; // Introduza seu nome e password para entrar no painel de admin
+stxt[1012] = "Preencha todos os campos para se registar como administrador. O seu nome e password serão usados para login"; // Preencha todos os campos para se registar como administrador. O seu nome e password serão usados para login.
+stxt[1013] = "Registado com sucesso. Por favor <a href=\"index.php\">login</a>";  // Registado com sucesso. Por favor entre.
+
+
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";
 

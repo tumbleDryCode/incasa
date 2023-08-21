@@ -27,7 +27,7 @@ if(isset($_REQUEST['login']))
 			   $error = "<p class='alert alert-warning'><ti data-ison='stxt[976]' data-desc='btn_loginerr'>Login Error</ti></p>";
 		   }
 	}else{
-		$error = "<p class='alert alert-warning'>Please Fill all the fields</p>";
+		$error = "<p class='alert alert-warning'><ti data-ison='stxt[1008]' data-desc='btn_regerr'>Fill all</ti></p>";
 	}
 }
 ?>
@@ -39,6 +39,13 @@ if(isset($_REQUEST['login']))
 		<?php include("include/html_header.php");?>
         <!--	HYML Header end  -->
 </head>
+<script>
+window.onload = function() {
+document.getElementsByName('email')[0].placeholder= stxt[977];
+document.getElementsByName('pass')[0].placeholder= stxt[978];
+doWinLoad();
+};
+</script>
 <body>
 
 <!--	Page Loader
@@ -62,7 +69,7 @@ if(isset($_REQUEST['login']))
 		<div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
-                                <li class="breadcrumb-item text-black"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item text-black"><a href="./">Home</a></li>
                                 <li class="breadcrumb-item active">Login</li>
                             </ol>
                         </nav>
@@ -133,10 +140,6 @@ if(isset($_REQUEST['login']))
         <!--	HTML footer start  -->
 		<?php include("include/html_footer.php");?>
         <!--	HTML footer end  -->
-<script laguage="javascript" type="text/javascript">
-document.getElementsByName('email')[0].placeholder= stxt[977];
-document.getElementsByName('pass')[0].placeholder= stxt[978];
 
-</script>
 </body>
 </html>

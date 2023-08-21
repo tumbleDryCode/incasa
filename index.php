@@ -143,9 +143,10 @@ include("config.php");
 			$rdate = $row["date"];	
 
 									?>
-								
+ 
+
                                     <div class="col-md-6 col-lg-4">
-                                    <div class="price text-primary"><b>$<?php echo $row['13'];?> </b><span class="txtClrHdr"><?php echo $row['12'];?> Area m2</span></div>
+                                    <div class="price text-primary">&euro;<b><?php echo $row['13'];?> </b><span class="txtClrHdr"><?php echo $row['12'];?> Area m2</span></div>
 
                                         <div class="featured-thumb hover-zoomer mb-4">
                                             <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row['18'];?>" alt="pimage">

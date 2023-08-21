@@ -337,6 +337,16 @@ stxt[1005] = "Item price must be good.";
 stxt[1006] = "Mensaje enviado con exito";
 stxt[1007] = "Mensaje no enviado";
 stxt[1008] = "Por favor, rellene todos los campos";
+stxt[1009] = "El registro falló. Inténtalo de nuevo."; // El registro falló. Inténtalo de nuevo.
+stxt[1010] = "Registro exitoso. Por favor <a href=\"login.php\">login</a>."; // Registro exitoso. Por favor inicia sesión.
+stxt[1011] = "Ingrese su nombre y contraseña para iniciar sesión en el administrador"; // Ingrese su nombre y contraseña para iniciar sesión en el administrador
+stxt[1012] = "Rellene todos los campos para registrarse como administrador. Su nombre y contrasena se utilizaran para iniciar sesion."; // Rellene todos los campos para registrarse como administrador. Su nombre y contraseña se utilizarán para iniciar sesión.
+stxt[1013] = "Registro exitoso. Por favor <a href=\"index.php\">login</a>."; // Registro exitoso. Por favor inicia sesión.
+
+
+
+
+
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";

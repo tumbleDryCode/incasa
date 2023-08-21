@@ -10,40 +10,22 @@ if(!isset($_SESSION['auser']))
 	header("location:index.php");
 }
 ?>  
-<link rel="stylesheet" href="../css/x_dev.css">
-<link rel="stylesheet" href="../css/x_forms.css">
-
-
-<script type="text/javascript">
-		 function  toggleVisibility(rowname){
-		try {
-			theRow = document.getElementById(rowname);
-			if(theRow.style.display == "none") {
-				theRow.style.display = "block";
-				theRow.style.visibility = "visible";
-			} else {
-				theRow.style.display = "none";
-				theRow.style.visibility = "hidden";
-			}
-		} catch (e) {	 
- alert(e);
-		}
-	}
-	</script>
   <div class="header">
 			<div>
 	
-				 
-								<a onclick="javascript:toggleVisibility('sidebara');" id="toggle_btn" style="float:right;padding: 2px;" class="bkgdWhite">
+				 <!-- WideScreen Menu Toggle
+												<a onclick="javascript:toggleVisibility('sidebara');" id="toggle_btn" style="float:right;padding: 2px;" class="bkgdWhite">
 					<i class="fa fa-bars"></i>
 				</a>
+			 -->
+
 			
 				<!-- Mobile Menu Toggle -->
 	 
 				
-								<a class="mobile_btn" id="mobile_btna" onclick="javascript:toggleVisibility('sidebara');" style="float:right;padding: 2px;" class="bkgdWhite">
+								<div class="mobile_btn" id="mobile_btna" onclick="javascript:JSSHOP.ui.toggleVisibility('sidebara');" style="float:right;padding: 2px;" class="bkgdWhite">
 					<i class="fa fa-bars" ></i>
-				</a>
+</div>
 
 				<!-- /Mobile Menu Toggle -->
 			
@@ -184,32 +166,7 @@ if(!isset($_SESSION['auser']))
             </div>
 			<!-- /Sidebar -->
 			
-<script src="../js/x_allinit.js"></script> 
-<script>
-function doDWD() {
- xae = document.getElementsByTagName("ti");
-var iint = 0;
-while(iint < xae.length) {
-nuDW(xae[iint]);
-iint++
-}
-}
-function dosearch() {
-strUp = "propertygrid.php?type=" + ptype.value + "&stype=" + pstype.value + "&city=" + pcity.value + "&q=" + ptype.value + " " + pstype.value + " " + pcity.value;
-document.getElementById("q").value = ptype.value + " " + pstype.value + " " + pcity.value;
-// document.location.href = strUp;
-document.getElementById("psearch").action = strUp;
 
-document.getElementById("psearch").submit();
-}
-</script>
 
-<script src="../js/x_booter.js"></script> 
-<script src="../js/x_all.js"></script> 
-<script>
-JSSHOP.loadScript("../js/" + jscssprefix + "aa-" + usrlang + ".js", donada,"js");
-
-setTimeout("doDWD()", 800);
-</script>
  
 

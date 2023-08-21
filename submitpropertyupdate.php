@@ -325,10 +325,7 @@ JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "<?php echo $rtype; ?>"
 getPropImgs();
 doWinLoad();
 };
-
-
-
-			</script>
+</script>
 </head>
 <body>
 

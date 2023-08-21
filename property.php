@@ -30,7 +30,14 @@ include("config.php");
         <!--	Header start  -->
 		<?php include("include/header.php");?>
         <!--	Header end  -->
-        
+        <div class="col-md-6">
+                        <nav aria-label="breadcrumb" class="float-left float-md-right">
+                            <ol class="breadcrumb bg-transparent m-0 p-0">
+                                <li class="breadcrumb-item text-black"><a href="./">Home</a></li>
+                                <li class="breadcrumb-item active"><ti data-ison="stxt[940]" data-desc="btn_property_featured">Featured</ti></li>
+                            </ol>
+                        </nav>
+                    </div>
         <!--	Banner   --->
         <div class="rtable brdrClrHdr" style="background-image: url('images/banner/04.jpg'); min-width: 95%; max-width: 95%;min-height: 105%;margin:0 auto;margin-top:2px;">
             <div class="container">
@@ -38,14 +45,7 @@ include("config.php");
                     <div class="col-md-6">
                         <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b><ti data-ison="stxt[940]" data-desc="btn_pdetail">Featured</ti></b></h2>
                     </div>
-                    <div class="col-md-6">
-                        <nav aria-label="breadcrumb" class="float-left float-md-right">
-                            <ol class="breadcrumb bg-transparent m-0 p-0">
-                                <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active"><ti data-ison="stxt[940]" data-desc="btn_property_featured">Featured</ti></li>
-                            </ol>
-                        </nav>
-                    </div>
+
                 </div>
             </div>
         </div>

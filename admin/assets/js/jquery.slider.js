@@ -697,7 +697,3 @@ var tmpl = '<span class="<%=className%>">' +
 	};
   
 })(jQuery);
-
- 
-setTimeout("jSlider()", 1000);
- 

@@ -2491,8 +2491,7 @@ tPSUObj = JSSHOP.user.doNuCkieUprefs("prefs" + quid);
 alert("tPSUObj.error: " + e);
 } 
 
-
-
+	
 JSSHOP.loadScript("js/app/" + jscssprefix + "aa-" + usrlang + ".js", doFrmQLoad,"js");
 
 } catch(e) {

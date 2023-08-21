@@ -333,7 +333,11 @@ stxt[1005] = "Item price must be good.";
 stxt[1006] = "Message sent successfully";
 stxt[1007] = "Message failed to send";
 stxt[1008] = "Please fill in all fields";
-
+stxt[1009] = "Registration failed. Please try again.";
+stxt[1010] = "Registration successful. Please <a href=\"login.php\">login</a>.";
+stxt[1011] = "Enter  your name and password to log into admin"; // Introduza seu nome e password para entrar no painel de admin
+stxt[1012] = "Fill in all fields to register as admin. Your name and password will be used for login."; // Preencha todos os campos para se registar como administrador. O seu nome e password serão usados para login.
+stxt[1013] = "Registration successful. Please <a href=\"index.php\">login</a>.";
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";

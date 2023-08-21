@@ -5,5 +5,5 @@
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
-	include("include/functions.php");
+	// include("../include/functions.php");
 ?>

@@ -652,7 +652,11 @@ while(iint < xae.length) {
 nuDW(xae[iint]);
 iint++
 }
-doCCrun();
+if(document.location.href.indexOf("admin/") != -1) {
+atmpa = "cc";
+} else {
+setTimeout("doCCrun()", 800);
+}
 }
 function dosearch() {
 strUp = "propertygrid.php?type=" + ptype.value + "&stype=" + pstype.value + "&city=" + pcity.value + "&q=" + ptype.options[ptype.selectedIndex].text + " " + pstype.options[pstype.selectedIndex].text + " " + pcity.value;

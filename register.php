@@ -23,37 +23,43 @@ if(isset($_REQUEST['reg']))
 	}
 	else
 	{
-		
-		if(!empty($name) && !empty($email) && !empty($phone) && !empty($pass) && !empty($uimage))
+	 if(!empty($email) && !empty($pass))
+
+		// if(!empty($name) && !empty($email) && !empty($phone) && !empty($pass) && !empty($uimage))
 		{
 			
 			$sql="INSERT INTO user (uname,uemail,uphone,upass,utype,uimage) VALUES ('$name','$email','$phone','$pass','$utype','$uimage')";
 			$result=mysqli_query($con, $sql);
 			move_uploaded_file($temp_name1,"admin/user/$uimage");
 			   if($result){
-				   $msg = "<p class='alert alert-success'>Register Successfully</p> ";
+				   $msg = "<p class='alert alert-success'><ti data-ison='stxt[1010]' data-desc='btn_regok'>Reg ok</ti></p> ";
 			   }
 			   else{
-				   $error = "<p class='alert alert-warning'>Register Not Successfully</p> ";
+				   $error = "<p class='alert alert-warning'><ti data-ison='stxt[1009]' data-desc='btn_regerr'>Reg Error</ti></p> ";
 			   }
 		}else{
-			$error = "<p class='alert alert-warning'>Please Fill all the fields</p>";
+			$error = "<p class='alert alert-warning'><ti data-ison='stxt[1008]' data-desc='btn_fillall'>Fill all</ti></p>";
 		}
 	}
 	
 }
 ?>
-<!DOCTYPE html>
 <html>
-
 <head>
-        <!--	HYML Header start  -->
-		<?php include("include/html_header.php");?>
-        <!--	HYML Header end  -->
-
+<!--	HTML Header start  -->
+<?php include("include/html_header.php");?>
+<!--	HTML Header end  -->
+<script>
+window.onload = function() {
+document.getElementsByName('name')[0].placeholder= stxt[97];
+document.getElementsByName('phone')[0].placeholder= stxt[24];
+document.getElementsByName('email')[0].placeholder= stxt[977];
+document.getElementsByName('pass')[0].placeholder= stxt[978];
+doWinLoad();
+};
+</script>
 </head>
 <body>
-
 <!--	Page Loader
 =============================================================
 <div class="page-loader position-fixed z-index-9999 w-100 bg-white vh-100">
@@ -64,8 +70,6 @@ if(isset($_REQUEST['reg']))
 	</div>
 </div>
 --> 
-
-
 <div id="page-wrapper">
     <div class="row"> 
         <!--	Header start  -->
@@ -76,7 +80,7 @@ if(isset($_REQUEST['reg']))
 		<div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
-                                <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item text-black"><a href="./">Home</a></li>
                                 <li class="breadcrumb-item active"><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></li>
                             </ol>
                         </nav>
@@ -102,31 +106,30 @@ if(isset($_REQUEST['reg']))
             </div>
         </div>
        Banner   --->
-		 
-		 
-		 
 	   <div class="page-wrappers full-row" style="padding: 15px;">
             <div class="">
             	<div class="container">
 				<div class="rtable bkgdClrWhite brdrClrHdr" style="max-width:600px;margin: 0 auto">
                         <div class="login-right">
 							<div class="login-right-wrap">
-								<h1><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></h1>
-								<p class="account-subtitle"><ti data-ison="stxt[942]" data-desc="btn_access_to_our_dashboard">Access to our dashboard</ti></p>
+ 
+								<p class="account-subtitle" style="margin:0px;padding:0px;"><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></p>
+								<span class="txtSmall txtClrGrey"><ti data-ison="stxt[37]" data-desc="btn_login">Email Password</ti>:</span>
+								
 								<?php echo $error; ?><?php echo $msg; ?>
 								<!-- Form -->
 								<form method="post" enctype="multipart/form-data">
 									<div class="form-group">
-										<input type="text"  name="name" class="form-control" placeholder="Your Name*">
+										<input type="text"  name="name" id="prpname"  class="form-control" placeholder="Your Name*">
 									</div>
 									<div class="form-group">
-										<input type="email"  name="email" class="form-control" placeholder="Your Email*">
+										<input type="text"  name="phone" id="prpphone" class="form-control" placeholder="Your Phone*" maxlength="10">
 									</div>
 									<div class="form-group">
-										<input type="text"  name="phone" class="form-control" placeholder="Your Phone*" maxlength="10">
+										<input type="email"  name="email" id="prpemail" name="name" class="form-control" placeholder="Your Email*">
 									</div>
 									<div class="form-group">
-										<input type="text" name="pass"  class="form-control" placeholder="Your Password*">
+										<input type="text" name="pass" id="prppass"  class="form-control" placeholder="Your Password*">
 									</div>
 
 									 <div class="form-check-inline">
@@ -150,16 +153,17 @@ if(isset($_REQUEST['reg']))
 										<input class="form-control" name="uimage" type="file">
 									</div>
 									
-									<button class="btn btn-primary" name="reg" value="Register" type="submit">Register</button>
+									<button class="btn btn-primary" name="reg" value="Register" type="submit"><ti data-ison="stxt[36]" data-desc="btn_register">Register</ti></button>
 									
 								</form>
-								
+
+								<!-- Social Login 
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
 								</div>
 								
-								<!-- Social Login -->
+								
 								<div class="social-login">
 									<span>Register with</span>
 									<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -167,7 +171,7 @@ if(isset($_REQUEST['reg']))
 									<a href="#" class="facebook"><i class="fab fa-twitter"></i></a>
 									<a href="#" class="google"><i class="fab fa-instagram"></i></a>
 								</div>
-								<!-- /Social Login -->
+								 Social Login -->
 								
 								<div class="text-center dont-have"><ti data-ison="stxt[946]" data-desc="btn_already_have_an_account">Already have an account?</ti> <a href="login.php">Login</a></div>
 								
@@ -184,29 +188,14 @@ if(isset($_REQUEST['reg']))
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
         
-        <!-- Scroll to top --> 
+        <!-- Scroll to top 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
-        <!-- End Scroll To top --> 
+        End Scroll To top --> 
     </div>
 </div>
 <!-- Wrapper End --> 
-
-<!--	Js Link
-============================================================--> 
-<script src="js/jquery.min.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/greensock.js"></script> 
-<script src="js/layerslider.transitions.js"></script> 
-<script src="js/layerslider.kreaturamedia.jquery.js"></script> 
-<!--jQuery Layer Slider --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/tmpl.js"></script> 
-<script src="js/jquery.dependClass-0.1.js"></script> 
-<script src="js/draggable-0.1.js"></script> 
-<script src="js/jquery.slider.js"></script> 
-<script src="js/wow.js"></script> 
-<script src="js/custom.js"></script>
+        <!--	HYML footer start  -->
+		<?php include("include/html_footer.php");?>
+        <!--	HYML footer end  -->
 </body>
 </html>

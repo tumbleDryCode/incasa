@@ -1509,10 +1509,12 @@ button.bg-danger:hover {
 .header .user-menu .dropdown-menu > li > a:hover i {
 	color: #fff;
 }
+/*
 .mobile_btn {
 	display: none;
 	float: left;
 }
+*/
 .slide-nav .sidebar {
 	margin-left: 0;
 }
@@ -1737,10 +1739,13 @@ html.menu-opened body {
 	color: #2962ff;
 	text-decoration: underline;
 }
+
+/*
 .mobile_btn {
 	display: none;
 	float: left;
 }
+*/
 .sidebar .sidebar-menu > ul > li > a span {
 	transition: all 0.2s ease-in-out 0s;
 	display: inline-block;
@@ -3747,7 +3752,8 @@ table.table-inbox tbody tr.checked {
 		z-index: 10;
 	}
 	#toggle_btn {
-		display: none;
+		/* display: none; */ 
+		display: inline-flex;
 	}
 	.top-nav-search {
 		display: none;
@@ -4015,4 +4021,29 @@ table.table-inbox tbody tr.checked {
 	.page-header .breadcrumb {
 		display: none;
 	}
+}
+
+
+
+
+
+/* custom css */
+.mobile_btn {
+	color: #fff !important;
+	cursor: pointer;
+	display: block;
+	font-size: 24px;
+	height: 60px;
+	left: 0;
+	line-height: 60px;
+	padding: 0 15px;
+	position: relative;
+	text-align: center;
+	top: 0;
+	z-index: 10;
+}
+
+.card-body {
+    padding: 1.5rem;
+    overflow: auto;
 }
