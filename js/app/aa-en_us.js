@@ -338,6 +338,21 @@ stxt[1010] = "Registration successful. Please <a href=\"login.php\">login</a>.";
 stxt[1011] = "Enter  your name and password to log into admin"; // Introduza seu nome e password para entrar no painel de admin
 stxt[1012] = "Fill in all fields to register as admin. Your name and password will be used for login."; // Preencha todos os campos para se registar como administrador. O seu nome e password serão usados para login.
 stxt[1013] = "Registration successful. Please <a href=\"index.php\">login</a>.";
+stxt[1014] = "About Us";
+stxt[1015] = "New Story";
+stxt[1016] = "Edit Stories";
+stxt[1017] = "Show";
+stxt[1018] = "Entries";
+stxt[1019] = "No data available in table";
+stxt[1020] = "Showing _START_ to _END_ of _TOTAL_ entries";
+stxt[1021] = "Showing 0 to 0 of 0 entries";
+stxt[1022] = "filtered from _MAX_ total entries";
+stxt[1023] = "No matching records found";
+stxt[1024] = "Admin List";
+stxt[1025] = "Agente List";
+stxt[1026] = "Builder List";
+stxt[1027] = "User List";
+
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";

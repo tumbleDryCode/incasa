@@ -42,8 +42,16 @@
 <script src="js/app/x_booter.js"></script>
 <script src="js/app/x_admin.js"></script>
 <script>
-JSSHOP.loadScript("js/app/aa-" + usrlang + ".js", donada,"js");
+// JSSHOP.loadScript("js/app/aa-" + usrlang + ".js", donada,"js");
 </script>
-
+<?php
+// check for cookie userlan
+if(isset($_COOKIE['usrlang'])) {
+	$usrlang = $_COOKIE['usrlang'];
+} else {
+	$usrlang = "pt_pt";
+}
+echo "<scr" . "ipt src=\"js/app/aa-" .  $usrlang . ".js\"></script>";
+?>
 
 <title>IN-CASA.eu</title>

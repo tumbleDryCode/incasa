@@ -9,7 +9,8 @@ include("config.php");
         <!--	HTML Header start  -->
 		<?php include("include/html_header.php");?>
         <!--	HTML Header end  -->
-
+        <script src="js/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
         <script>
 
 if(currUrlArr.pid) {
@@ -61,7 +62,7 @@ return tmpRetStr;
 }
 };
 
-var setPropImgs = function(theAIa, theAIb, theAIc) {
+var setSliderPropImgs = function(theAIa, theAIb, theAIc) {
     console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
     console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
     console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
@@ -71,16 +72,64 @@ var setPropImgs = function(theAIa, theAIb, theAIc) {
         tstr = "";
         iint = 0;
         while (iint < len) {
-            tstr += "<div class=\"ls-slide\" data-ls=\"duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;\"> <img width=\"1920\" height=\"1080\"  src=\"admin/property/" + tAiretArr[iint]["m_file"] + "\" class=\"ls-bg\" alt=\"\" /> </div>";
+            tstr += "<div class=\"ls-slide\" data-ls=\"duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;\"> <img width=\"1920\" height=\"1080\"    src=\"admin/property/" + tAiretArr[iint]["m_file"] + "\" class=\"ls-bg\" alt=\"\" /> </div>";
  
  
 			iint++;
 		}
-		document.getElementById("single-property").innerHTML = tstr;
+        tmpItDiv = document.createElement('span');
+        tmpItDiv.innerHTML = tstr;
+		// document.getElementById("single-property").innerHTML = tstr;
+        document.getElementById("single-property").appendChild(tmpItDiv);
 	}
 	// alert(inpPropCtrct.value);
 	
 };
+
+var doSwipe = function() {
+    var swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+    });
+};
+
+var setPropImgs = function(theAIa, theAIb, theAIc) {
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+	if(theAIb.indexOf("_id") != -1) {
+		tAiretArr = JSON.parse(theAIb);
+		var len = tAiretArr.length;
+        tstr = "";
+        iint = 0;
+        tstr += "<div class=\"swiper\"> <div class=\"swiper-wrapper\">";
+        while (iint < len) {
+            tstr += "<div class=\"swiper-slide\"> <img width=\"100%\"  src=\"admin/property/" + tAiretArr[iint]["m_file"] + "\"  alt=\"\"> </div>";
+ 
+ 
+			iint++;
+		}
+        tstr += "</div><div class=\"swiper-pagination\"></div><div class=\"swiper-button-prev\"></div><div class=\"swiper-button-next\"></div></div>";
+        // tmpItDiv = document.createElement('span');
+        // tmpItDiv.innerHTML = tstr;
+		document.getElementById("singlerproperty").innerHTML = tstr;
+       //  document.getElementById("single-property").appendChild(tmpItDiv);
+      setTimeout(function(){ doSwipe(); }, 1000);
+	}
+	// alert(inpPropCtrct.value);
+	
+};
+
+
 
 var getPropImgs = function() {
     tmpFobj = null;
@@ -159,22 +208,7 @@ var getPropImgs = function() {
 
                         <div class="row">
                             <div class="col-md-12">
-                                <div id="single-property" style="width:1200px; height:700px; margin:30px auto 50px;"> 
-                                    <!-- Slide 1
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['18'];?>" class="ls-bg" alt="" /> </div>
-                                    -->
-                                    <!-- Slide 2
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
-                                    -->
-                                    <!-- Slide
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['20'];?>" class="ls-bg" alt="" /> </div>
-									 3-->
-									<!-- Slide
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['21'];?>" class="ls-bg" alt="" /> </div>
-									 4-->
-									<!-- Slide 5
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="admin/property/<?php echo $row['22'];?>" class="ls-bg" alt="" /> </div>
-                                    -->
+                                <div id="singlerproperty" style="margin: 12px;"> 
                                 </div>
                             </div>
                         </div>

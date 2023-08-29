@@ -1,21 +1,17 @@
 <?php
 session_start();
 require("config.php");
-////code
- 
 if(!isset($_SESSION['auser']))
 {
 	header("location:index.php");
 }
 ?>
 <html>
-
 <head>
-		
-		        <!--	HTML Header start  -->
-				<?php include("includes/html_header.php");?>
+		<!--	HTML Header start  -->
+		<?php include("includes/html_header.php");?>
 		<!--	HTML Header end  -->
-    </head>
+</head>
     <body>
 	
 		<!-- Main Wrapper -->
@@ -33,10 +29,10 @@ if(!isset($_SESSION['auser']))
 					<div class="page-header">
 						<div class="row">
 							<div class="col">
-								<h3 class="page-title">User</h3>
+								<h3 class="page-title">Admin</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">User</li>
+									<li class="breadcrumb-item active"><ti data-ison="stxt[1027]" data-desc="btn_userlist">User List</ti></li>
 								</ul>
 							</div>
 						</div>
@@ -47,7 +43,7 @@ if(!isset($_SESSION['auser']))
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">User List</h4>
+									<h4 class="card-title"><ti data-ison="stxt[1027]" data-desc="btn_userlist">User List</ti></h4>
 									<?php 
 										if(isset($_GET['msg']))	
 										echo $_GET['msg'];	

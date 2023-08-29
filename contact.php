@@ -182,7 +182,7 @@ doWinLoad();
                                 <li class="d-flex mb-4"> <i class="fas fa-envelope text-white mr-2 font-13 mt-1"></i>
                                     <div class="contact-address">
                                         <h5 class="text-white">Email</h5>
-										<span class="d-table text-secondary">in.casa22@sapo.pt</span>
+										<!-- <span class="d-table text-secondary">in.casa22@sapo.pt</span> -->
 
 										<span class="d-table text-secondary">home@in-casa.eu</span>
 

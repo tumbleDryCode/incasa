@@ -12,7 +12,8 @@ if(isset($_REQUEST['insert']))
 	
 	if(!empty($name) && !empty($email) && !empty($pass)  && !empty($phone))
 	{
-		$sql="insert into admin (auser,aemail,apass,adob,aphone) values('$name','$email','$pass','12222','$phone')";
+		$dob = date("Y-m-d");
+		$sql="insert into admin (auser,aemail,apass,adob,aphone) values('$name','$email','$pass','$dob','$phone')";
 		$result=mysqli_query($con,$sql);
 		if($result)
 			{

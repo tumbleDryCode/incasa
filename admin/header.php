@@ -102,16 +102,17 @@ if(!isset($_SESSION['auser']))
 								</ul>
 							</li>
 							<li class="menu-title"> 
-								<span>Users</span>
+								<span><ti data-ison="stxt[962]" data-desc="btn_all_users">All Users</ti></span>
 							</li>
 						
 							<li class="submenu">
 								<a href="#"><i class="fe fe-user"></i> <span><ti data-ison="stxt[617]" data-desc="btn_users">Users</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="adminlist.php"> Admin </a></li>
-									<li><a href="userlist.php"><ti data-ison="stxt[96]" data-desc="btn_allusers"><ti data-ison="stxt[962]" data-desc="btn_all_users">All Users</ti></a></li>
 									<li><a href="useragent.php"><ti data-ison="stxt[943]" data-desc="btn_agent">Agent</ti></a></li>
 									<li><a href="userbuilder.php"><ti data-ison="stxt[944]" data-desc="btn_builder">Builder</ti></a></li>
+									<li><a href="userlist.php"><ti data-ison="stxt[75]" data-desc="btn_user">User</ti></a></li>
+									
 								</ul>
 							</li>
 						
@@ -126,11 +127,10 @@ if(!isset($_SESSION['auser']))
 									
 								</ul>
 							</li>
-							
+							<!--
 							<li class="menu-title"> 
 								<span>State & City</span>
 							</li>
-						
 							<li class="submenu">
 								<a href="#"><i class="fe fe-user"></i> <span><ti data-ison="stxt[966]" data-desc="btn_state_city">State - City</ti></span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -138,14 +138,14 @@ if(!isset($_SESSION['auser']))
 									<li><a href="cityadd.php"><ti data-ison="stxt[210]" data-desc="btn_city">City</ti></a></li>
 								</ul>
 							</li>
-							
+							-->
 							<li class="menu-title"> 
 								<span>Query</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fe fe-user"></i> <span> Query </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fe fe-user"></i> <span> <ti data-ison="stxt[902]" data-desc="btn_contacts">Contact Us</ti> </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="contactview.php"><ti data-ison="stxt[912]" data-desc="btn_city">Contact Us</ti></a></li>
+									<li><a href="contactview.php"> <ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti> </a></li>
 									<li><a href="feedbackview.php">Feedback</a></li>
 								</ul>
 							</li>
@@ -153,10 +153,10 @@ if(!isset($_SESSION['auser']))
 								<span><ti data-ison="stxt[30]" data-desc="btn_about">About</ti></span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fe fe-user"></i><span><ti data-ison="stxt[30]" data-desc="btn_about">About</ti></span><span class="menu-arrow"></span></a>
+								<a href="#"><i class="fe fe-user"></i><span> <ti data-ison="stxt[1014]" data-desc="btn_about">About</ti> </span><span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="aboutadd.php"> <ti data-ison="stxt[30]" data-desc="btn_about">About</ti> </a></li>
-									<li><a href="aboutview.php"><ti data-ison="stxt[967]" data-desc="btn_view_about">View About</ti></a></li>
+									<li><a href="aboutadd.php"> <ti data-ison="stxt[1015]" data-desc="btn_about">About</ti> </a></li>
+									<li><a href="aboutview.php"> <ti data-ison="stxt[1016]" data-desc="btn_view_about">View About</ti> </a></li>
 								</ul>
 							</li>
 							

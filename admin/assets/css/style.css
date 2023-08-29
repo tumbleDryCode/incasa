@@ -37,10 +37,10 @@ Version      : 1.0
 
 /*-----------------
 	1. General
------------------------*/
+
 
 @import url('https://fonts.googleapis.com/css?family=Mada:400,500,600,700&amp;display=swap');
-
+-----------------------*/
 @font-face {
 	font-family: 'Material Icons';
 	font-style: normal;
@@ -3750,6 +3750,7 @@ table.table-inbox tbody tr.checked {
 		text-align: center;
 		top: 0;
 		z-index: 10;
+		margin-right: 15px;
 	}
 	#toggle_btn {
 		/* display: none; */ 
@@ -3760,11 +3761,11 @@ table.table-inbox tbody tr.checked {
 	}
 	.login-wrapper .loginbox .login-left {
 		padding: 80px 50px;
-		width: 50%;
+		/* width: 50%; */
 	}
 	.login-wrapper .loginbox .login-right {
 		padding: 50px;
-		width: 50%;
+		/* width: 50%; */
 	}
 	.sidebar {
 		margin-left: -225px;
@@ -4037,6 +4038,7 @@ table.table-inbox tbody tr.checked {
 	left: 0;
 	line-height: 60px;
 	padding: 0 15px;
+	margin-right: 15px;
 	position: relative;
 	text-align: center;
 	top: 0;

@@ -1,16 +1,12 @@
 <?php
 session_start();
 require("config.php");
-////code
- 
 if(!isset($_SESSION['auser']))
 {
 	header("location:index.php");
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     	
 		        <!--	HTML Header start  -->
@@ -37,7 +33,7 @@ if(!isset($_SESSION['auser']))
 								<h3 class="page-title">Admin</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">Admin</li>
+									<li class="breadcrumb-item active"><ti data-ison="stxt[1024]" data-desc="btn_adminlist">Admin List</ti></li>
 								</ul>
 							</div>
 						</div>
@@ -48,7 +44,7 @@ if(!isset($_SESSION['auser']))
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">Admin List</h4>
+									<h4 class="card-title"><ti data-ison="stxt[1024]" data-desc="btn_adminlist">Admin List</ti></h4>
 									<?php 
 											if(isset($_GET['msg']))	
 											echo $_GET['msg'];
@@ -61,10 +57,10 @@ if(!isset($_SESSION['auser']))
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Date Of Birth</th>
-                                                    <th>Phone</th>
+                                                    <th><ti data-ison="stxt[97]" data-desc="btn_name">Name</ti></th>
+                                                    <th><ti data-ison="stxt[26]" data-desc="btn_email">Email</ti></th>
+                                                    <!-- <th>Date Of Birth</th> -->
+                                                    <th><ti data-ison="stxt[24]" data-desc="btn_phone">Phone</ti></th>
                                                     <th>Delete</th>
                                                 </tr>
                                             </thead>
@@ -82,7 +78,7 @@ if(!isset($_SESSION['auser']))
                                                     <td><?php echo $cnt; ?></td>
                                                     <td><?php echo $row['1']; ?></td>
                                                     <td><?php echo $row['2']; ?></td>
-                                                    <td><?php echo $row['4']; ?></td>
+                                                    <!-- <td><?php echo $row['4']; ?></td> -->
                                                     <td><?php echo $row['5']; ?></td>
                                                     <td><a href="admindelete.php?id=<?php echo $row['0']; ?>">Delete</a></td>
                                                 </tr>

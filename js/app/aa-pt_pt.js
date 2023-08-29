@@ -75,11 +75,11 @@ stxt[71] = "Ajuda";
 stxt[72] = "Partilhar";
 stxt[73] = "Copiar";
 stxt[74] = "Data";
-stxt[75] = "User";
+stxt[75] = "Utilizador";
 stxt[76] = "Total";
 stxt[77] = "Estado";
 stxt[78] = "Pesquisar";
-stxt[79] = "Localiza�ao";
+stxt[79] = "Localizacao";
 stxt[80] = "Codigo Postal";
 stxt[81] = "Region";
 stxt[82] = "Selecione";
@@ -201,7 +201,7 @@ stxt[613] = "Edit Places";
 stxt[614] = "Spread Sheet";
 stxt[615] = "Edit Fleet";
 stxt[616] = "Edit Drivers";
-stxt[617] = "Users";
+stxt[617] = "Utilizadores";
 stxt[618] = "Favorites";
 stxt[619] = "List Trips";
 
@@ -347,7 +347,20 @@ stxt[1010] = "Registado com sucesso. Por favor <a href=\"login.php\">login</a>";
 stxt[1011] = "Introduza seu nome e password para entrar no painel de admin"; // Introduza seu nome e password para entrar no painel de admin
 stxt[1012] = "Preencha todos os campos para se registar como administrador. O seu nome e password serão usados para login"; // Preencha todos os campos para se registar como administrador. O seu nome e password serão usados para login.
 stxt[1013] = "Registado com sucesso. Por favor <a href=\"index.php\">login</a>";  // Registado com sucesso. Por favor entre.
-
+stxt[1014] = "Sobre nos"; // Sobre nos
+stxt[1015] = "Nova Historia"; // Nova Historia
+stxt[1016] = "Editar Historias"; // Editar Historias
+stxt[1017] = "Amostrar";
+stxt[1018] = "Entradas"; // Entradas
+stxt[1019] = "Nao ha dados disponiveis"; // Nao ha dados disponiveis
+stxt[1020] = "Amostrando _START_ ate _END_ de _TOTAL_ entradas"; // Amostrando _START_ de _END_ de _TOTAL_ entradas
+stxt[1021] = "Amostrando 0 de 0 de 0 entradas"; // Amostrando 0 de 0 de 0 entradas
+stxt[1022] = "filtrado de _MAX_ entradas totais"; // filtrado de _MAX_ entradas totais
+stxt[1023] = "Nao ha registos encontrados"; // Nao ha registos encontrados
+stxt[1024] = "Lista de Admins"; // Lista de Admins
+stxt[1025] = "Lista de Agentes"; // Lista de Agentes
+stxt[1026] = "Lista de Construtores"; // Lista de Construtores
+stxt[1027] = "Lista de Utilizadores"; // Lista de Utilizadores
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";

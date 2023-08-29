@@ -124,7 +124,7 @@
         })
     })
 	
-	
+	/*
 	// LayerSlider Settings
 	$('#image-slider').layerSlider({
 		sliderVersion: '6.0.0',
@@ -271,7 +271,7 @@
 		 }
 		
 	});
-	 	 
+	*/
 
 	//  Feature property sidebar
 	$sidebarFeatured.owlCarousel({

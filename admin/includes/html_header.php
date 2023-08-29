@@ -34,12 +34,26 @@
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+
+		<link href="../js/bootstrap5.2/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/x_dev.css">
 <link rel="stylesheet" href="../css/x_forms.css">
+<script src="../js/bootstrap5.2/bootstrap.js"  language="javascript" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="../css/x_bs-fixes.css">
+
 <script src="../js/app/x_allinit.js"></script> 
 <script src="../js/app/x_all.js"></script> 
 <script src="../js/app/x_admin.js"></script> 
 <script src="../js/app/x_booter.js"></script> 
 <script>
-JSSHOP.loadScript("../js/app/aa-" + usrlang + ".js", donada,"js");
+// JSSHOP.loadScript(" + usrlang + ".js", donada,"js");
 </script>
+<?php
+// check for cookie userlan
+if(isset($_COOKIE['usrlang'])) {
+	$usrlang = $_COOKIE['usrlang'];
+} else {
+	$usrlang = "pt_pt";
+}
+echo "<scr" . "ipt src=\"../js/app/aa-" .  $usrlang . ".js\"></script>";
+?>

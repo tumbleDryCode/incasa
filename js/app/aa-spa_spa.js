@@ -72,7 +72,7 @@ stxt[71] = "Help";
 stxt[72] = "Share";
 stxt[73] = "Copy";
 stxt[74] = "Date";
-stxt[75] = "User";
+stxt[75] = "Usario";
 stxt[76] = "Total";
 stxt[77] = "Status";
 stxt[78] = "Search";
@@ -199,8 +199,8 @@ stxt[612] = "Add Trip";
 stxt[613] = "Edit Places";
 stxt[614] = "Spread Sheet";
 stxt[615] = "Edit Fleet";
-stxt[616] = "Edit Drivers";
-stxt[617] = "Users";
+stxt[616] = "Edit Drivers"; // Editar conductores
+stxt[617] = "Usuarios"; // Usuarios
 stxt[618] = "Favorites";
 stxt[619] = "List Trips";
 
@@ -342,10 +342,20 @@ stxt[1010] = "Registro exitoso. Por favor <a href=\"login.php\">login</a>."; // 
 stxt[1011] = "Ingrese su nombre y contraseña para iniciar sesión en el administrador"; // Ingrese su nombre y contraseña para iniciar sesión en el administrador
 stxt[1012] = "Rellene todos los campos para registrarse como administrador. Su nombre y contrasena se utilizaran para iniciar sesion."; // Rellene todos los campos para registrarse como administrador. Su nombre y contraseña se utilizarán para iniciar sesión.
 stxt[1013] = "Registro exitoso. Por favor <a href=\"index.php\">login</a>."; // Registro exitoso. Por favor inicia sesión.
-
-
-
-
+stxt[1014] = "Sobre nosotros"; // Sobre nosotros
+stxt[1015] = "Nueva historia"; // Nueva historia
+stxt[1016] = "Editar historias"; // Editar historias
+stxt[1017] = "Mostrar"; // Mostrar
+stxt[1018] = "Entradas"; // Entradas
+stxt[1019] = "No hay datos disponibles"; // No hay datos disponibles
+stxt[1020] = "Mostrando _START_ hasta _END_ de _TOTAL_ entradas"; // Mostrando _START_ a _END_ de _TOTAL_ entradas
+stxt[1021] = "Mostrando 0 a 0 de 0 entradas"; // Mostrando 0 a 0 de 0 entradas
+stxt[1022] = "filtrado de _MAX_ entradas totales"; // filtrado de _MAX_ entradas totales
+stxt[1023] = "No se encontraron registros coincidentes"; // No se encontraron registros coincidentes
+stxt[1024] = "Admin List"; // Lista de Admins
+stxt[1025] = "Agente List"; // Lista de Agentes
+stxt[1026] = "Builder List"; // Lista de Constructores
+stxt[1027] = "User List"; // Lista de Usuarios
 
 
 // tips

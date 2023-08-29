@@ -23,7 +23,7 @@ if(session_id() == '') {
 			{
 				$error='* Invalid User Name and Password';
 			}
-		}else{
+		} else {
 			$error="* Please Fill all the Fileds!";
 		}
 		
@@ -36,8 +36,8 @@ if(session_id() == '') {
 <html>
 <head>
         
-		        <!--	HTML Header start  -->
-				<?php include("includes/html_header.php");?>
+		<!--	HTML Header start  -->
+		<?php include("includes/html_header.php"); ?>
         <!--	HTML Header end  -->
     </head>
     <body>
