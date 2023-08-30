@@ -110,10 +110,10 @@ doWinLoad();
 					<div class="page-header">
 						<div class="row">
 							<div class="col">
-								<h3 class="page-title">Property</h3>
+								<h3 class="page-title">Admin</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">Property</li>
+									<li class="breadcrumb-item active"><ti data-ison="stxt[916]" data-desc="btn_addprop">Add Property</ti></li>
 								</ul>
 							</div>
 						</div>
@@ -122,9 +122,9 @@ doWinLoad();
 					
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+							<div class="">
 								<div class="card-header">
-									<h4 class="card-title">Add Property Details</h4>
+									<h4 class="card-title"><ti data-ison="stxt[916]" data-desc="btn_addprop">Add Property</ti></h4>
 								</div>
 								<form method="post" enctype="multipart/form-data">
 								<!-- form and fields -->
