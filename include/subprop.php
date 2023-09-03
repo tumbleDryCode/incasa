@@ -1,4 +1,4 @@
- 
+<input type="hidden" name="uid" id="uid"   value="<?php echo $uid; ?>">
 								<div class="accordion" id="accordionEPExample">
 									<h5 class="text-secondary"><ti data-ison="stxt[947]" data-desc="btn_basic_information">Basic Information</ti></h5>
 									<?php if(isset($error)) echo $error; ?>
@@ -282,7 +282,14 @@ if(isset($_REQUEST['id']))
 {
 $pid = $_REQUEST['id'];
  echo "<scr" . "ipt>";
+ echo "uid.value=quid;";
  echo "currMediaID= '" . $pid. "';";
- echo "doMediaBtnSetup('uploadBtn', '', 'finishMMupload', 'admin/property');</script>";
+ // if url has admin/ then we are in admin mode
+ if(strpos($_SERVER['REQUEST_URI'], "admin/")) {
+ 	echo "doMediaBtnSetup('uploadBtn', '', 'finishMMupload', 'admin/property');";
+ } else {
+ 	echo "doMediaBtnSetup('uploadBtn', '', 'finishMMupload', 'property');";
+ }
+echo "</script>";
  }
 ?>

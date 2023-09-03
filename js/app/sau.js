@@ -2229,6 +2229,9 @@ try {
       progressOuter = document.getElementById(cmpPfix + 'progressOuter'),
       msgBox = document.getElementById(cmpPfix + 'msgBox'),
 	tmpDAIurl = 'admin/file_upload.php?in=' + tmpItemID + '&ud=' + tmpMfldr;
+    if(document.location.href.indexOf('admin/') != -1) {
+      tmpDAIurl = 'file_upload.php?in=' + tmpItemID + '&ud=' + tmpMfldr;
+    }
 	var uploader = null;
   	uploader = new ss.SimpleUpload({
         button: btn,

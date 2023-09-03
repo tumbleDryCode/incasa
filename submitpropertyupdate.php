@@ -6,10 +6,7 @@ include("config.php");
 if(!isset($_SESSION['uemail']))
 {
 	header("location:login.php");
-}
-
- 
-								
+}						
 /*
 title
 pcontent
@@ -136,6 +133,7 @@ if(isset($_POST['add']))
 	$loc=$_POST['loc'];
 	$state=$_POST['state'];
 	$status=$_POST['status'];
+	
 	$uid=$_SESSION['uid'];
 	$feature=$_POST['feature'];
 	
@@ -230,13 +228,11 @@ if(isset($_POST['add']))
 	}
 }						
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-        <!--	HYML Header start  -->
+        <!--	HTML Header start  -->
 		<?php include("include/html_header.php");?>
-        <!--	HYML Header end  -->
+        <!--	HTML Header end  -->
 		<script>
 
 
@@ -339,8 +335,6 @@ doWinLoad();
 	</div>
 </div>
 --> 
-
-
 <div id="page-wrapper">
     <div class="row"> 
         <!--	Header start  -->

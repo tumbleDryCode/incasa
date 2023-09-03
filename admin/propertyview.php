@@ -59,6 +59,7 @@ if(!isset($_SESSION['auser']))
                                                 <tr>
                                                     <th>P ID</th>
                                                     <th>Title</th>
+                                                    <th>Price</th>
                                                    <!-- <th>Description</th> -->
                                                      <th>Type</th> 
                                                     <!-- <th>BHK</th>
@@ -70,7 +71,7 @@ if(!isset($_SESSION['auser']))
                                                     <th>Hall</th>
                                                     <th>Floor</th> -->
 													<th>Area Size</th>
-                                                    <th>Price</th>
+                                                    
                                                     <!-- <th>Location</th> -->
                                                     <th>City</th>
                                                     <th>State</th>
@@ -106,12 +107,12 @@ if(!isset($_SESSION['auser']))
 											
                                                 <tr>
                                                     <td><?php echo $row['0']; ?></td>
-                                                    <td><?php echo $row['1']; ?></td>
-                                                   
+                                                    <td><a href="../propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1']; ?></a></td>
+                                                    <td><a href="propertyedit.php?id=<?php echo $row['0'];?>" target="_blank"><?php echo $row['13']; ?></a></td>
                                                     <td><?php echo $row['3']; ?></td>
  
                                                     <td><?php echo $row['12']; ?></td>
-                                                    <td><?php echo $row['13']; ?></td>
+
  
 													 <td><?php echo $row['15']; ?></td>
                                                     <td><?php echo $row['16']; ?></td>

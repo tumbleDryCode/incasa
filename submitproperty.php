@@ -80,6 +80,9 @@ if(isset($_POST['add']))
 		{
 			$error="<p class='alert alert-warning'>Property Not Inserted Some Error</p>";
 		}
+		echo $error;
+		echo $msg;
+		exit;
 }							
 ?>
 <html>

@@ -78,7 +78,7 @@ if(!isset($_SESSION['auser']))
 													{
 											?>
                                                 <tr>
-                                                    <td><?php echo $cnt; ?></td>
+                                                    <td><?php echo $row['0']; ?></td>
                                                     <td><?php echo $row['1']; ?></td>
                                                     <td><?php echo $row['2']; ?></td>
                                                     <td><?php echo $row['3']; ?></td>

@@ -21,7 +21,7 @@
 								<?php  if(isset($_SESSION['uemail']))
 								{ ?>
 								<a href="logout.php">Logout</a>&nbsp;&nbsp;<?php } else { ?>
-								<a href="login.php">Loginz</a>&nbsp;&nbsp;
+								<a href="login.php">Login</a>&nbsp;&nbsp;
                                 <a href="register.php"><ti data-ison="stxt[30]" data-desc="btn_register">Register</ti>
 								<?php } ?>
 								| </li>
@@ -101,7 +101,7 @@
                                     </ul>
                                     
 									
-									<a class="btn btn-primary d-none d-xl-block" href="submitproperty.php"><ti data-ison="stxt[90]" data-desc="btn_about">About</ti></a> 
+									<!-- <a class="btn btn-primary d-none d-xl-block" href="submitproperty.php"><ti data-ison="stxt[90]" data-desc="btn_about">About</ti></a> -->
                                     
                                 </div>
                             </nav>

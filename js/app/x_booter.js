@@ -1256,7 +1256,6 @@ doLclSych(strQ);
 
 var doQComm = function(strQ, theElem, theCB) {
 doNuQComm("noQvalue", "n", "123",  strQ, theElem, theCB);
-
 };
 
 

@@ -10,6 +10,10 @@ if(!isset($_SESSION['auser']))
 	header("location:index.php");
 }
 ?>  
+<div id="lightbox" class="lightbox"   onclick="javascript:JSSHOP.ui.closePopMenus();">
+</div> <div id="lightbox_content" class="rtable bkgdClrWhite" style="min-height:400px;min-width:350px;z-index: 2147483647;position:fixed;top:-700px;left:-700px;word-wrap: break-word;max-width:80%;margin: 0 auto">
+      </div>
+
   <div class="header">
 			<div>
 	

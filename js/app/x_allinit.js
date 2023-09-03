@@ -88,6 +88,9 @@ var currSearchType = "products"; // companies (qco db table), messages (qmsgs, q
 var actbSearch;
 var actbLoaded = false; // boolean show js_actb.js  is loaded
 var shopDir = document.location.href;
+if(shopDir.indexOf("admin/") != -1) {
+shopDir = "../";
+}
 var spinTextDiv = document.createElement("div");
 var currSpinText = "noQvalue";
 var currSpinType = "small";
@@ -227,7 +230,12 @@ JSSHOP.loadScript = function(path, callback, filetype) {
         if (filetype == "js") { //if filename is a external JavaScript file
             var scr = document.createElement('script');
             scr.setAttribute("type", "text/javascript")
+            // if current url contains admin/ then path is relative to parent folder
+            if(currDocHref.indexOf("admin/") != -1) {
+            scr.src = "../" + path;
+            } else {
             scr.src = path;
+            }
         } else if (filetype == "css") { //if filename is an external CSS file
             var scr = document.createElement("link")
             scr.setAttribute("rel", "stylesheet")
@@ -667,6 +675,7 @@ document.getElementById("psearch").action = strUp;
 document.getElementById("psearch").submit();
 }
 
+/*
 // just keeping out of view for now
 if(JSSHOP.cookies.getCookie("beta")) {
 } else {
@@ -681,7 +690,7 @@ if (person != null) {
 }
 
 }
-
+*/
 
 function doWinLoad() {
     

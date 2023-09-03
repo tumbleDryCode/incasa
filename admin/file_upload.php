@@ -87,7 +87,9 @@ $ud = $_REQUEST['ud'];
 if(isset($_POST['ud'])) {
 $ud = $_POST['ud'];
 }
-$upload_dir = '../' . $ud;
+
+$upload_dir = $ud;
+
 $uploader = new FileUpload('uploadfile');
 // create a variable with unix timestamp
 $timestamp = time();

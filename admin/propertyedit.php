@@ -1,16 +1,82 @@
-<?php
+<?php 
 session_start();
 require("config.php");
-////code
- 
 if(!isset($_SESSION['auser']))
 {
 	header("location:index.php");
 }
-
-//// code insert
-//// add code
 $error="";
+$msg="";						
+/*
+title
+pcontent
+type
+bhk
+stype
+bedroom
+bathroom
+balcony
+kitchen
+hall
+floor
+size
+price
+location
+city
+state
+feature
+pimage
+pimage1
+pimage2
+pimage3
+pimage4
+uid
+status
+mapimage
+topmapimage
+groundmapimage
+totalfloor
+date
+*/
+
+$ruid = "";
+$rstatus = "";
+$rtype = "";
+$rstype = "";
+$rtitle = "";
+$rpcontent = "";
+$stype = "";
+$ptype = "";
+$status = "";
+
+$rbhk = "0";
+
+$rbedroom = "1";
+$rbathroom = "1";
+$rbalcony = "0";
+$rkitchen = "1";
+$rhall = "1";
+$rfloor = "1";
+$rsize = "";
+$rprice = "0";
+$rlocation = "";
+$rcity = "";
+$rstate = "";
+$rfeature = "";
+$rpimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage1 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage2 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage3 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rpimage4 = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+
+
+
+$rmapimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rtopmapimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rgroundmapimage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+$rtotalfloor = "1";
+$rdate = "";				 
+
 $msg="";
 if(isset($_POST['add']))
 {
@@ -37,425 +103,324 @@ if(isset($_POST['add']))
 	$feature=$_POST['feature'];
 	
 	$totalfloor=$_POST['totalfl'];
-	
-	$aimage=$_FILES['aimage']['name'];
-	$aimage1=$_FILES['aimage1']['name'];
-	$aimage2=$_FILES['aimage2']['name'];
-	$aimage3=$_FILES['aimage3']['name'];
-	$aimage4=$_FILES['aimage4']['name'];
-	
-	$fimage=$_FILES['fimage']['name'];
-	$fimage1=$_FILES['fimage1']['name'];
-	$fimage2=$_FILES['fimage2']['name'];
-	
-	$temp_name  =$_FILES['aimage']['tmp_name'];
-	$temp_name1 =$_FILES['aimage1']['tmp_name'];
-	$temp_name2 =$_FILES['aimage2']['tmp_name'];
-	$temp_name3 =$_FILES['aimage3']['tmp_name'];
-	$temp_name4 =$_FILES['aimage4']['tmp_name'];
-	
-	$temp_name5 =$_FILES['fimage']['tmp_name'];
-	$temp_name6 =$_FILES['fimage1']['tmp_name'];
-	$temp_name7 =$_FILES['fimage2']['tmp_name'];
-	
-	move_uploaded_file($temp_name,"property/$aimage");
-	move_uploaded_file($temp_name1,"property/$aimage1");
-	move_uploaded_file($temp_name2,"property/$aimage2");
-	move_uploaded_file($temp_name3,"property/$aimage3");
-	move_uploaded_file($temp_name4,"property/$aimage4");
-	
-	move_uploaded_file($temp_name5,"property/$fimage");
-	move_uploaded_file($temp_name6,"property/$fimage1");
-	move_uploaded_file($temp_name7,"property/$fimage2");
-	
-	
+	if(isset($_FILES['aimage']['name'])) {
+		$aimage = $_FILES['aimage']['name'];
+		$temp_name = $_FILES['aimage']['tmp_name'];
+		move_uploaded_file($temp_name,"admin/property/$aimage");
+	} else {
+		$aimage=$rpimage;
+	}
+	if(isset($_FILES['aimage1']['name'])) {
+		$aimage1 = $_FILES['aimage1']['name'];
+		$temp_name1 = $_FILES['aimage1']['tmp_name'];
+		move_uploaded_file($temp_name1,"admin/property/$aimage1");
+	} else {
+		$aimage1=$rpimage1;
+	}
+	if(isset($_FILES['aimage2']['name'])) {
+		$aimage2 = $_FILES['aimage2']['name'];
+		$temp_name2 = $_FILES['aimage2']['tmp_name'];
+		move_uploaded_file($temp_name2,"admin/property/$aimage2");
+	} else {
+		$aimage2=$rpimage2;
+	}
+	if(isset($_FILES['aimage3']['name'])) {
+		$aimage3 = $_FILES['aimage3']['name'];
+		$temp_name3 = $_FILES['aimage3']['tmp_name'];
+		move_uploaded_file($temp_name3,"admin/property/$aimage3");
+	} else {
+		$aimage3=$rpimage3;
+	}
+	if(isset($_FILES['aimage4']['name'])) {
+		$aimage4 = $_FILES['aimage4']['name'];
+		$temp_name4 = $_FILES['aimage4']['tmp_name'];
+		move_uploaded_file($temp_name4,"admin/property/$aimage4");
+	} else {
+		$aimage4=$rpimage4;
+	}
+
+
+	if(isset($_FILES['fimage']['name'])) {
+		$fimage = $_FILES['fimage']['name'];
+		$rmapimage = $_FILES['fimage']['name'];
+		$temp_name5 = $_FILES['fimage']['tmp_name'];
+		move_uploaded_file($temp_name5,"admin/property/$fimage");
+	} else {
+		$fimage=$rmapimage;
+	}
+	if(isset($_FILES['fimage1']['name'])) {
+		$fimage1 = $_FILES['fimage1']['name'];
+		$rtopmapimage = $_FILES['fimage1']['name'];
+		$temp_name6 = $_FILES['fimage1']['tmp_name'];
+		move_uploaded_file($temp_name6,"admin/property/$fimage1");
+	} else {
+		$fimage1=$rtopmapimage;
+	}
+	if(isset($_FILES['fimage2']['name'])) {
+		$fimage2 = $_FILES['fimage2']['name'];
+		$rgroundmapimage = $_FILES['fimage2']['name'];
+		$temp_name7 = $_FILES['fimage2']['tmp_name'];
+		move_uploaded_file($temp_name7,"admin/property/$fimage2");
+	} else {
+		$fimage2=$rgroundmapimage;
+	}
+
+	 	 
 	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
 	bedroom='{$bed}', bathroom='{$bath}', balcony='{$balc}', kitchen='{$kitc}', hall='{$hall}', floor='{$floor}', 
 	size='{$asize}', price='{$price}', location='{$loc}', city='{$city}', state='{$state}', feature='{$feature}',
-	pimage='{$aimage}', pimage1='{$aimage1}', pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
+	pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
 	uid='{$uid}', status='{$status}', mapimage='{$fimage}', topmapimage='{$fimage1}', groundmapimage='{$fimage2}', 
 	totalfloor='{$totalfloor}' WHERE pid = {$pid}";
-	
+	 
+	/*
+	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
+	bedroom='{$bed}', bathroom='{$bath}', balcony='{$balc}', kitchen='{$kitc}', hall='{$hall}', floor='{$floor}', 
+	size='{$asize}', price='{$price}', location='{$loc}', city='{$city}', state='{$state}', feature='{$feature}',
+	pimage='{$aimage}', pimage1='{$rpimage}', pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
+	uid='{$uid}', status='{$status}', mapimage='{$fimage}', topmapimage='{$fimage1}', groundmapimage='{$fimage2}', 
+	totalfloor='{$totalfloor}' WHERE pid = {$pid}";
+	*/
 	$result=mysqli_query($con,$sql);
 	if($result == true)
 	{
 		$msg="<p class='alert alert-success'>Property Updated</p>";
-		header("Location:propertyview.php?msg=$msg");
+		// header("Location:feature.php?msg=$msg");
 	}
 	else{
 		$msg="<p class='alert alert-warning'>Property Not Updated</p>";
-		header("Location:propertyview.php?msg=$msg");
+		// header("Location:feature.php?msg=$msg");
 	}
-}
+	//   exit;
+} else {
+	$pid=$_REQUEST['id'];
+	$query=mysqli_query($con,"select type, stype, status from property where pid='$pid'");
+	while($row=mysqli_fetch_array($query))
+	{
+ 
+		$ptype = $row["type"];
+		$stype = $row["stype"];
+		$status = $row["status"];	 
+	} 
+
+	}
+
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>LM HOMES | Property</title>
-		
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		
-		<!-- Feathericon CSS -->
-        <link rel="stylesheet" href="assets/css/feathericon.min.css">
-		
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-		
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-    </head>
-    <body>
+        <!--	HTML Header start  -->
+		<?php include("includes/html_header.php");?>
+        <!--	HTML Header end  -->
+		<script>
 
-		
-			<!-- Header -->
-			<?php include("header.php"); ?>
-			<!-- /Sidebar -->
-			
-			<!-- Page Wrapper -->
-            <div class="page-wrapper">
-                <div class="content container-fluid">
-				
-					<!-- Page Header -->
-					<div class="page-header">
-						<div class="row">
-							<div class="col">
-								<h3 class="page-title">Property</h3>
-								<ul class="breadcrumb">
-									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">Property</li>
-								</ul>
-							</div>
-						</div>
+
+var fnshProdMDel = function(aa,bb,cc) { 
+	getPropImgs();
+JSSHOP.ui.closeLbox();
+};
+
+var doPrdMDelete = function() { 
+    if(confirm(stxt[42] + " " + stxt[19] + "?")) {
+    procNuUIitem("qmedia","m_rtype",JSSHOP.shared.getFrmFieldVal("qmedia", "_id", 0),"0","fnshProdMDel");
+    }
+};
+
+
+
+var fnshProdMMain = function(aa,bb,cc) { 
+// alert(bb);
+getPropImgs();
+JSSHOP.ui.closeLbox();
+
+};
+
+
+var doPrdMMain = function() { 
+if(confirm("Set as main product picture?" + JSSHOP.shared.getFrmFieldVal("qmedia", "m_file", 0))) {
+procNurUIitem("property","pimage","pid",cid,JSSHOP.shared.getFrmFieldVal("qmedia", "m_file", "1.jpg"),"fnshProdMMain");
+    }
+};
+ 
+
+var getPropIEditDv = function(tpIncrNPI, tpFImg) {
+	console.log("getPrdImgEditDv " + tpIncrNPI + " " + tpFImg);
+tpPIEDv = document.createElement('div');
+JSSHOP.shared.setFrmFieldVal("qmedia", "_id", tpIncrNPI);
+JSSHOP.shared.setFrmFieldVal("qmedia", "m_file", tpFImg);
+ 
+tmpRetStr = "<img src=\"property/" + tpFImg +  "\" style=\"width: 100%\"  class=\"\" onclick=\"alert('" + JSSHOP.shared.getFrmFieldVal("qmedia", "_id", "0") + "');\">"
+ try {
+tmpRetStr += "<div class=\"dvTxtBtns\"><input type=\"button\" class=\"btnTxtLabel\" value=\"Set as Main\" onclick=\"javascript:doPrdMMain();\">   |   <input type=\"button\" class=\"btnTxtLabel\" value=\"Delete\" onclick=\"javascript:doPrdMDelete();\"></div>";
+tmpRetStr += "<br><br>";
+ 
+return tmpRetStr;
+} catch(e) {
+alert("getPrdImgEditDv " + e);
+tmpRetStr = "oops. something wrong..";
+return tmpRetStr;
+}
+};
+
+var setPropImgs = function(theAIa, theAIb, theAIc) {
+	try {
+    console.log("setPropImgs: " + theAIa + " " + theAIb + " " + theAIc);
+    if(theAIb.indexOf("_id") != -1) {
+		tAiretArr = JSON.parse(theAIb);
+		var len = tAiretArr.length;
+        tstr = "";
+        iint = 0;
+        while (iint < len) {
+ 
+			tstr += "<div style=\"float:left\">";
+ 			tstr += "aa<img src=\"property/" + tAiretArr[iint]["m_file_thumb"] + "\" class=\"icnmedbtn rtable\" onclick=\"javascript:JSSHOP.ui.popAndFillLbox(getPropIEditDv('" + tAiretArr[iint]["_id"] + "','" + tAiretArr[iint]["m_file"] + "'));\">";
+			tstr += "</div>";
+ 
+			iint++;
+		}
+		document.getElementById("dvProdImgs").innerHTML = tstr;
+	}
+	} catch(e) {
+		alert("setPropImgs: " + e);
+	}
+};
+
+var getPropImgs = function() {
+    tmpFobj = null;
+    tmpFobj = {};
+    tmpFobj["ws"] = "where m_uid=? and m_pid=? and m_rtype=?";
+    tmpFobj["wa"] = [quid, cid, 5];
+	tmpFobj["o"] = "m_vala desc";
+    oi = getNuDBFnvp("qmedia", 5, null, tmpFobj);
+    doQComm(oi["rq"], null, "setPropImgs");
+};
+
+
+window.onload = function() {
+JSSHOP.shared.addCurrSlctObj(svftObj["contract"], stype, "<?php echo $stype; ?>", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["propstat"], selPropStat, "<?php echo $status; ?>", "noQvalue", "noQvalue");
+JSSHOP.shared.addCurrSlctObj(svftObj["proptype"], ptype, "<?php echo $ptype; ?>", "noQvalue", "noQvalue");
+getPropImgs();
+doWinLoad();
+};
+</script>
+</head>
+<body>
+
+<!--	Page Loader
+=============================================================
+<div class="page-loader position-fixed z-index-9999 w-100 bg-white vh-100">
+	<div class="d-flex justify-content-center y-middle position-relative">
+	  <div class="spinner-border" role="status">
+		<span class="sr-only">Loading...</span>
+	  </div>
+	</div>
+</div>
+--> 
+<div id="page-wrapper">
+    <div class="row"> 
+        <!--	Header start  -->
+		<?php include("header.php");?>
+        <!--	Header end  -->
+        
+        <!--	Banner  
+        <div class="banner-full-row page-banner" style="background-image:url('images/breadcromb.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Submit Property</b></h2>
+                    </div>
+                    <div class="col-md-6">
+                        <nav aria-label="breadcrumb" class="float-left float-md-right">
+                            <ol class="breadcrumb bg-transparent m-0 p-0">
+                                <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Submit Property</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+          Banner   --->
+		 
+		 
+		<!--	Submit property   -->
+        <div class="full-row py-2">
+            <div class="container" style="margin: 0 auto; max-width: 600px;">
+                    <div class="row">						<div class="col-lg-12">
+							<h2 class="text-secondary double-down-line text-center"><ti data-ison="stxt[985]" data-desc="btn_editprop">Edit Property</ti></h2>
+                        </div>
 					</div>
-					<!-- /Page Header -->
-					
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header">
-									<h4 class="card-title">Update Property Details</h4>
-									<?php echo $error; ?>
-									<?php echo $msg; ?>
-								</div>
-								<form method="post" enctype="multipart/form-data">
+                    <div class="row bg-white">
+                        <form method="post" enctype="multipart/form-data">
 								
-								<?php
-									
-									$pid=$_REQUEST['id'];
-									$query=mysqli_query($con,"select * from property where pid='$pid'");
-									while($row=mysqli_fetch_row($query))
-									{
-								?>
-												
-								<div class="card-body">
-									<h5 class="card-title">Property Detail</h5>
-										<div class="row">
-											<div class="col-xl-12">
-												<div class="form-group row">
-													<label class="col-lg-2 col-form-label">Title</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="title" required value="<?php echo $row['1']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-2 col-form-label">Content</label>
-													<div class="col-lg-9">
-														<textarea class="tinymce form-control" name="content" rows="10" cols="30"><?php echo $row['2']; ?></textarea>
-													</div>
-												</div>
-												
-											</div>
-											<div class="col-xl-6">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Property Type</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="ptype">
-															<option value="">Select Type</option>
-															<option value="appartment">Appartment</option>
-															<option value="flat">Flat</option>
-															<option value="bunglow">Bunglow</option>
-															<option value="house">House</option>
-															<option value="villa">Villa</option>
-															<option value="office">Office</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Selling Type</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="stype">
-															<option value="">Select Status</option>
-															<option value="rent">Rent</option>
-															<option value="sale">Sale</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Bathroom</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="bath" required value="<?php echo $row['7']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Kitchen</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="kitc" required value="<?php echo $row['9']; ?>">
-													</div>
-												</div>
-												
-											</div>   
-											<div class="col-xl-6">
-												<div class="form-group row mb-3">
-													<label class="col-lg-3 col-form-label">BHK</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="bhk">
-															<option value="">Select BHK</option>
-															<option value="1 BHK">1 BHK</option>
-															<option value="2 BHK">2 BHK</option>
-															<option value="3 BHK">3 BHK</option>
-															<option value="4 BHK">4 BHK</option>
-															<option value="5 BHK">5 BHK</option>
-															<option value="1,2 BHK">1,2 BHK</option>
-															<option value="2,3 BHK">2,3 BHK</option>
-															<option value="2,3,4 BHK">2,3,4 BHK</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Bedroom</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="bed" required value="<?php echo $row['6']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Balcony</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="balc" required value="<?php echo $row['8']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Hall</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="hall" required value="<?php echo $row['10']; ?>">
-													</div>
-												</div>
-												
-											</div>
-										</div>
-										<h4 class="card-title">Price & Location</h4>
-										<div class="row">
-											<div class="col-xl-6">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Floor</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="floor">
-															<option value="">Select Floor</option>
-															<option value="1st Floor">1st Floor</option>
-															<option value="2nd Floor">2nd Floor</option>
-															<option value="3rd Floor">3rd Floor</option>
-															<option value="4th Floor">4th Floor</option>
-															<option value="5th Floor">5th Floor</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Price</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="price" required value="<?php echo $row['13']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">City</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="city" required value="<?php echo $row['15']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">State</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="state" required value="<?php echo $row['16']; ?>">
-													</div>
-												</div>
-											</div>
-											<div class="col-xl-6">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Total Floor</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="totalfl">
-															<option value="">Select Floor</option>
-															<option value="1 Floor">1 Floor</option>
-															<option value="2 Floor">2 Floor</option>
-															<option value="3 Floor">3 Floor</option>
-															<option value="4 Floor">4 Floor</option>
-															<option value="5 Floor">5 Floor</option>
-															<option value="6 Floor">6 Floor</option>
-															<option value="7 Floor">7 Floor</option>
-															<option value="8 Floor">8 Floor</option>
-															<option value="9 Floor">9 Floor</option>
-															<option value="10 Floor">10 Floor</option>
-															<option value="11 Floor">11 Floor</option>
-															<option value="12 Floor">12 Floor</option>
-															<option value="13 Floor">13 Floor</option>
-															<option value="14 Floor">14 Floor</option>
-															<option value="15 Floor">15 Floor</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Area Size</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="asize" required value="<?php echo $row['12']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Address</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="loc" required value="<?php echo $row['14']; ?>">
-													</div>
-												</div>
-												
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label class="col-lg-2 col-form-label">Feature</label>
-											<div class="col-lg-9">
-											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
-											
-											<textarea class="tinymce form-control" name="feature" rows="10" cols="30">
-												
-													<?php echo $row['17']; ?>
-												
-											</textarea>
-											</div>
-										</div>
-												
-										<h4 class="card-title">Image & Status</h4>
-										<div class="row">
-											<div class="col-xl-6">
-												
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="aimage" type="file" required="">
-														<img src="property/<?php echo $row['18'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 2</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="aimage2" type="file" required="">
-														<img src="property/<?php echo $row['20'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 4</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="aimage4" type="file" required="">
-														<img src="property/<?php echo $row['22'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Status</label>
-													<div class="col-lg-9">
-														<select class="form-control"  required name="status">
-															<option value="">Select Status</option>
-															<option value="available">Available</option>
-															<option value="sold out">Sold Out</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Basement Floor Plan Image</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="fimage1" type="file">
-														<img src="property/<?php echo $row['26'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-											</div>
-											<div class="col-xl-6">
-												
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Image 1</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="aimage1" type="file" required="">
-														<img src="property/<?php echo $row['19'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">image 3</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="aimage3" type="file" required="">
-														<img src="property/<?php echo $row['21'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Uid</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control" name="uid" required value="<?php echo $row['23']; ?>">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Floor Plan Image</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="fimage" type="file">
-														<img src="property/<?php echo $row['25'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Ground Floor Plan Image</label>
-													<div class="col-lg-9">
-														<input class="form-control" name="fimage2" type="file">
-														<img src="property/<?php echo $row['27'];?>" alt="pimage" height="150" width="180">
-													</div>
-												</div>
-											</div>
-										</div>
-
-										
-											<input type="submit" value="Submit" class="btn btn-primary"name="add" style="margin-left:200px;">
-										
-									</div>
+								
+						<?php
+							$pid=$_REQUEST['id'];
+							$query=mysqli_query($con,"select * from property where pid='$pid'");
+							while($row=mysqli_fetch_array($query))
+							{
+								$rtitle = $row["title"];
+								$rpcontent = $row["pcontent"];
+								$rtype = $row["type"];
+								$rbhk = $row["bhk"];
+								$rstype = $row["stype"];
+								$rbedroom = $row["bedroom"];
+								$rbathroom = $row["bathroom"];
+								$rbalcony = $row["balcony"];
+								$rkitchen = $row["kitchen"];
+								$rhall = $row["hall"];
+								$rfloor = $row["floor"];
+								$rsize = $row["size"];
+								$rprice = $row["price"];
+								$rlocation = $row["location"];
+								$rcity = $row["city"];
+								$rstate = $row["state"];
+								$rfeature = $row["feature"];
+								$rpimage = "admin/property/" . $row["pimage"];
+								$rpimage1 = "admin/property/" . $row["pimage1"];
+								$rpimage2 = "admin/property/" . $row["pimage2"];
+								$rpimage3 = "admin/property/" . $row["pimage3"];
+								$rpimage4 = "admin/property/" . $row["pimage4"];
+								$ruid = $row["uid"];
+								$rstatus = $row["status"];
+								$rmapimage = "admin/property/" . $row["mapimage"];
+								$rtopmapimage = "admin/property/" . $row["topmapimage"];
+								$rgroundmapimage = "admin/property/" . $row["groundmapimage"];
+								$rtotalfloor = $row["totalfloor"];
+								$rdate = $row["date"];		 
+								} 
+								include "../include/subprop.php";	
+								?>	 
 								</form>
 								
-								<?php
-									} 
-								?>
-												
-							</div>
-						</div>
-					</div>
-				
-				</div>			
-			</div>
-			<!-- /Main Wrapper -->
+							
+                    </div>            
+            </div>
+        </div>
+	<!--	Submit property   -->
+        
+        
+        <!-- 
+		<?php include("includes/footer.php");?>
+		-->
+        
+        <!-- Scroll to top   
+        <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
+          End Scroll To top --> 
+    </div>
+</div>
+<!-- Wrapper End --> 
 
-		
-		<!-- jQuery -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <!--	HYML footer start  -->
+		<?php include("includes/html_footer.php");?>
+        <!--	HYML footer end  -->
+
 		<script src="assets/plugins/tinymce/tinymce.min.js"></script>
 		<script src="assets/plugins/tinymce/init-tinymce.min.js"></script>
-		<!-- Bootstrap Core JS -->
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- Slimscroll JS -->
-        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-		
-		<!-- Custom JS -->
-		<script  src="assets/js/script.js"></script>
-		
-    </body>
-
+<script laguage="javascript" type="text/javascript">
+// JSSHOP.shared.addCurrSlctObj(svftObj["u_jtype"], totalfl, "noQvalue", "noQvalue", "Select");
+teramid = "tearmid";
+</script>
+</body>
 </html>
