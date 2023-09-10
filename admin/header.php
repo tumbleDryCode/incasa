@@ -149,7 +149,7 @@ if(!isset($_SESSION['auser']))
 							<li class="submenu">
 								<a href="#"><i class="fe fe-user"></i> <span> <ti data-ison="stxt[902]" data-desc="btn_contacts">Contact Us</ti> </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="contactview.php"> <ti data-ison="stxt[902]" data-desc="btn_contacts">Contacts</ti> </a></li>
+									<li><a href="contactview.php"> <ti data-ison="stxt[702]" data-desc="btn_messgs">Messages</ti> </a></li>
 									<li><a href="feedbackview.php">Feedback</a></li>
 								</ul>
 							</li>

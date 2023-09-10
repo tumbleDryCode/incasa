@@ -209,7 +209,8 @@ stxt[619] = "List Trips";
 
 // messaging strings
 stxt[700] = "Have a Question?";
-
+stxt[701] = "Mensagem";
+stxt[702] = "Mensagens";
 
 
 // coookie consent strings
@@ -323,7 +324,12 @@ stxt[983] = "Descricao do imovel"; // Descricao do imovel
 stxt[984] = "adicionar mais imagens-media";  // adicionar mais imagens-media 
 stxt[985] = "Editar Propriedade";
 stxt[986] = "Carregar";  // Carregar
-
+stxt[987] = "Para venda";  // Para venda
+stxt[988] = "Para alugar";  // Para alugar
+stxt[989] = "Para arrendar";  // Para arrendar
+stxt[990] = "Para leilao";  // Para leilão
+stxt[991] = "Para execução";  // Para execução
+stxt[992] = "Tipo";  // Tipo
 
 
 

@@ -1719,7 +1719,13 @@ alert("doRequestPrep: " + e);
 		console.log("finishMMupload: " + theMMum);
 		image = null;
 		image = new Image();
-		image.src = "admin/property/s_thumb" + theMMum;
+		
+		if(document.location.href.indexOf('admin/') != -1) {
+			image.src = "property/s_thumb" + theMMum;
+		  } else {
+			image.src = "admin/property/s_thumb" + theMMum;
+		}			
+
 		// document.getElementById("dvProdImgs").appendChild(image);
 		document.getElementById("m_file").value = theMMum;
 		document.getElementById("m_file_thumb").value = "s_thumb" + theMMum;

@@ -2286,4 +2286,8 @@ try {
 alert(e);
 }
 };
+
+if(document.location.href.indexOf('admin/') != -1) {
+    currMediaFldr = "property";
+  }
 doAIU(currMediaBtnPrfx, currMediaBtnCB, currMediaFldr, currMediaID);

@@ -17,7 +17,7 @@ if(session_id() == '') {
 			if( $num_row ==1 )
 			{
 				$_SESSION['auser']=$user;
-				header("Location: dashboard.php");
+				header("Location: propertyview.php");
 			}
 			else
 			{
@@ -30,7 +30,7 @@ if(session_id() == '') {
 	}   
 	
 	} else {
-		header("location:dashboard.php");
+		header("Location:propertyview.php");
 	}
 ?>
 <html>

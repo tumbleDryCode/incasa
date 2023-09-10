@@ -208,7 +208,8 @@ stxt[619] = "List Trips";
 
 // messaging strings
 stxt[700] = "Have a Question?";
-
+stxt[701] = "Mensaje";
+stxt[702] = "Mensajes";
 
 
 // coookie consent strings
@@ -318,8 +319,13 @@ stxt[982] = "Numero de dormitorios, cocinas..."; // Numero de dormitorios, cocin
 stxt[983] = "Descripcion de la propiedad"; // Descripcion de la propiedad 
 stxt[984] = "add more images-media";  // adicionar mais imagens-media 
 stxt[985] = "Editar Propiedad";
-stxt[986] = "Carregar";  // Carregar
-
+stxt[986] = "Cargar";  // Cargar
+stxt[987] = "Para Venta";  // Para venda
+stxt[988] = "Para alquilar";  // Para alquilar
+stxt[989] = "Arrendamiento"; // Arrendamiento
+stxt[990] = "Subasta";
+stxt[991] = "Ejecucion"; // ejecución
+stxt[992] = "Type"; 
 
 
 

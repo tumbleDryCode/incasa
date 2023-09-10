@@ -342,7 +342,19 @@ doWinLoad();
             </div>
         </div>
           Banner   --->
-		 
+		 					<!-- Page Header -->
+							 <div class="page-header">
+						<div class="row">
+							<div class="col">
+								<h3 class="page-title">Admin</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
+									<li class="breadcrumb-item active"><ti data-ison="stxt[916]" data-desc="btn_addprop">Add Property</ti></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
 		 
 		<!--	Submit property   -->
         <div class="full-row py-2">

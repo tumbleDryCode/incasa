@@ -206,6 +206,8 @@ stxt[619] = "List Trips";
 
 // messaging strings
 stxt[700] = "Have a Question?";
+stxt[701] = "Message";
+stxt[702] = "Messages";
 
 
 
@@ -322,6 +324,7 @@ stxt[988] = "For Rent";  // Para alugar
 stxt[989] = "For Lease";  // Para arrendar
 stxt[990] = "For Auction";  // Para leilão
 stxt[991] = "For Foreclosure";  // Para execução
+stxt[992] = "Type";  // Tipo
 
 // valdiation error messages
 stxt[1001] = "Username must be good.";

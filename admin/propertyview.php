@@ -31,10 +31,10 @@ if(!isset($_SESSION['auser']))
 					<div class="page-header">
 						<div class="row">
 							<div class="col">
-								<h3 class="page-title">Property</h3>
+								<h3 class="page-title">Admin</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">Property</li>
+									<li class="breadcrumb-item active"><ti data-ison="stxt[965]" data-desc="btn_vwprops">View Properties</ti></li>
 								</ul>
 							</div>
 						</div>
@@ -49,7 +49,7 @@ if(!isset($_SESSION['auser']))
                                 <div class="card">
                                     <div class="card-body">
 
-                                        <h4 class="header-title mt-0 mb-4">Property View</h4>
+                                        <h4 class="header-title mt-0 mb-4"><ti data-ison="stxt[965]" data-desc="btn_vwprops">View Properties</ti></h4>
 										<?php 
 											if(isset($_GET['msg']))	
 											echo $_GET['msg'];	
@@ -58,10 +58,12 @@ if(!isset($_SESSION['auser']))
                                             <thead>
                                                 <tr>
                                                     <th>P ID</th>
-                                                    <th>Title</th>
-                                                    <th>Price</th>
+                                                    <th><ti data-ison="stxt[10]" data-desc="btn_title">Title</ti></th>
+                                                    <th><ti data-ison="stxt[31]" data-desc="btn_edit">Edit</ti></th>
+                                                    <th><ti data-ison="stxt[42]" data-desc="btn_delete">Delete</ti></th>
+                                                    <th><ti data-ison="stxt[18]" data-desc="btn_price">Price</ti></th>
                                                    <!-- <th>Description</th> -->
-                                                     <th>Type</th> 
+                                                     <th><ti data-ison="stxt[992]" data-desc="btn_type">Type</ti></th> 
                                                     <!-- <th>BHK</th>
                                                     <th>Selling Type</th>
                                                      <th>Bedroom</th>
@@ -70,11 +72,11 @@ if(!isset($_SESSION['auser']))
                                                     <th>Kitchen</th>
                                                     <th>Hall</th>
                                                     <th>Floor</th> -->
-													<th>Area Size</th>
+													<th><ti data-ison="stxt[921]" data-desc="btn_area">Area m2</ti></th>
                                                     
                                                     <!-- <th>Location</th> -->
-                                                    <th>City</th>
-                                                    <th>State</th>
+                                                    <th><ti data-ison="stxt[210]" data-desc="btn_city">City</ti></th>
+                                                    <th><ti data-ison="stxt[211]" data-desc="btn_state">State</ti></th>
                                           
 													<!-- <th>Image1</th>
                                                     <th>Image2</th>
@@ -82,16 +84,15 @@ if(!isset($_SESSION['auser']))
                                                     <th>Image4</th>
                                                     <th>Image5</th> -->
                                                     <th>Uid</th>
-													<th>Status</th>
+													<th><ti data-ison="stxt[77]" data-desc="btn_area">Status</ti></th>
                                                     <!--
                                                     <th>Floor Plan</th>
                                                     <th>Basement Plan</th>
 													<th>Ground Floor Plan</th>
                                                     <th>Total Floor</th>
                                                     -->
-                                                    <th>Date</th>
-                                                    <th>Edit</th>
-                                                    <th>Delete</th>
+                                                    <th><ti data-ison="stxt[74]" data-desc="btn_date">Date</ti></th>
+
                                                     
                                                 </tr>
                                             </thead>
@@ -108,6 +109,8 @@ if(!isset($_SESSION['auser']))
                                                 <tr>
                                                     <td><?php echo $row['0']; ?></td>
                                                     <td><a href="../propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1']; ?></a></td>
+                                                    <td><a href="propertyedit.php?id=<?php echo $row['0'];?>">Edit</a></td>
+                                                    <td><a href="propertydelete.php?id=<?php echo $row['0'];?>">Delete</a></td>
                                                     <td><a href="propertyedit.php?id=<?php echo $row['0'];?>" target="_blank"><?php echo $row['13']; ?></a></td>
                                                     <td><?php echo $row['3']; ?></td>
  
@@ -122,8 +125,7 @@ if(!isset($_SESSION['auser']))
                                                     <td><?php echo $row['24']; ?></td>
  
                                                     <td><?php echo $row['29']; ?></td>
-													<td><a href="propertyedit.php?id=<?php echo $row['0'];?>">Edit</a></td>
-                                                    <td><a href="propertydelete.php?id=<?php echo $row['0'];?>">Delete</a></td>
+
                                                 </tr>
                                                <?php
 												} 
