@@ -355,7 +355,7 @@ stxt[1012] = "Preencha todos os campos para se registar como administrador. O se
 stxt[1013] = "Registado com sucesso. Por favor <a href=\"index.php\">login</a>";  // Registado com sucesso. Por favor entre.
 stxt[1014] = "Sobre nos"; // Sobre nos
 stxt[1015] = "Nova Historia"; // Nova Historia
-stxt[1016] = "Editar Historias"; // Editar Historias
+stxt[1016] = "Editar Historia(s)"; // Editar Historias
 stxt[1017] = "Amostrar";
 stxt[1018] = "Entradas"; // Entradas
 stxt[1019] = "Nao ha dados disponiveis"; // Nao ha dados disponiveis
@@ -367,7 +367,7 @@ stxt[1024] = "Lista de Admins"; // Lista de Admins
 stxt[1025] = "Lista de Agentes"; // Lista de Agentes
 stxt[1026] = "Lista de Construtores"; // Lista de Construtores
 stxt[1027] = "Lista de Utilizadores"; // Lista de Utilizadores
-
+stxt[1028] = "Titulo"; // Titulo
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";
 

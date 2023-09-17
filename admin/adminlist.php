@@ -98,8 +98,8 @@ if(!isset($_SESSION['auser']))
 			</div>
 			<!-- /Main Wrapper -->
 
-		<!--	HYML footer start  -->																
+		<!--	HTML footer start  -->																
 		<?php include("includes/html_footer.php");?>
-		<!--	HYML footer end  -->
+		<!--	HTML footer end  -->
     </body>
 </html>

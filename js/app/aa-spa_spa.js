@@ -362,7 +362,7 @@ stxt[1024] = "Admin List"; // Lista de Admins
 stxt[1025] = "Agente List"; // Lista de Agentes
 stxt[1026] = "Builder List"; // Lista de Constructores
 stxt[1027] = "User List"; // Lista de Usuarios
-
+stxt[1028] = "Titulo"; // Titulo
 
 // tips
 stxt[2001] = "Setting up is easy. Enter your shops title, add some item categories and click Save.";

@@ -2,11 +2,11 @@
 ini_set("display_errors", 1);
 error_reporting(E_ALL ^ E_STRICT ^ E_DEPRECATED);
 header('Content-Type: text/html; charset=ISO-8859-15');
-global $fJSonFldrQstring, $respstat;
+global $fJSonFldrQstring, $respstat, $con;
 
 if(stristr($_SERVER["HTTP_HOST"], "localhost") || stristr($_SERVER["HTTP_HOST"], "titan") || stristr($_SERVER["HTTP_HOST"], "192.")) {
 // change evenflow to your database name
-define("DB_DSN","mysql:host=127.12.163.130;dbname=developers"); // works with rhcloud and xampp
+define("DB_DSN","mysql:host=titan;dbname=developers"); // works with rhcloud and xampp
 define("DB_USERNAME","developers");
 define("DB_PASSWORD","casain");
 } else {
@@ -25,6 +25,7 @@ include "DumDatabase.php";
 // include "Database.php";
 // $cdbf = new Database();
 $cdbg = new DumDatabase();
+
 
 function sendGZMsg($thealert) {
 $thegzalert = gzencode($thealert);
@@ -65,9 +66,7 @@ sendGZMsg("Total Records Inserted: $i");
 } catch(Exception $ex) {
 sendGZMsg("loadQfile.error: " . $ex);
 }
-
 exit;
- 
 }
 
  

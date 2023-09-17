@@ -171,13 +171,12 @@ doWinLoad();
 
 		
  
-		<script src="assets/plugins/tinymce/tinymce.min.js"></script>
-		<script src="assets/plugins/tinymce/init-tinymce.min.js"></script>
  
 				        <!--	HYML footer start  -->
 		<?php include("includes/html_footer.php");?>
         <!--	HYML footer end  -->
-
+		<script src="assets/plugins/tinymce/tinymce.min.js"></script>
+		<script src="assets/plugins/tinymce/init-tinymce.min.js"></script>
  
     </body>
 

@@ -53,14 +53,14 @@ if(!isset($_SESSION['auser']))
 					<div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body" style="overflow: scroll">
 
                                         <h4 class="header-title mt-0 mb-4"><ti data-ison="stxt[965]" data-desc="btn_vwprops">View Properties</ti></h4>
 										<?php 
 											if(isset($_GET['msg']))	
 											echo $_GET['msg'];	
 										?>
-                                        <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                                        <table id="datatable-buttons" class="table table-striped dt-responsive">
                                             <thead>
                                                 <tr>
                                                     <th>P ID</th>

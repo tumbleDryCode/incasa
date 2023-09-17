@@ -86,8 +86,8 @@ if(!isset($_SESSION['uemail']))
 						
 							<?php 
 							$uid=$_SESSION['uid'];
-                            // $query=mysqli_query($con,"SELECT property.*, qmedia.*  FROM `property`, qmedia WHERE property.uid='$uid' and property.bhk='5' and qmedia.m_uid=property.uid  and qmedia.m_file like '%.%'  order by qmedia.m_vala desc limit 5");
-                            $query=mysqli_query($con,"SELECT * FROM `property` WHERE property.uid='$uid' and property.bhk='5'");
+                            // $query=mysqli_query($con,"SELECT property.*, qmedia.*  FROM `property`, qmedia WHERE property.uid='$uid' and qmedia.m_uid=property.uid  and qmedia.m_file like '%.%'  order by qmedia.m_vala desc limit 5");
+                            $query=mysqli_query($con,"SELECT * FROM `property` WHERE property.uid='$uid'"); //  and property.bhk='5'
 
 								while($row=mysqli_fetch_array($query))
 								{

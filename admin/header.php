@@ -28,7 +28,7 @@ if(!isset($_SESSION['auser']))
 	 
 				
 								<div class="mobile_btn" id="mobile_btna" onclick="javascript:JSSHOP.ui.toggleVisibility('sidebara');" style="float:right;padding: 2px;" class="bkgdWhite">
-					<i class="fa fa-bars" ></i>
+					<i style="padding-top:10px"  class="fa fa-bars" ></i>
 </div>
 
 				<!-- /Mobile Menu Toggle -->
@@ -44,20 +44,19 @@ if(!isset($_SESSION['auser']))
 				<!-- Header Right Menu -->
 				<ul class="nav user-menu">
 
-					<h4 style="color:white;text-transform:capitalize;padding-top:10px;"><a href="dashboard.php" class="logo logo-small"><img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
-					</a>  <span style="padding-right:10px; vertical-align: middle">  <a href="../index.php" class="txtClrWhite txtDecorNone txtBig txtBold">
-						Home</a> &nbsp;&nbsp;&nbsp;</span></h4>
+					<h4 style="color:white;text-transform:capitalize;padding-top:10px; vertical-align: middle"><a href="dashboard.php" class="logo logo-small"><img src="assets/img/logo-small.png" alt="Logo" width="30" height="30" class="rtable bkgdClrWhite">
+					</a>  <span style="padding-top:10px;padding-right:10px;margin-right:15px; vertical-align: middle"><a href="../index.php" class="txtClrWhite txtDecorNone txtBig txtBold">Home</a> &nbsp;&nbsp;&nbsp;<a href="dashboard.php"  class="txtClrWhite txtDecorNone txtBig txtBold"><?php echo $_SESSION['auser'];?></a></span></h4>
 					<!-- User Menu -->
-					<h4 style="color:white;margin-top:13px;text-transform:capitalize;"><a href="dashboard.php"  class="txtClrWhite txtDecorNone txtBig txtBold"><?php echo $_SESSION['auser'];?></a></h4>
+					<h4 style="color:white;padding-top:10px;text-transform:capitalize; vertical-align: middle"></h4>
 					<li class="nav-item dropdown app-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-							<span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.png" width="31" alt="Ryan Taylor"></span>
+							<span class="user-img"><img style="padding-top:10px" class="rounded-circle" src="assets/img/profiles/avatar-01.png" width="31" alt="Admin Icon"></span>
 						</a>
 						
 						<div class="dropdown-menu">
 							<div class="user-header">
 								<div class="avatar avatar-sm">
-									<img src="assets/img/profiles/avatar-01.png" alt="User Image" class="avatar-img rounded-circle">
+									<img style="padding-top:10px" src="assets/img/profiles/avatar-01.png" alt="User Image" class="avatar-img rounded-circle">
 								</div>
 								<div class="user-text">
 									<h6><?php echo $_SESSION['auser'];?></h6>

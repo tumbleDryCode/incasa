@@ -355,6 +355,7 @@ stxt[1024] = "Admin List";
 stxt[1025] = "Agente List";
 stxt[1026] = "Builder List";
 stxt[1027] = "User List";
+stxt[1028] = "Title";
 
 
 // tips

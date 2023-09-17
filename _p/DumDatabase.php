@@ -12,12 +12,13 @@
 class DumDatabase {
   
     private $pdo;
+ 
 
     
     public function __construct()
     {
-	global $docroot,$dumdb,$dumhost;
-
+	global $docroot,$dumdb,$dumhost,$con;
+    $con = mysqli_connect("titan","incasa","casain","developers");
         try
         {
 
@@ -44,6 +45,7 @@ class DumDatabase {
 
 
     public function fetch_custom( $sql,$data=null) {
+        global $con;
 		$dumhost = "localhost";
 $tvalues = array();
 $data = "";
@@ -52,11 +54,11 @@ $numlines = 0;
 $numrows = 0;
 
 
-
+/*
       $dumdb = ($GLOBALS["___mysqli_ston"] = mysqli_connect($dumhost, DB_USERNAME, DB_PASSWORD)) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 ((bool)mysqli_query($dumdb, "USE " . DB_USERNAME));
-
-$result = mysqli_query($dumdb, $sql) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
+*/
+$result = mysqli_query($con, $sql) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 $colqty = (($___mysqli_tmp = mysqli_num_fields($result)) ? $___mysqli_tmp : false) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 $finfo = $result->fetch_fields();
 $tvi = 0;
@@ -113,6 +115,7 @@ $data .= "]";
 
 
     public function edit_custom( $sql,$data=null) {
+        global $con;
 	$dumhost = "localhost";
 $tvalues = array();
 $data = "";
@@ -120,12 +123,12 @@ $dbpropsString = "";
 $numlines = 0;
 $numrows = 0;
 
-
+/*
 
       $dumdb = ($GLOBALS["___mysqli_ston"] = mysqli_connect($dumhost, DB_USERNAME, DB_PASSWORD)) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
 ((bool)mysqli_query($dumdb, "USE " . DB_USERNAME));
-
-$result = mysqli_query($dumdb, $sql) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
+*/
+$result = mysqli_query($con, $sql) or trigger_error(((is_object($GLOBALS["___mysqli_ston"]) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))));
   return $result;
     }
 
