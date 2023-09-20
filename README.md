@@ -9,11 +9,15 @@ changes made include:
 - added Portuguese and Spanish language strings
 - using later version of bootstrap and added primer
 - modified property adding and editing
+
+general script purging and cleanup on todo list.
 ......
 
 screen-shots:
-<img src="img4.jpg" style="max-width:200px;padding:5px">
-<img src="img6.jpg" style="max-width:200px;padding:5px">
+<img src="img6.jpg" style="max-width:150px;padding:5px">
+admin section:
+<img src="img4.jpg" style="max-width:150px;padding:5px">
+
 
 
 suraj25809/Real-Estate-Php readme:
