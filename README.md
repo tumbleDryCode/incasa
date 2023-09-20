@@ -1,8 +1,22 @@
 # incasa
 
-this is a fork of and readme taken from:
+this is a fork of:
 https://github.com/suraj25809/Real-Estate-Php
 
+Scripted for small to medium size real estate agencies.
+
+changes made include:
+- added Portuguese and Spanish language strings
+- using later version of bootstrap and added primer
+- modified property adding and editing
+......
+
+screen-shots:
+<img src="img4.jpg" style="max-width:200px;padding:5px">
+<img src="img6.jpg" style="max-width:200px;padding:5px">
+
+
+suraj25809/Real-Estate-Php readme:
 # Real-Estate-Php
 
 Realestate Management system
