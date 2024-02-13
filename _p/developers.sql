@@ -234,6 +234,9 @@ CREATE TABLE `qmedia` (
   `m_dadded` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+ALTER TABLE `qmedia`
+  ADD PRIMARY KEY (`_id`);
+
 --
 -- Dumping data for table `qmedia`
 --
@@ -364,9 +367,7 @@ ALTER TABLE `property`
 
 --
 -- Indexes for table `qmedia`
---
-ALTER TABLE `qmedia`
-  ADD PRIMARY KEY (`_id`);
+
 
 --
 -- Indexes for table `state`
