@@ -1,3 +1,11 @@
+<?php
+global $uid;
+if(isset($_COOKIE['quid'])) {
+	$uid = $_COOKIE['quid'];
+} else {
+	$uid = "5";
+}
+?>
 <input type="hidden" name="uid" id="uid"   value="<?php echo $uid; ?>">
 								<div class="accordion" id="accordionEPExample">
 									<h5 class="text-secondary"><ti data-ison="stxt[947]" data-desc="btn_basic_information">Basic Information</ti></h5>

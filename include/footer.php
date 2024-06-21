@@ -10,7 +10,7 @@
                                         <table style="border:0px;">
 											<tr>
 												<td><a href="#"><img src="images/logo/logo-white.png" alt="image" style="max-width:60px"  class="rtable brdrClrHdr bkgdClrWhite"></a></td>
-												<td style="text-align:left;padding:0px;"><span class="text-primary txtBig">IN</span><span class="txtClrWhite txtBig">-</span><span class="text-primary txtBig">CASA<span class="txtClrWhite txtBig">.</span>eu</span></td>
+												<td style="text-align:left;padding:0px;"><span class="text-primary txtBig">imobtech</span></td>
 											</tr>
 											</table>
 										</div>

@@ -10,8 +10,8 @@
                     <div class="row">
                         <div class="col-md-8">
                             <ul class="top-contact list-text-white  d-table">
-                                <li><a href="#"><i class="fas fa-phone-alt text-primary mr-1"></i>961159145</a></li>
-                                <li><a href="#"><i class="fas fa-envelope text-primary mr-1"></i>in.casa22@sapo.pt</a></li>
+                                <li><a href="#"><i class="fas fa-phone-alt text-primary mr-1"></i>9611211215</a></li>
+                                <li><a href="#"><i class="fas fa-envelope text-primary mr-1"></i>myemail@mysite</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="col-lg-12" style="margin:0px;">
                             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                              <span style="float:left;text-align:left;white-space: nowrap;"><a class="breadcrumb-item active" href="index.php"><img class="slmtable" src="images/logo/logo-small.png" alt="in-casa.eu" style="max-height:40px;max-width:40px;"> <b>IN<span class="txtClrWhite">-</span>CASA<span class="txtClrWhite">.</span>eu</b></a></span>
+                              <span style="float:left;text-align:left;white-space: nowrap;"><a class="breadcrumb-item active" href="index.php"><img class="slmtable" src="images/logo/logo-small.png" alt="imobtech" style="max-height:40px;max-width:40px;"> <b>imobtech</b></a></span>
 
   <!-- menu icons 
 
@@ -95,7 +95,7 @@
                                         </li>
 										<?php } else { ?>
 										<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>
-                                        <li class="nav-item"> <a class="nav-link"  href="register.php"><ti data-ison="stxt[961]" data-desc="btn_register">Register</ti></li>
+                                        <li class="nav-item"> <a class="nav-link"  href="register.php"><ti data-ison="stxt[961]" data-desc="btn_register">Register</ti></a></li>
 										<?php } ?>
 										
                                     </ul>
